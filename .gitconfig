@@ -30,3 +30,5 @@
 	tool = vimdiff
 [rerere]
 	enabled = 1
+[branch "master"]
+	mergeoptions = --no-ff
