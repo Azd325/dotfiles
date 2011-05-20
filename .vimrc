@@ -35,6 +35,14 @@ autocmd BufWritePre * :%s/\s\+$//e
  autocmd FileType python set shiftwidth=4
  autocmd FileType python set expandtab
  autocmd FileType python compiler pylint
+" Set the terminal's title.
+set title
+" No beeping.
+set visualbell
+" Don't make a backup before overwriting a file.
+set nobackup
+" SHow the status line all the time
+set laststatus=2
 
 " Style Settings.
 set background=dark
