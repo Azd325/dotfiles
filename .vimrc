@@ -1,7 +1,9 @@
 set nocompatible
 
 syntax enable
+" Enables filetype detection.
 filetype on
+ " Enables filetype specific plugins.
 filetype plugin indent on
 
 " Display incomplete commands.
