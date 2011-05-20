@@ -1,50 +1,29 @@
 set nocompatible
 
 syntax enable
-" Enables filetype detection.
-filetype on
- " Enables filetype specific plugins.
-filetype plugin indent on
-
-" Display incomplete commands.
-set showcmd
-" Display the current mode.
-set showmode
-" Intuitive backspacing.
-set backspace=indent,eol,start
-" Emhamced command line completion.
-set wildmenu
-" Complete files like a shell.
-set wildmode=list:longest
-" Case-insentitive searching.
-set ignorecase
-" But case-sensitive if expression contains a capital letter.
-set smartcase
-" Show line numbers.
-set number
-" Toggle line numbers and fold column for easy copying.
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
-" Show Cursor position.
-set ruler
-" Highlight matches as you type.
-set incsearch
-" Higlight matches.
-set hlsearch
-" Remove trailing whitespace.
-autocmd BufWritePre * :%s/\s\+$//e
-" tab configs for python.
-autocmd FileType python set tabstop=4
+filetype on						" Enables filetype detection.
+filetype plugin indent on				" Enables filetype specific plugins.
+set showcmd						" Display incomplete commands.
+set showmode						" Display the current mode.
+set backspace=indent,eol,start				" Intuitive backspacing.
+set wildmenu						" Emhamced command line completion.
+set wildmode=list:longest				" Complete files like a shell.
+set ignorecase						" Case-insentitive searching.
+set smartcase						" But case-sensitive if expression contains a capital letter.
+set number						" Show line numbers.
+nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>	" Toggle line numbers and fold column for easy copying.
+set ruler  						" enables filetype specific plugins
+set incsearch						" Highlight matches as you type.
+set hlsearch						" Higlight matches.
+autocmd BufWritePre * :%s/\s\+$//e			" Remove trailing whitespace.
+autocmd FileType python set tabstop=4			" tab configs for python.
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set expandtab
 autocmd FileType python compiler pylint
-" Set the terminal's title.
-set title
-" No beeping.
-set visualbell
-" Don't make a backup before overwriting a file.
-set nobackup
-" Show the status line all the time.
-set laststatus=2
+set title						" Set the terminal's title.
+set visualbell						" No beeping.
+set nobackup						" Don't make a backup before overwriting a file.
+set laststatus=2					" Show the status line all the time.
 
 " Style Settings.
 set background=dark
