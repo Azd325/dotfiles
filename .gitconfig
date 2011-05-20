@@ -1,31 +1,32 @@
 [user]
-    name = Tim Kleinschmidt
-    email = tim.kleinschmidt@googlemail.com
+	name = Tim Kleinschmidt
+	email = tim.kleinschmidt@googlemail.com
 [alias]
-    st = status
-    ci = commit
-    co = checkout
-    br = branch
-    s-u = submodule update --init --recursive
-    s-s = submodule status
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	s-u = submodule update --init --recursive
+	s-s = submodule status
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [color]
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-    ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
 [core]
-    editor = vim
-    whitespace = space-before-tab, trailing-space
-    excludesfile = ~/.gitignore
+	editor = vim
+	whitespace = space-before-tab, trailing-space
+	excludesfile = /home/tim/.gitignore
 [giggle]
-    main-window-maximized = true
-    main-window-geometry = 0x0+0+0
-    history-view-vpane-position = 362
-    main-window-view = HistoryView
-    file-view-vpane-position = 207
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 362
+	main-window-view = HistoryView
+	file-view-vpane-position = 207
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
+	tool = vimdiff
 [rerere]
-    enabled = 1
+	enabled = 1
