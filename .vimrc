@@ -31,10 +31,18 @@ set hlsearch
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 " tab configs for python
- autocmd FileType python set tabstop=4
- autocmd FileType python set shiftwidth=4
- autocmd FileType python set expandtab
- autocmd FileType python compiler pylint
+autocmd FileType python set tabstop=4
+autocmd FileType python set shiftwidth=4
+autocmd FileType python set expandtab
+autocmd FileType python compiler pylint
+" Set the terminal's title.
+set title
+" No beeping.
+set visualbell
+" Don't make a backup before overwriting a file.
+set nobackup
+" Show the status line all the time
+set laststatus=2
 
 " Style Settings.
 set background=dark
