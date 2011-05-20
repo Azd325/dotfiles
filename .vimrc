@@ -26,13 +26,13 @@ set number
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 " Show Cursor position.
 set ruler
-" Highlight matches as you type
+" Highlight matches as you type.
 set incsearch
-" Higlight matches
+" Higlight matches.
 set hlsearch
-" Remove trailing whitespace
+" Remove trailing whitespace.
 autocmd BufWritePre * :%s/\s\+$//e
-" tab configs for python
+" tab configs for python.
 autocmd FileType python set tabstop=4
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set expandtab
@@ -43,7 +43,7 @@ set title
 set visualbell
 " Don't make a backup before overwriting a file.
 set nobackup
-" Show the status line all the time
+" Show the status line all the time.
 set laststatus=2
 
 " Style Settings.
