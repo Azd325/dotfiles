@@ -30,6 +30,11 @@ set incsearch
 set hlsearch
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+" tab configs for python
+ autocmd FileType python set tabstop=4
+ autocmd FileType python set shiftwidth=4
+ autocmd FileType python set expandtab
+ autocmd FileType python compiler pylint
 
 " Style Settings.
 set background=dark
