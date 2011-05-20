@@ -28,6 +28,8 @@ set ruler
 set incsearch
 " Higlight matches
 set hlsearch
+" Remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Style Settings.
 set background=dark
