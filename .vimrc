@@ -13,6 +13,7 @@ set smartcase						" But case-sensitive if expression contains a capital letter.
 set number						" Show line numbers.
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>	" Toggle line numbers and fold column for easy copying.
 nnoremap <F3> :TlistToggle<CR>				" Toogle to see a taglist
+nnoremap <F4> :NERDTreeToggle<CR>			" Toogle NerdTree
 set ruler  						" enables filetype specific plugins
 set incsearch						" Highlight matches as you type.
 set hlsearch						" Higlight matches.
