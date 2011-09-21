@@ -52,6 +52,11 @@ autocmd FileType javascript set ts=4
 autocmd FileType javascript set sts=4
 autocmd FileType javascript set textwidth=79
 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 set title						" Set the terminal's title.
 set visualbell						" No beeping.
 set nobackup						" Don't make a backup before overwriting a file.
