@@ -22,7 +22,7 @@
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 362
+	history-view-vpane-position = 407
 	main-window-view = HistoryView
 	file-view-vpane-position = 207
 [merge]
@@ -32,3 +32,6 @@
 	enabled = 1
 [branch "master"]
 	mergeoptions = --no-ff
+
+[pack]
+	threads = 4
