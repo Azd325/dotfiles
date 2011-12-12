@@ -1,6 +1,6 @@
 [user]
 	name = Tim Kleinschmidt
-	email = tim.kleinschmidt@googlemail.com
+	email = tim.kleinschmidt@gmail.com
 [alias]
 	st = status
 	ci = commit
@@ -8,25 +8,28 @@
 	br = branch
 	s-u = submodule update --init --recursive
 	s-s = submodule status
+	ls = ls-files
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [help]
         autocorrect = 1
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
 	ui = auto
+[color "branch"]
+	current = red
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 [core]
 	editor = vim
 	whitespace = space-before-tab, trailing-space
 	excludesfile = /home/tim/.gitignore
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 407
-	main-window-view = HistoryView
-	file-view-vpane-position = 207
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
@@ -34,6 +37,5 @@
 	enabled = 1
 [branch "master"]
 	mergeoptions = --no-ff
-
 [pack]
 	threads = 4
