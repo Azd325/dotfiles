@@ -13,7 +13,7 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	ll = log --stat --abbrev-commit
-	score = shortlog -sn.
+	score = shortlog -sn
 [help]
         autocorrect = 1
 [color]
