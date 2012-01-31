@@ -14,6 +14,8 @@ let g:EasyMotion_leader_key = '<Leader>'
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'fancy'
 
+Bundle 'tpope/vim-surround'
+
 filetype plugin indent on           " required!
 syntax enable
 
