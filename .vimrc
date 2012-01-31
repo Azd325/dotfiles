@@ -10,11 +10,11 @@ Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader>'
-
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'fancy'
-
 Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
+nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
 
 filetype plugin indent on           " required!
 syntax enable
@@ -47,8 +47,6 @@ nnoremap <F2> :tabn<CR>
 nnoremap <F3> :tabp<CR>
 nnoremap <F4> :set nonumber!<CR>:set foldcolumn=0<CR>   " Toggle line numbers and fold column for easy copying.
 nnoremap <F5> :TlistToggle<CR>              " Toogle to see a taglist
-nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
-
 nnoremap <C-^> :tabp<cr>
 nnoremap <^> :tabNext<cr>
 
