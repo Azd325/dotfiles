@@ -5,6 +5,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
+" https://github.com/gmarik/vundle
+" Launch vim, run :BundleInstall (or vim +BundleInstall +qall for CLI lovers)
 " required!
 Bundle 'gmarik/vundle'
 " My bundles
