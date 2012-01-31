@@ -1,8 +1,21 @@
 set nocompatible
+filetype off                        " required!
 
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+" My bundles
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+let g:Powerline_symbols = 'fancy'
+
+
+
+filetype plugin indent on           " required!
 syntax enable
-filetype on						" Enables filetype detection.
-filetype plugin indent on				" Enables filetype specific plugins.
 
 set ai
 set ts=4
@@ -10,29 +23,34 @@ set sts=4
 set et
 set sw=4
 set textwidth=79
-set showcmd						" Display incomplete commands.
-set showmode						" Display the current mode.
-set backspace=indent,eol,start				" Intuitive backspacing.
-set wildmenu						" Emhamced command line completion.
-set wildmode=list:longest				" Complete files like a shell.
-set ignorecase						" Case-insentitive searching.
-set smartcase						" But case-sensitive if expression contains a capital letter.
-set number						" Show line numbers.
-set title						" Set the terminal's title.
-set visualbell						" No beeping.
-set nobackup						" Don't make a backup before overwriting a file.
-set laststatus=2					" Show the status line all the time.
+set showcmd                         " Display incomplete commands.
+set showmode                        " Display the current mode.
+set backspace=indent,eol,start      " Intuitive backspacing.
+set wildmenu                        " Emhamced command line completion.
+set wildmode=list:longest               " Complete files like a shell.
+set ignorecase                      " Case-insentitive searching.
+set smartcase                       " But case-sensitive if expression contains a capital letter.
+set number                          " Show line numbers.
+set title                           " Set the terminal's title.
+set visualbell                      " No beeping.
+set nobackup                        " Don't make a backup before overwriting a file.
+set laststatus=2                    " Show the status line all the time.
 set background=dark
-set ruler						" enables filetype specific plugins
-set incsearch						" Highlight matches as you type.
-set hlsearch						" Higlight matches.
+set ruler                           " enables filetype specific plugins
+set incsearch                       " Highlight matches as you type.
+set hlsearch                        " Higlight matches.
 colorscheme delek
 
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>	" Toggle line numbers and fold column for easy copying.
-nnoremap <F3> :TlistToggle<CR>				" Toogle to see a taglist
-nnoremap <F4> :NERDTreeToggle<CR>			" Toogle NerdTree
+nnoremap <F2> :tabn<CR>
+nnoremap <F3> :tabp<CR>
+nnoremap <F4> :set nonumber!<CR>:set foldcolumn=0<CR>   " Toggle line numbers and fold column for easy copying.
+nnoremap <F5> :TlistToggle<CR>              " Toogle to see a taglist
+nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
 
-autocmd BufWritePre * :%s/\s\+$//e			" Remove trailing whitespace.
+nnoremap <C-^> :tabp<cr>
+nnoremap <^> :tabNext<cr>
+
+autocmd BufWritePre * :%s/\s\+$//e          " Remove trailing whitespace.
 " HTML (tab width 2 chr, no wrapping)
 autocmd FileType html set sw=2
 autocmd FileType html set ts=2
