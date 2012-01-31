@@ -1,18 +1,18 @@
 set nocompatible
 filetype off                        " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key = '<Leader>'
+
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'fancy'
-
-
 
 filetype plugin indent on           " required!
 syntax enable
