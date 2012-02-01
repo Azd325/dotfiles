@@ -6,11 +6,10 @@
 	ci = commit
 	co = checkout
 	br = branch
-	diff = diff --color-words
+	d = diff --color-words
 	s-u = submodule update --init --recursive
 	s-s = submodule status
 	ls = ls-files
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	ll = log --stat --abbrev-commit
 	score = shortlog -sn
