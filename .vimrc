@@ -17,6 +17,8 @@ let g:Powerline_symbols = 'fancy'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
+Bundle 'kevinw/pyflakes'
+Bundle 'jcrocholl/pep8'
 
 filetype plugin indent on           " required!
 syntax enable
