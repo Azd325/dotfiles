@@ -18,7 +18,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
 Bundle 'kevinw/pyflakes'
-Bundle 'jcrocholl/pep8'
+" Need an installed pep8
+Bundle 'nvie/vim-pep8'
 
 filetype plugin indent on           " required!
 syntax enable
@@ -70,7 +71,6 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 autocmd FileType python set textwidth=79
-autocmd FileType python compiler pylint
 " CSS (tab width 2 chr, wrap at 79th char)
 autocmd FileType css set sw=2
 autocmd FileType css set ts=2
