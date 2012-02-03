@@ -18,6 +18,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
 Bundle 'kevinw/pyflakes'
+" Need an installed pep8
 Bundle 'nvie/vim-pep8'
 
 filetype plugin indent on           " required!
