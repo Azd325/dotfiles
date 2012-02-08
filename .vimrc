@@ -55,6 +55,11 @@ nnoremap <F5> :TlistToggle<CR>              " Toogle to see a taglist
 nnoremap <C-^> :tabp<cr>
 nnoremap <^> :tabNext<cr>
 
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
 autocmd BufWritePre * :%s/\s\+$//e          " Remove trailing whitespace.
 " HTML (tab width 2 chr, no wrapping)
 autocmd FileType html set sw=2
