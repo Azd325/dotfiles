@@ -66,7 +66,7 @@ set background=dark
 set ruler                           " enables filetype specific plugins
 set incsearch                       " Highlight matches as you type.
 set hlsearch                        " Higlight matches.
-colorscheme delek
+colorscheme molokai
 
 nnoremap <F2> :tabn<CR>
 nnoremap <F3> :tabp<CR>
