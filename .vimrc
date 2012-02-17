@@ -20,9 +20,12 @@ nnoremap <F6> :NERDTreeToggle<CR>           " Toogle NerdTree
 Bundle 'kevinw/pyflakes'
 " Need an installed pep8
 Bundle 'nvie/vim-pep8'
+Bundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+colorscheme solarized
 
 filetype plugin indent on           " required!
-syntax enable
 
 """ FocusMode
 function! ToggleFocusMode()
@@ -39,7 +42,7 @@ function! ToggleFocusMode()
     set numberwidth=4
     set foldcolumn=0
     set ruler
-    colorscheme molokai "re-call your colorscheme
+    colorscheme solarized "re-call your colorscheme
   endif
 endfunc
 nnoremap <F8> :call ToggleFocusMode()<cr>
@@ -62,11 +65,9 @@ set title                           " Set the terminal's title.
 set visualbell                      " No beeping.
 set nobackup                        " Don't make a backup before overwriting a file.
 set laststatus=2                    " Show the status line all the time.
-set background=dark
 set ruler                           " enables filetype specific plugins
 set incsearch                       " Highlight matches as you type.
 set hlsearch                        " Higlight matches.
-colorscheme molokai
 
 nnoremap <F2> :tabn<CR>
 nnoremap <F3> :tabp<CR>
