@@ -68,6 +68,7 @@ set laststatus=2                    " Show the status line all the time.
 set ruler                           " enables filetype specific plugins
 set incsearch                       " Highlight matches as you type.
 set hlsearch                        " Higlight matches.
+set spell
 
 nnoremap <F2> :tabn<CR>
 nnoremap <F3> :tabp<CR>
