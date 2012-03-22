@@ -52,7 +52,6 @@ set ts=4
 set sts=4
 set et
 set sw=4
-set textwidth=79
 set showcmd                         " Display incomplete commands.
 set showmode                        " Display the current mode.
 set backspace=indent,eol,start      " Intuitive backspacing.
