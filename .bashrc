@@ -106,11 +106,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-if [ -f ~/.bash_prompt ]; then
-    . ~/.bash_prompt
-fi
-
-export WORKON_HOME=~/.virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Work
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PERL_LOCAL_LIB_ROOT="~/perl5";
@@ -118,3 +115,5 @@ export PERL_MB_OPT="--install_base ~/perl5";
 export PERL_MM_OPT="INSTALL_BASE=~/perl5";
 export PERL5LIB="~/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:~/perl5/lib/perl5";
 export PATH="~/perl5/bin:$PATH";
+
+. ~/.bash_prompt
