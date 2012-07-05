@@ -39,3 +39,9 @@
 	enabled = 1
 [pack]
 	threads = 4
+[cola]
+	fontdiff = MesloLGS-DZ-Regular-Powerline,9,-1,5,50,0,0,0,0,0
+[gui]
+	editor = vim
+[format]
+	pretty = oneline
