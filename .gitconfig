@@ -22,7 +22,7 @@
     publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
 [help]
-        autocorrect = 1
+    autocorrect = 1
 [color]
     ui = auto
 [core]
@@ -31,7 +31,6 @@
     whitespace = trailing-space,space-before-tab,indent-with-non-tab
     excludesfile = /home/tim/.gitignore
     autocrlf = input
-    safecrlf = true
 [merge]
     conflictstyle = diff3
     tool = vimdiff
@@ -45,3 +44,5 @@
     editor = vim
 [format]
     pretty = oneline
+[github]
+    user = Azd325
