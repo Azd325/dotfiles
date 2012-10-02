@@ -106,6 +106,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# sudo apt-get install source-highlight
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Work
 source /usr/local/bin/virtualenvwrapper.sh
@@ -127,4 +131,3 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 # pip bash completion end
-
