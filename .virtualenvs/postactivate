@@ -2,3 +2,6 @@
 # This hook is run after every virtualenv is activated.
 
 source "$WORKON_HOME/extras/django_bash_completion"
+export GEM_HOME="$VIRTUAL_ENV/gems"
+export GEM_PATH=""
+export PATH=$PATH:"$GEM_HOME/bin"
