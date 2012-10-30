@@ -131,7 +131,7 @@ complete -o default -F _pip_completion pip
 # Bash Powerline
 function _update_ps1()
 {
-   export PS1="$(~/powerline-bash.py $?)"
+   export PS1="$(~/bin/powerline-bash/powerline-bash.py $?)"
 }
 export PROMPT_COMMAND="_update_ps1"
 
