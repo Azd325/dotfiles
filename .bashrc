@@ -106,21 +106,17 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# sudo apt-get install source-highlight
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=' -R '
-
+# Python Virtualevns + wrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Work
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Perl settings
 export PERL_LOCAL_LIB_ROOT="~/perl5";
 export PERL_MB_OPT="--install_base ~/perl5";
 export PERL_MM_OPT="INSTALL_BASE=~/perl5";
 export PERL5LIB="~/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:~/perl5/lib/perl5";
 export PATH="~/perl5/bin:$PATH";
-
-. ~/.bash_prompt
 
 # pip bash completion start
 _pip_completion()
@@ -131,3 +127,11 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 # pip bash completion end
+
+# Bash Powerline
+function _update_ps1()
+{
+   export PS1="$(~/powerline-bash.py $?)"
+}
+export PROMPT_COMMAND="_update_ps1"
+
