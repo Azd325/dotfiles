@@ -1,4 +1,5 @@
 import Control.Monad (liftM2)
+import Data.List
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -8,42 +9,29 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
--- The preferred terminal program, which is used in a binding below and by
--- certain contrib modules.
---
 myTerminal = "gnome-terminal"
--- modMask lets you specify which modkey you want to use. The default
--- is mod1Mask ("left alt").  You may also consider using mod3Mask
--- ("right alt"), which does not conflict with emacs keybindings. The
--- "windows key" is usually mod4Mask.
---
 myModMask = mod4Mask
 myNormalBorderColor = "#abc123"
 myFocusedBorderColor = "#456def"
--- Width of the window border in pixels.
---
+
 myBorderWidth = 3
 
---myManageHook = composeAll
---    [ isFullscreen --> (doF W.focusDown <+> doFullFloat)
---    , className =? "Gimp"      --> doFloat
---    , className =? "Xmessage"  --> doFloat
---    , manageDocks
---    ]
-
-myWorkspaces = ["web","chat","dev","media","browse"]
+myWorkspaces = ["web","chat","dev","media","browse", "6", "7", "8", "9"]
 
 myManageHook = composeAll . concat $
-    [ -- The applications that go to web
-      [ className =? b --> viewShift "web" | b <- myClassWebShifts ]
-      -- The applications that go to chat
-    , [ resource =? c --> doF (W.shift "chat") | c <- myClassChatShifts ]
-    , [ className =? "Git-cola"   --> doFloat ]
+    [
+        [className =? c   --> doShift "web" |    c <- myWebApps]
+    ,   [className =? c   --> doShift "chat" |    c <- myChatApps]
+    ,   [className =? c   --> doShift "dev" |    c <- myDevApps]
+    ,   [className =? c   --> doShift "media" |    c <- myMediaApps]
+    ,   [className =? c   --> doShift "browse" |    c <- myBrowseApps]
     ]
     where
-      viewShift = doF . liftM2 (.) W.greedyView W.shift
-      myClassWebShifts  = ["Firefox", "Google Chrome"]
-      myClassChatShifts = ["Skype"]
+        myWebApps = ["Firefox","Google-chrome"]
+        myChatApps = ["Skype"]
+        myDevApps = ["subl"]
+        myMediaApps = ["vlc", "clementine"]
+        myBrowseApps = ["thunar"]
 
 main = do
     xmproc <- spawnPipe "xmobar"
