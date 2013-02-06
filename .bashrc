@@ -109,7 +109,7 @@ fi
 # Python Virtualevns + wrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Work
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # Perl settings
 export PERL_LOCAL_LIB_ROOT="~/perl5";
