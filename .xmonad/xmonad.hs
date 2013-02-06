@@ -9,14 +9,14 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
-myTerminal = "gnome-terminal"
+myTerminal = "urxvt"
 myModMask = mod4Mask
-myNormalBorderColor = "#abc123"
-myFocusedBorderColor = "#456def"
+myNormalBorderColor = "#bada55"
+myFocusedBorderColor = "#ed1c25"
 
 myBorderWidth = 3
 
-myWorkspaces = ["web","chat","dev","media","browse", "6", "7", "8", "9"]
+myWorkspaces = ["web","chat","dev","media","browse"] ++ map show [6..9]
 
 myManageHook = composeAll . concat $
     [
