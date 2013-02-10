@@ -9,7 +9,7 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
-myTerminal = "urxvt"
+myTerminal = "terminator"
 myModMask = mod4Mask
 myNormalBorderColor = "#bada55"
 myFocusedBorderColor = "#ed1c25"
