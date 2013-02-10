@@ -14,7 +14,7 @@ myModMask = mod4Mask
 myNormalBorderColor = "#bada55"
 myFocusedBorderColor = "#ed1c25"
 
-myBorderWidth = 3
+myBorderWidth = 1
 
 myWorkspaces = ["web","chat","dev","media","browse"] ++ map show [6..9]
 
