@@ -135,3 +135,4 @@ function _update_ps1()
 }
 export PROMPT_COMMAND="_update_ps1"
 
+export PATH=/home/tim/.cabal/bin:/home/tim/local/bin:/home/foo/.cabal/bin:/home/foo/local/bin:/home/tim/perl5/bin:/home/tim/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/cuda/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
