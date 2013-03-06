@@ -23,16 +23,10 @@ myManageHook = composeAll . concat $
     [
         [className =? c   --> doShift "web" |    c <- myWebApps]
     ,   [className =? c   --> doShift "chat" |    c <- myChatApps]
-    ,   [className =? c   --> doShift "dev" |    c <- myDevApps]
-    ,   [className =? c   --> doShift "media" |    c <- myMediaApps]
-    ,   [className =? c   --> doShift "browse" |    c <- myBrowseApps]
     ]
     where
         myWebApps = ["Firefox","Google-chrome"]
         myChatApps = ["Skype"]
-        myDevApps = ["subl"]
-        myMediaApps = ["vlc", "clementine"]
-        myBrowseApps = ["thunar"]
 
 main = do
     xmproc <- spawnPipe "xmobar"
