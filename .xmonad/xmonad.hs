@@ -2,6 +2,7 @@ import Control.Monad (liftM2)
 import Data.List
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers (isFullscreen, isDialog,  doFullFloat, doCenterFloat)
 import qualified XMonad.StackSet as W
@@ -35,8 +36,9 @@ myManageHook = composeAll . concat $
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $ defaultConfig
+    xmonad $ ewmh defaultConfig
         { workspaces = myWorkspaces
+        , handleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
         , manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
                         <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
