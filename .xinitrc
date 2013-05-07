@@ -1,6 +1,5 @@
-#!/bin/bash
-export BROWSER=google-chrome
-export EDITOR=subl
+xsetroot -cursor_name left_ptr
+setxkbmap -layout de
 
 # Start a D-Bus session
 source /etc/X11/xinit/xinitrc.d/30-dbus
@@ -12,17 +11,9 @@ export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
 
-
-udiskie &
-xsetroot -cursor_name left_ptr
-setxkbmap -layout de
-
+xcompmgr -c &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 16 &
 thunar --daemon &
-xcompmgr &
-nitrogen --restore &
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype pixel --width 76 --transparent true --alpha 0 --tint 0x000000 --height 16 &
-volumeicon -b &
-batti &
+xfce4-power-manager &
 nm-applet --sm-disable &
-
-exec dbus-launch --sh-syntax --exit-with-session xmonad
+exec xmonad 
