@@ -23,10 +23,11 @@ myManageHook = composeAll . concat $
     [
         [className =? c   --> doShift "web" |    c <- myWebApps]
     ,   [className =? c   --> doShift "chat" |    c <- myChatApps]
+    ,   [isFullscreen --> (doF W.focusDown <+> doFullFloat)]
     ]
     where
-        myWebApps = ["Firefox","Google-chrome"]
-        myChatApps = ["Skype"]
+        myWebApps = ["Chromium"]
+        myChatApps = ["Skype", "Pidgin"]
 
 main = do
     xmproc <- spawnPipe "xmobar"
@@ -50,3 +51,4 @@ main = do
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "scrot")
         ]
+
