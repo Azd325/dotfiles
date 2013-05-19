@@ -24,7 +24,6 @@ myTerminal = "terminator"
 myModMask = mod4Mask
 myNormalBorderColor = "#bada55"
 myFocusedBorderColor = "#ed1c25"
-myBorderWidth = 1
 
 ------------------------------------------------------------------------
 -- Workspaces
@@ -81,6 +80,9 @@ tabConfig = defaultTheme {
     inactiveTextColor = "#EEEEEE",
     inactiveColor = "#000000"
 }
+
+-- Width of the window border in pixels.
+myBorderWidth = 1
 
 main = do
     xmproc <- spawnPipe "xmobar"
