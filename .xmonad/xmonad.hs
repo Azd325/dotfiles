@@ -21,8 +21,6 @@ import Data.List
 --
 myTerminal = "terminator"
 
-myModMask = mod4Mask
-
 ------------------------------------------------------------------------
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
@@ -97,26 +95,89 @@ xmobarCurrentWorkspaceColor = "#CEFFAC"
 -- Width of the window border in pixels.
 myBorderWidth = 1
 
-main = do
-    xmproc <- spawnPipe "xmobar"
-    xmonad $ defaultConfig
-        { workspaces = myWorkspaces
-        , handleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
-        , manageHook = manageDocks <+> myManageHook -- make sure to include myManageHook definition from above
-                        <+> manageHook defaultConfig
-        , layoutHook = smartBorders $ myLayout
-        , logHook = dynamicLogWithPP xmobarPP
-                        { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "green" "" . shorten 50
-                        }
-        , modMask = myModMask
-        , terminal = myTerminal
-        , normalBorderColor = myNormalBorderColor
-        ,focusedBorderColor = myFocusedBorderColor
-        , borderWidth = myBorderWidth
-        } `additionalKeys`
-        [ ((mod4Mask .|. shiftMask, xK_l), spawn "slock") -- put lock screen on mod + shift + l
-        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        , ((0, xK_Print), spawn "scrot")
-        ]
+------------------------------------------------------------------------
+-- Key bindings
+--
+-- modMask lets you specify which modkey you want to use. The default
+-- is mod1Mask ("left alt").  You may also consider using mod3Mask
+-- ("right alt"), which does not conflict with emacs keybindings. The
+-- "windows key" is usually mod4Mask.
+--
+myModMask = mod4Mask
 
+------------------------------------------------------------------------
+-- Mouse bindings
+--
+-- Focus rules
+-- True if your focus should follow your mouse cursor.
+myFocusFollowsMouse :: Bool
+myFocusFollowsMouse = True
+
+------------------------------------------------------------------------
+-- Status bars and logging
+-- Perform an arbitrary action on each internal state change or X event.
+-- See the 'DynamicLog' extension for examples.
+--
+-- To emulate dwm's status bar
+--
+-- > logHook = dynamicLogDzen
+--
+ 
+
+------------------------------------------------------------------------
+-- Startup hook
+-- Perform an arbitrary action each time xmonad starts or is restarted
+-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
+-- per-workspace layout choices.
+--
+-- By default, do nothing.
+myStartupHook = return ()
+
+------------------------------------------------------------------------
+-- Run xmonad with all the defaults we set up.
+--
+main = do
+  xmproc <- spawnPipe "xmobar"
+  xmonad $ defaults {
+      logHook = dynamicLogWithPP $ xmobarPP {
+            ppOutput = hPutStrLn xmproc
+          , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
+          , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
+          , ppSep = "   "}
+      , manageHook = manageDocks <+> myManageHook
+      --, startupHook = setWMName "LG3D"
+  }
+ 
+
+------------------------------------------------------------------------
+-- Combine it all together
+-- A structure containing your configuration settings, overriding
+-- fields in the default config. Any you don't override, will 
+-- use the defaults defined in xmonad/XMonad/Config.hs
+-- 
+-- No need to modify this.
+--
+defaults = defaultConfig {
+    -- simple stuff
+    terminal           = myTerminal,
+    focusFollowsMouse  = myFocusFollowsMouse,
+    borderWidth        = myBorderWidth,
+    modMask            = myModMask,
+    workspaces         = myWorkspaces,
+    normalBorderColor  = myNormalBorderColor,
+    focusedBorderColor = myFocusedBorderColor,
+ 
+    -- key bindings
+    --keys               = myKeys,
+    --mouseBindings      = myMouseBindings,
+ 
+    -- hooks, layouts
+    layoutHook         = smartBorders $ myLayout,
+    manageHook         = myManageHook,
+    startupHook        = myStartupHook
+}
+
+--  Keys to be implement
+--        [ ((mod4Mask .|. shiftMask, xK_l), spawn "slock") -- put lock screen on mod + shift + l
+--        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
+--        , ((0, xK_Print), spawn "scrot")
