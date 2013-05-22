@@ -22,8 +22,6 @@ import Data.List
 myTerminal = "terminator"
 
 myModMask = mod4Mask
-myNormalBorderColor = "#bada55"
-myFocusedBorderColor = "#ed1c25"
 
 ------------------------------------------------------------------------
 -- Workspaces
@@ -46,11 +44,12 @@ myWorkspaces = ["1:term","2:web","3:code","4:chat","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"       --> doShift "2:web"
-    , className =? "Skype"          --> doShift "4:chat"
-    , resource  =? "desktop_window" --> doIgnore
-    , className =? "Steam"          --> doFloat
-    , className =? "Gimp"           --> doFloat
+    [ className =? "Chromium"                       --> doShift "2:web"
+    , className =? "Skype"                          --> doShift "4:chat"
+    , resource  =? "desktop_window"                 --> doIgnore
+    , className =? "Steam"                          --> doFloat
+    , className =? "Gimp"                           --> doFloat
+    , className =? "net-minecraft-LauncherFrame"    --> doFloat
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)
     ]
 
@@ -72,6 +71,13 @@ myLayout = avoidStruts (
     spiral (6/7)) |||
     noBorders (fullscreenFull Full)
 
+------------------------------------------------------------------------
+-- Colors and borders
+-- Currently based on the ir_black theme.
+--
+myNormalBorderColor = "#bada55"
+myFocusedBorderColor = "#ed1c25"
+
 -- Colors for text and backgrounds of each tab when in "Tabbed" layout.
 tabConfig = defaultTheme {
     activeBorderColor = "#7C7C7C",
@@ -81,6 +87,12 @@ tabConfig = defaultTheme {
     inactiveTextColor = "#EEEEEE",
     inactiveColor = "#000000"
 }
+
+-- Color of current window title in xmobar.
+xmobarTitleColor = "#FFB6B0"
+
+-- Color of current workspace in xmobar.
+xmobarCurrentWorkspaceColor = "#CEFFAC"
 
 -- Width of the window border in pixels.
 myBorderWidth = 1
