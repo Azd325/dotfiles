@@ -9,10 +9,9 @@ import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
-import qualified XMonad.StackSet as W
 import Control.Monad (liftM2)
-import Data.List
-
+import qualified Data.Map        as M
+import qualified XMonad.StackSet as W
 
 ------------------------------------------------------------------------
 -- Terminal
@@ -113,6 +112,23 @@ myModMask = mod4Mask
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
+myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
+    [
+    -- mod-button1, Set the window to floating mode and move by dragging
+    ((modMask, button1),
+     (\w -> focus w >> mouseMoveWindow w))
+
+    -- mod-button2, Raise the window to the top of the stack
+    , ((modMask, button2),
+       (\w -> focus w >> windows W.swapMaster))
+
+    -- mod-button3, Set the window to floating mode and resize by dragging
+    , ((modMask, button3),
+       (\w -> focus w >> mouseResizeWindow w))
+
+    -- you may also bind events to the mouse scroll wheel (button4 and button5)
+    ]
+
 ------------------------------------------------------------------------
 -- Status bars and logging
 -- Perform an arbitrary action on each internal state change or X event.
@@ -169,7 +185,7 @@ defaults = defaultConfig {
  
     -- key bindings
     --keys               = myKeys,
-    --mouseBindings      = myMouseBindings,
+    mouseBindings      = myMouseBindings,
  
     -- hooks, layouts
     layoutHook         = smartBorders $ myLayout,
