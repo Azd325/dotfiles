@@ -116,7 +116,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Lock the screen using slock.
   , ((modMask .|. controlMask, xK_l),
-     spawn "slock")
+     spawn "xscreensaver-command --lock")
 
   -- Take full screenshot in multi-head mode.
   -- That is, take a screenshot of everything you see.
@@ -133,6 +133,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Increase volume.
   , ((modMask .|. controlMask, xK_k),
      spawn "amixer -q set Master 10%+")
+
+  , ((mod4Mask, xK_p), spawn "dmenu_run  -nb white")
 
   --------------------------------------------------------------------
   -- "Standard" xmonad key bindings
@@ -285,7 +287,7 @@ main = do
           , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
           , ppSep = "   "}
       , manageHook = manageDocks <+> myManageHook
-      --, startupHook = setWMName "LG3D"
+      , handleEventHook    = fullscreenEventHook
   }
  
 
