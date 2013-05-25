@@ -16,4 +16,5 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 thunar --daemon &
 xfce4-power-manager &
 nm-applet --sm-disable &
+xscreensaver -no-splash &
 exec xmonad 
