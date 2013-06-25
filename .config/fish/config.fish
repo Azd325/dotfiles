@@ -1,3 +1,5 @@
+set -g -x fish_greeting 'Hey Tim'
+
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
@@ -16,6 +18,9 @@ set magenta (set_color magenta)
 set yellow (set_color yellow)
 set green (set_color green)
 set gray (set_color -o black)
+
+set -x PATH ~/.cabal/bin $PATH
+set -x PATH ~/.gem/ruby/2.0.0/bin/ $PATH
 
 
 function fish_prompt
