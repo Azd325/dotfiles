@@ -134,7 +134,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask .|. controlMask, xK_k),
      spawn "amixer -q set Master 10%+")
 
-  , ((mod4Mask, xK_p), spawn "dmenu_run  -nb white")
+  , ((mod4Mask, xK_p), spawn "dmenu_run  -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#cb4b16'")
 
   --------------------------------------------------------------------
   -- "Standard" xmonad key bindings
