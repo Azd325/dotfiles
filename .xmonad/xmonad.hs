@@ -19,7 +19,7 @@ import qualified XMonad.StackSet as W
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal = "terminator"
+myTerminal = "lxterminal"
 
 ------------------------------------------------------------------------
 -- Workspaces
