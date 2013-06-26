@@ -41,4 +41,8 @@ function fish_prompt
 
    printf '%s ' (__fish_git_prompt)
    set_color normal
+
+   if set -q VIRTUAL_ENV
+       echo -n -s (set_color cyan) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+   end
 end
