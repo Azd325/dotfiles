@@ -1,4 +1,4 @@
-set -g -x fish_greeting 'Hey Tim'
+set fish_greeting ""
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -21,6 +21,11 @@ set gray (set_color -o black)
 
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/.gem/ruby/2.0.0/bin/ $PATH
+
+set -x EDITOR "vim"
+set -x BROWSER "chromium"
+set -x CHROMIUM_USER_FLAGS "--disk-cache-size=/tmp/cache --disk-cache-size=50000000 --disable-gl-error-limit"
+set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 . ~/.config/fish/virtual.fish
 
