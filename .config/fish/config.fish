@@ -21,6 +21,7 @@ set gray (set_color -o black)
 
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/.gem/ruby/2.0.0/bin/ $PATH
+set -x PATH /opt/android-sdk/platform-tools/ $PATH
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
