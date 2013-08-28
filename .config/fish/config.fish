@@ -22,6 +22,11 @@ set gray (set_color -o black)
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/.gem/ruby/2.0.0/bin/ $PATH
 set -x PATH /opt/android-sdk/platform-tools/ $PATH
+# For normal compiling https://wiki.archlinux.org/index.php/Ccache
+set -x PATH /usr/lib/colorgcc/bin/ $PATH
+set -x PATH /usr/bin/vendor_perl/ $PATH
+
+set -x CCACHE_PATH /usr/bin
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
