@@ -9,7 +9,6 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.Grid
 import XMonad.Layout.ResizableTile
-import XMonad.Layout.IM
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Circle
 import XMonad.Layout.Tabbed
