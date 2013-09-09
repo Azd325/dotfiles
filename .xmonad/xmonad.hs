@@ -7,6 +7,11 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
+import XMonad.Layout.Grid
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.IM
+import XMonad.Layout.ThreeColumns
+import XMonad.Layout.Circle
 import XMonad.Layout.Tabbed
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
@@ -61,13 +66,37 @@ myManageHook = composeAll
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (
-    Tall 1 (3/100) (1/2) |||
-    Mirror (Tall 1 (3/100) (1/2)) |||
-    tabbed shrinkText tabConfig |||
-    Full |||
-    spiral (6/7)) |||
-    noBorders (fullscreenFull Full)
+myLayout = smartBorders(avoidStruts(
+  -- ResizableTall layout has a large master window on the left,
+  -- and remaining windows tile on the right. By default each area
+  -- takes up half the screen, but you can resize using "super-h" and
+  -- "super-l".
+  ResizableTall 1 (3/100) (1/2) []
+
+  -- Mirrored variation of ResizableTall. In this layout, the large
+  -- master window is at the top, and remaining windows tile at the
+  -- bottom of the screen. Can be resized as described above.
+  ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
+
+  -- Full layout makes every window full screen. When you toggle the
+  -- active window, it will bring the active window to the front.
+  ||| noBorders Full
+
+  -- Grid layout tries to equally distribute windows in the available
+  -- space, increasing the number of columns and rows as necessary.
+  -- Master window is at top left.
+  ||| Grid
+
+  -- ThreeColMid layout puts the large master window in the center
+  -- of the screen. As configured below, by default it takes of 3/4 of
+  -- the available space. Remaining windows tile to both the left and
+  -- right of the master window. You can resize using "super-h" and
+  -- "super-l".
+  ||| ThreeColMid 1 (3/100) (3/4)
+
+  -- Circle layout places the master window in the center of the screen.
+  -- Remaining windows appear in a circle around it
+  ||| Circle))
 
 ------------------------------------------------------------------------
 -- Colors and borders
@@ -110,7 +139,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Custom key bindings
   --
 
-  -- Start a terminal.  Terminal to start is specified by myTerminal variable.
+  -- Start a terminal.  Terminal to start is specified by myTerminal variablüe.
   [ ((modMask .|. shiftMask, xK_Return),
      spawn $ XMonad.terminal conf)
 
@@ -216,7 +245,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
      restart "xmonad" True)
   ]
   ++
- 
+
   -- mod-[1..9], Switch to workspace N
   -- mod-shift-[1..9], Move client to workspace N
   [((m .|. modMask, k), windows $ f i)
@@ -264,7 +293,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --
 -- > logHook = dynamicLogDzen
 --
- 
+
 
 ------------------------------------------------------------------------
 -- Startup hook
@@ -289,14 +318,14 @@ main = do
       , manageHook = manageDocks <+> myManageHook
       , handleEventHook    = fullscreenEventHook
   }
- 
+
 
 ------------------------------------------------------------------------
 -- Combine it all together
 -- A structure containing your configuration settings, overriding
--- fields in the default config. Any you don't override, will 
+-- fields in the default config. Any you don't override, will
 -- use the defaults defined in xmonad/XMonad/Config.hs
--- 
+--
 -- No need to modify this.
 --
 defaults = defaultConfig {
@@ -308,11 +337,11 @@ defaults = defaultConfig {
     workspaces         = myWorkspaces,
     normalBorderColor  = myNormalBorderColor,
     focusedBorderColor = myFocusedBorderColor,
- 
+
     -- key bindings
     keys               = myKeys,
     mouseBindings      = myMouseBindings,
- 
+
     -- hooks, layouts
     layoutHook         = smartBorders $ myLayout,
     manageHook         = myManageHook,
