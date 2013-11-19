@@ -34,6 +34,8 @@ set -x CHROMIUM_USER_FLAGS "--disk-cache-size=/tmp/cache --disk-cache-size=50000
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 . ~/.config/fish/virtual.fish
+. ~/.config/fish/global_requirements.fish
+. ~/.config/fish/auto_activation.fish
 
 function fish_prompt
    set_color yellow
@@ -56,4 +58,11 @@ function fish_prompt
    if set -q VIRTUAL_ENV
        echo -n -s (set_color cyan) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
    end
+end
+
+# start X at login
+if status --is-login
+    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+        exec startx
+    end
 end
