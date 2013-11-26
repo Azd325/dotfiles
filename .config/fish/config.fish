@@ -30,7 +30,6 @@ set -x CCACHE_PATH /usr/bin
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
-set -x CHROMIUM_USER_FLAGS "--disk-cache-size=/tmp/cache --disk-cache-size=50000000 --disable-gl-error-limit"
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 . ~/.config/fish/virtual.fish
