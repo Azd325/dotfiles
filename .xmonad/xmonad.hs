@@ -239,6 +239,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask .|. shiftMask, xK_q),
      io (exitWith ExitSuccess))
 
+    ,((modMask, xK_b     ), sendMessage ToggleStruts)
+
   -- Restart xmonad.
   , ((modMask, xK_q),
      restart "xmonad" True)
@@ -315,7 +317,7 @@ main = do
           , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
           , ppSep = "   "}
       , manageHook = manageDocks <+> myManageHook
-      , handleEventHook    = fullscreenEventHook
+      , handleEventHook = fullscreenEventHook <+> docksEventHook
   }
 
 
