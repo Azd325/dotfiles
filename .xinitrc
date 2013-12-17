@@ -11,10 +11,10 @@ export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
 
-xcompmgr -c &
+pulseaudio --start
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --transparent true --alpha 0 --tint 0x000000 --height 16 &
 thunar --daemon &
 xfce4-power-manager &
 nm-applet --sm-disable &
 xscreensaver -no-splash &
-exec xmonad 
+exec xmonad
