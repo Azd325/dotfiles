@@ -26,15 +26,34 @@ set -x PATH /opt/android-sdk/platform-tools/ $PATH
 set -x PATH /usr/lib/colorgcc/bin/ $PATH
 set -x PATH /usr/bin/vendor_perl/ $PATH
 
+set -x GOPATH "$HOME/tim/go"
+
 set -x CCACHE_PATH /usr/bin
 
-set -x EDITOR "vim"
-set -x BROWSER "chromium"
+set -x TERM xterm-256color
+set -x EDITOR vim
+set -x BROWSER "google-chrome-beta"
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
-. ~/.config/fish/virtual.fish
-. ~/.config/fish/global_requirements.fish
-. ~/.config/fish/auto_activation.fish
+# Activate Virtualfish
+# https://github.com/adambrenecki/virtualfish
+if test -f ~/.config/fish/virtual.fish
+    . ~/.config/fish/virtual.fish
+    . ~/.config/fish/global_requirements.fish
+    . ~/.config/fish/auto_activation.fish
+    set -x VIRTUALFISH_HOME ~/.virtualenvs
+    set -x VIRTUALFISH_COMPAT_ALIASES 1
+end
+
+# Pip settings
+set -x PIP_REQUIRE_VIRTUALENV 1
+set -x PIP_RESPECT_VIRTUALENV 1
+set -x PIP_USE_WHEEL true
+set -x PIP_WHEEL_DIR ~/.pip/wheels
+set -x PIP_FIND_LINKS ~/.pip/wheels
+set -x PIP_LOG_FILE ~/.cache/pip-log.txt
+set -x PIP_DOWNLOAD_CACHE ~/.cache/pip
+
 
 function fish_prompt
    set_color yellow
@@ -64,4 +83,9 @@ if status --is-login
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
         exec startx
     end
+end
+
+
+function myfunc --on-event virtualenv_did_activate
+    echo "The virtualenv" (basename $VIRTUAL_ENV) "was activated"
 end
