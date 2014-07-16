@@ -1,5 +1,5 @@
 [user]
-    name = Tim Kleinschmidt
+	name = Tim Kleinschmidt
     email = tim.kleinschmidt@gmail.com
 [alias]
     st = status
@@ -30,7 +30,8 @@
     editor = vim
     whitespace = trailing-space,space-before-tab,indent-with-non-tab
     excludesfile = /home/tim/.gitignore
-    autocrlf = input
+	autocrlf = false
+	filemode = false
 [merge]
     conflictstyle = diff3
     tool = vimdiff
@@ -39,10 +40,14 @@
 [pack]
     threads = 4
 [cola]
-    fontdiff = MesloLGS-DZ-Regular-Powerline,9,-1,5,50,0,0,0,0,0
+	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
 [gui]
     editor = vim
 [format]
     pretty = oneline
 [github]
     user = Azd325
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
