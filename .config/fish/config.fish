@@ -89,3 +89,5 @@ end
 function myfunc --on-event virtualenv_did_activate
     echo "The virtualenv" (basename $VIRTUAL_ENV) "was activated"
 end
+
+test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
