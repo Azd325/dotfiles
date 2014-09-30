@@ -1,0 +1,7 @@
+set -U EDITOR "vim"
+set -U BROWSER "google-chrome-stable"
+set -U _JAVA_AWT_WM_NONREPARENTING 1
+set -U JAVA_HOME /usr/lib/jvm/java-default-runtime
+set -U VIRTUALFISH_COMPAT_ALIASES 1
+set -U GOPATH "$HOME/tim/go"
+set -U CCACHE_PATH /usr/bin
