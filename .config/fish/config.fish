@@ -8,7 +8,7 @@ set fish_theme custom
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
 
-set fish_plugins archlinux django extract python pyenv tmux vundler
+set fish_plugins archlinux django extract python pyenv tmux vundle
 
 # Path to your custom folder (default path is $FISH/custom)
 set fish_custom $HOME/.config/fish/custom
