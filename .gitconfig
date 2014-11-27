@@ -1,52 +1,52 @@
 [user]
 	name = Tim Kleinschmidt
-    email = tim.kleinschmidt@gmail.com
+    	email = tim.kleinschmidt@gmail.com
 [alias]
-    st = status
-    ci = commit
-    co = checkout
-    br = branch
-    d = diff --color-words
-    s-u = submodule update --init --recursive
-    s-s = submodule status
-    ls = ls-files
-    l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-    ll = log --stat --abbrev-commit
-    score = shortlog -sn
-    switch = !legit switch \"$@\"
-    branches = !legit branches
-    sprout = !legit sprout \"$@\"
-    unpublish = !legit unpublish \"$@\"
-    harvest = !legit harvest \"$@\"
-    sync = !legit sync \"$@\"
-    publish = !legit publish \"$@\"
-    graft = !legit graft \"$@\"
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	d = diff --color-words
+	s-u = submodule update --init --recursive
+	s-s = submodule status
+	ls = ls-files
+	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	score = shortlog -sn
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 [help]
-    autocorrect = 1
+    	autocorrect = 1
 [color]
-    ui = auto
+    	ui = auto
 [core]
-    pager = less -r
-    editor = vim
-    whitespace = trailing-space,space-before-tab,indent-with-non-tab
-    excludesfile = /home/tim/.gitignore
+	pager = less -r
+	editor = vim
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	excludesfile = /home/tim/.gitignore
 	autocrlf = false
 	filemode = false
 [merge]
-    conflictstyle = diff3
-    tool = vimdiff
+	conflictstyle = diff3
+	tool = vimdiff
 [rerere]
-    enabled = 1
+    	enabled = 1
 [pack]
-    threads = 4
+    	threads = 4
 [cola]
 	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
 [gui]
-    editor = vim
+    	editor = vim
 [format]
-    pretty = oneline
+    	pretty = oneline
 [github]
-    user = Azd325
+    	user = Azd325
 [push]
 	default = simple
 [branch]
