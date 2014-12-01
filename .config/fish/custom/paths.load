@@ -3,11 +3,5 @@ set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/.gem/ruby/2.0.0/bin/ $PATH
 set -x PATH ~/.gem/ruby/2.1.0/bin/ $PATH
 set -x PATH /usr/bin/core_perl/ $PATH
-set -x PATH /opt/android-sdk/platform-tools/ $PATH
-# For normal compiling https://wiki.archlinux.org/index.php/Ccache
-set -x PATH /usr/lib/colorgcc/bin/ $PATH
 set -x PATH /usr/bin/vendor_perl/ $PATH
-
-set -x GOPATH "$HOME/tim/go"
-
-set -x CCACHE_PATH /usr/bin
+set -x PATH ~/.scripts/ $PATH
