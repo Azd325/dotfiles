@@ -20,4 +20,4 @@ nitrogen --restore
 xsetroot -cursor_name left_ptr
 sxhkd &
 gnome-terminal &
-panel &
+panel_bspwm &
