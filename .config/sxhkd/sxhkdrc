@@ -84,7 +84,7 @@ super + Return
 	gnome-terminal
 
 super + space
-	dmenu_run
+	dmenu_run -nb "#34322e" -nf "#a3a6ab" -sb "#5c5955" -sf "#f6f9ff" -h 24 -dim 0.5 -q
 
 # make sxhkd reload its configuration files:
 super + Escape
