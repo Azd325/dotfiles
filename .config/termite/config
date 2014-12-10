@@ -3,41 +3,37 @@ font = DejavuSansMono 12
 
 [colors]
 
-# special
+# Base16 Eighties
+# Scheme: Chris Kempson (http://chriskempson.com)
+
 foreground      = #d3d0c8
 foreground_bold = #d3d0c8
 cursor          = #d3d0c8
 background      = #2d2d2d
 
-# black
+# 16 color space
 color0  = #2d2d2d
-color8  = #747369
-
-# red
 color1  = #f2777a
-color9  = #f2777a
-
-# green
 color2  = #99cc99
-color10 = #99cc99
-
-# yellow
 color3  = #ffcc66
-color11 = #ffcc66
-
-# blue
 color4  = #6699cc
-color12 = #6699cc
-
-# magenta
 color5  = #cc99cc
-color13 = #cc99cc
-
-# cyan
 color6  = #66cccc
-color14 = #66cccc
-
-# white
 color7  = #d3d0c8
+color8  = #747369
+color9  = #f2777a
+color10 = #99cc99
+color11 = #ffcc66
+color12 = #6699cc
+color13 = #cc99cc
+color14 = #66cccc
 color15 = #f2f0ec
+
+# 256 color space
+color16 = #f99157
+color17 = #d27b53
+color18 = #393939
+color19 = #515151
+color20 = #a09f93
+color21 = #e8e6df
 
