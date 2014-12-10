@@ -10,14 +10,18 @@ bspc config focus_by_distance   true
 
 bspc monitor -d term web editor misc music
 
-bspc rule -a Gimp desktop=^8 follow=on floating=on
 bspc rule -a Chromium desktop=^2
 bspc rule -a nitrogen floating=on center=true
 
 # Autostart apps
-compton &
+
+# Read .Xresources
+xrdb -merge ~/.Xresources &
+xsetroot -cursor_name left_ptr &
+# Start Compton composting manager
+compton --config ~/.config/compton.conf -b
+
 nitrogen --restore
-xsetroot -cursor_name left_ptr
 sxhkd &
 gnome-terminal &
-panel_bspwm &
+bspwm_panel.sh &

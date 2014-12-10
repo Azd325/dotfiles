@@ -81,7 +81,7 @@ super + @button{1-3}
 #
 
 super + Return
-	gnome-terminal
+	termite
 
 super + space
 	dmenu_run -nb "#34322e" -nf "#a3a6ab" -sb "#5c5955" -sf "#f6f9ff" -h 24 -dim 0.5 -q
