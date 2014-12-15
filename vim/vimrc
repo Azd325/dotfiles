@@ -1,0 +1,100 @@
+set shell=/bin/bash
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" The bundles you install will be listed here
+
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'chriskempson/base16-vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'mattn/livestyle-vim'
+
+filetype plugin indent on
+
+" The rest of your config follows here
+
+" Powerline setup
+set laststatus=2
+
+" Nerdtree setup
+map <C-n> :NERDTreeToggle<CR>
+
+" Python Mode setup
+" Activate rope
+" Keys:
+" K             Show python docs
+"   Rope autocomplete
+" g     Rope goto definition
+" d     Rope show documentation
+" f     Rope find occurrences
+" b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+let g:pymode_rope = 0
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+"Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = 'b'
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't autofold code
+let g:pymode_folding = 0
+
+
+" Other settigns
+
+" Use l to toggle display of whitespace
+nmap l :set list!
+" And set some nice chars to do it with
+set listchars=tab:»\ ,eol:¬
+
+" automatically change window's cwd to file's dir
+set autochdir
+
+" I'm prefer spaces to tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set background=dark
+colorscheme base16-eighties
+let base16colorspace=256
+
+" Css autocomplete
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" Theme
+syntax enable
+" Enable 256 colors
+set t_Co=256
