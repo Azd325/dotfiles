@@ -15,7 +15,8 @@
             "~/.config/fish/config.fish" : "config/fish/config.fish",
             "~/.gitconfig"               : "gitconfig",
             "~/.gitignore"               : "gitignore",
-            "~/.tmux.conf"               : "tmux.conf"
+            "~/.tmux.conf"               : "tmux.conf",
+            "~/.xinitrc"                 : "xinitrc"
         }
     },
     {
