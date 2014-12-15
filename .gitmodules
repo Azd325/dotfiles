@@ -1,3 +1,6 @@
 [submodule ".vim"]
 	path = .vim
 	url = git@github.com:Azd325/vim-config.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
