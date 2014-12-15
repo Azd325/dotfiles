@@ -1,6 +1,6 @@
 - shell: 
     - 
-      - "mkdir -p ~/{.pip,.config/{fish,bspwm,sxhkd,termite},.cache/pip,.vim/bundle}"
+      - "mkdir -p ~/{.pip,.config/{fish,bspwm,sxhkd,termite},.cache/pip,.subversion,.vim/bundle}"
       - "Checking folder structure exists"
     - 
       - "git submodule update --init --recursive"
@@ -14,6 +14,7 @@
     - "~/.config/sxhkd"
     - "~/.config/termite"
     - "~/.pip"
+    - "~/.subversion"
     - "~/.vim"
     - "~/.vim/bundle"
 - link: 
@@ -29,6 +30,7 @@
     ~/.config/sxhkd/sxhkdrc: "config/sxhkd/sxhkdrc"
     ~/.config/termite/confif: "config/termite/config"
     ~/.pip/pip.conf: "pip/pip.conf"
+    ~/.subversion/config: "subversion/config"
     ~/.vim/vimrc: "vim/vimrc"
     ~/.vim/bundle/vundle: "vim/bundle/vundle/"
 
