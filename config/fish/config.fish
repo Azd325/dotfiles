@@ -23,4 +23,6 @@ set fish_custom $HOME/.config/fish/custom
 
 test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
 # Envoy
-envoy -fp | source
+if type -fq envoy
+    envoy -fp | source
+end
