@@ -2,7 +2,7 @@
     {
         "shell": [
            [
-               "mkdir -p ~/.config/{fish,bspwm,sxhkd,termite}", 
+               "mkdir -p ~/{.pip,.config/{fish,bspwm,sxhkd,termite},.cache/pip}", 
                "Checking folder structure exists"
            ]
         ]
@@ -10,24 +10,29 @@
     {
         "clean": [
             "~",
+            "~/.cache",
             "~/.config",
             "~/.config/fish",
             "~/.config/bspwm",
             "~/.config/sxhkd",
-            "~/.config/termite"
+            "~/.config/termite",
+            "~/.pip"
         ]
     },
     {
         "link": {
+            "~/.gemrc"                      : "gemrc",
             "~/.gitconfig"                  : "gitconfig",
             "~/.gitignore"                  : "gitignore",
+            "~/.mongorc.js"                 : "mongorc.js",
             "~/.tmux.conf"                  : "tmux.conf",
             "~/.xinitrc"                    : "xinitrc",
             "~/.config/compton.conf"        : "config/compton.conf",
             "~/.config/fish/config.fish"    : "config/fish/config.fish",
             "~/.config/bspwm/bspwmrc"       : "config/bspwm/bspwmrc",
             "~/.config/sxhkd/sxhkdrc"       : "config/sxhkd/sxhkdrc",
-            "~/.config/termite/confif"      : "config/termite/config"
+            "~/.config/termite/confif"      : "config/termite/config",
+            "~/.pip/pip.conf"               : "pip/pip.conf"
         }
     },
     {
