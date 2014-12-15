@@ -15,13 +15,9 @@ bspc rule -a nitrogen floating=on center=true
 
 # Autostart apps
 
-# Read .Xresources
-xrdb -merge ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 # Start Compton composting manager
 compton --config ~/.config/compton.conf -b
 
 nitrogen --restore
-sxhkd &
-gnome-terminal &
-bspwm_panel.sh &
+sxhkd -f 100 &

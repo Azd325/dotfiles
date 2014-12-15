@@ -1,7 +1,7 @@
 [
     {
         "shell": [
-           ["mkdir -p ~/.config/fish", "Checking folder structure exists"]
+           ["mkdir -p ~/.config/i{fish,bspwm,sxhkd}", "Checking folder structure exists"]
         ]
     },
     {
@@ -12,11 +12,13 @@
     },
     {
         "link": {
-            "~/.config/fish/config.fish" : "config/fish/config.fish",
-            "~/.gitconfig"               : "gitconfig",
-            "~/.gitignore"               : "gitignore",
-            "~/.tmux.conf"               : "tmux.conf",
-            "~/.xinitrc"                 : "xinitrc"
+            "~/.config/fish/config.fish"    : "config/fish/config.fish",
+            "~/.config/bspwm/bspwmrc"       : "config/bspwm/bspwmrc",
+            "~/.config/sxhkd/sxhkdrc"       : "config/sxhkd/sxhkdrc",
+            "~/.gitconfig"                  : "gitconfig",
+            "~/.gitignore"                  : "gitignore",
+            "~/.tmux.conf"                  : "tmux.conf",
+            "~/.xinitrc"                    : "xinitrc"
         }
     },
     {
