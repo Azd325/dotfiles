@@ -1,24 +1,33 @@
 [
     {
         "shell": [
-           ["mkdir -p ~/.config/i{fish,bspwm,sxhkd}", "Checking folder structure exists"]
+           [
+               "mkdir -p ~/.config/{fish,bspwm,sxhkd,termite}", 
+               "Checking folder structure exists"
+           ]
         ]
     },
     {
         "clean": [
             "~",
-            "~/.config/fish"
+            "~/.config",
+            "~/.config/fish",
+            "~/.config/bspwm",
+            "~/.config/sxhkd",
+            "~/.config/termite"
         ]
     },
     {
         "link": {
-            "~/.config/fish/config.fish"    : "config/fish/config.fish",
-            "~/.config/bspwm/bspwmrc"       : "config/bspwm/bspwmrc",
-            "~/.config/sxhkd/sxhkdrc"       : "config/sxhkd/sxhkdrc",
             "~/.gitconfig"                  : "gitconfig",
             "~/.gitignore"                  : "gitignore",
             "~/.tmux.conf"                  : "tmux.conf",
-            "~/.xinitrc"                    : "xinitrc"
+            "~/.xinitrc"                    : "xinitrc",
+            "~/.config/compton.conf"        : "config/compton.conf",
+            "~/.config/fish/config.fish"    : "config/fish/config.fish",
+            "~/.config/bspwm/bspwmrc"       : "config/bspwm/bspwmrc",
+            "~/.config/sxhkd/sxhkdrc"       : "config/sxhkd/sxhkdrc",
+            "~/.config/termite/confif"      : "config/termite/config"
         }
     },
     {
