@@ -22,3 +22,5 @@ set fish_custom $HOME/.config/fish/custom
 . $fish_custom/plugins/virtualfish/projects.fish
 
 test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
+# Envoy
+envoy -fp | source
