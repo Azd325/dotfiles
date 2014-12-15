@@ -20,3 +20,5 @@ set fish_custom $HOME/.config/fish/custom
 . $fish_custom/plugins/virtualfish/auto_activation.fish
 . $fish_custom/plugins/virtualfish/global_requirements.fish
 . $fish_custom/plugins/virtualfish/projects.fish
+
+test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
