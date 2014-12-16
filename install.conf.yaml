@@ -17,6 +17,7 @@
     - "~/.subversion"
     - "~/.vim"
     - "~/.vim/bundle"
+    - "~/.wallpapers"
 - link: 
     ~/.gemrc: "gemrc"
     ~/.gitconfig: "gitconfig"
@@ -33,4 +34,5 @@
     ~/.subversion/config: "subversion/config"
     ~/.vim/vimrc: "vim/vimrc"
     ~/.vim/bundle/vundle: "vim/bundle/vundle/"
+    ~/.wallpapers: "wallpapers/"
 
