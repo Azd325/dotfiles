@@ -18,6 +18,7 @@
     - "~/.vim"
     - "~/.vim/bundle"
     - "~/.wallpapers"
+    - "~/.screenlayout"
 - link: 
     ~/.gemrc: "gemrc"
     ~/.gitconfig: "gitconfig"
@@ -35,6 +36,7 @@
     ~/.vim/vimrc: "vim/vimrc"
     ~/.vim/bundle/vundle: "vim/bundle/vundle/"
     ~/.wallpapers: "wallpapers/"
+    ~/.screenlayout: "screenlayout"
 - shell:
     -
       - "vim +PluginInstall +qall"
