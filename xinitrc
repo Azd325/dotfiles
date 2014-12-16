@@ -16,4 +16,6 @@ sxhkd -f 100 &
 # Fancy things
 compton &
 
+SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass ssh-add &
+
 exec bspwm 2> ~/.bspwm.log
