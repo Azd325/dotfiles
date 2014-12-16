@@ -16,4 +16,4 @@ sxhkd -f 100 &
 # Fancy things
 compton &
 
-exec bspwm
+exec bspwm 2> ~/.bspwm.log
