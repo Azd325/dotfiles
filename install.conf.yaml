@@ -35,4 +35,7 @@
     ~/.vim/vimrc: "vim/vimrc"
     ~/.vim/bundle/vundle: "vim/bundle/vundle/"
     ~/.wallpapers: "wallpapers/"
-
+- shell:
+    -
+      - "vim +PluginInstall +qall"
+      - "Update bundles"
