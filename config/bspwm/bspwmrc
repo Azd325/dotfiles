@@ -18,12 +18,3 @@ bspc monitor -d term web editor misc music
 
 bspc rule -a Chromium desktop=^2
 bspc rule -a nitrogen floating=on center=true
-
-# Autostart apps
-
-xsetroot -cursor_name left_ptr &
-# Start Compton composting manager
-compton --config ~/.config/compton.conf -b
-
-nitrogen --restore
-sxhkd -f 100 &
