@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 # Hide the cursor when not used
 unclutter -grab -noevents -root &
@@ -10,12 +11,6 @@ xsetroot -cursor_name left_ptr &
 
 nitrogen --restore
 
-# Enable hotkeys
-sxhkd -f 100 &
-
-# Fancy things
-compton &
-
 SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass ssh-add &
 
-exec bspwm 2> ~/.bspwm.log
+exec qtile
