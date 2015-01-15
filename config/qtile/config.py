@@ -75,9 +75,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Arial',
-    fontsize=16,
-    padding=3,
+    font='DejaVuSans',
+    fontsize=11,
+    padding=2,
 )
 
 screens = [
@@ -88,19 +88,27 @@ screens = [
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(format='%d-%m-%y %I:%M %p'),
             ],
-            30,
+            20,
         ),
     ),
 ]
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-        start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
-        start=lazy.window.get_size()),
+    Drag(
+        [mod],
+        "Button1",
+        lazy.window.set_position_floating(),
+        start=lazy.window.get_position()
+    ),
+    Drag(
+        [mod],
+        "Button3",
+        lazy.window.set_size_floating(),
+        start=lazy.window.get_size()
+    ),
     Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
