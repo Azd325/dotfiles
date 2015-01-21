@@ -71,7 +71,8 @@ for i in groups:
 
 layouts = [
     layout.Max(),
-    layout.Stack(num_stacks=2)
+    layout.Stack(num_stacks=2),
+    layout.MonadTall()
 ]
 
 widget_defaults = dict(
