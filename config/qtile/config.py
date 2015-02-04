@@ -90,6 +90,7 @@ screens = [
                 widget.WindowName(),
                 widget.Systray(),
                 widget.Clock(format='%d-%m-%y %I:%M %p'),
+                widget.Battery()
             ],
             20,
         ),
