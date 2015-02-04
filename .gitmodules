@@ -7,3 +7,6 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = http://github.com/gmarik/vundle.git
+[submodule "config/fish/custom/plugins/virtualfish"]
+	path = config/fish/custom/plugins/virtualfish
+	url = git@github.com:adambrenecki/virtualfish.git
