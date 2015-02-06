@@ -1,6 +1,6 @@
 - shell: 
     - 
-      - "mkdir -p ~/{.pip,.config/{fish,qtile,termite},.cache/pip,.subversion,.vim/bundle}"
+      - "mkdir -p ~/{.pip,.config/{qtile,termite},.cache/pip,.subversion,.vim/bundle}"
       - "Checking folder structure exists"
     - 
       - "git submodule update --init --recursive"
@@ -25,7 +25,7 @@
     ~/.mongorc.js: "mongorc.js"
     ~/.tmux.conf: "tmux.conf"
     ~/.xinitrc: "xinitrc"
-    ~/.config/fish/config.fish: "config/fish/config.fish"
+    ~/.config/fish: "config/fish/"
     ~/.config/qtile/config.py: "config/qtile/config.py"
     ~/.config/termite/confif: "config/termite/config"
     ~/.pip/pip.conf: "pip/pip.conf"
