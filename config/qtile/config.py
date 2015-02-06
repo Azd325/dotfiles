@@ -91,7 +91,9 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format='%d-%m-%y %I:%M %p'),
                 widget.Battery(),
-                widget.BitcoinTicker()
+                widget.BitcoinTicker(),
+                widget.Notify(),
+                widget.Pacman()
             ],
             20,
         ),
