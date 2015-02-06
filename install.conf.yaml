@@ -1,10 +1,10 @@
 - shell: 
     - 
-      - "mkdir -p ~/{.pip,.config/{qtile,termite},.cache/pip,.subversion,.vim/bundle}"
+      - "mkdir -p ~/{.pip,.config/{qtile,termite},.cache/pip,.subversion}"
       - "Checking folder structure exists"
     - 
-      - "git submodule update --init --recursive"
-      - "Installing submodules"
+      - "git submodule foreach git pull origin master"
+      - "Updating submodules"
 - clean: 
     - "~"
     - "~/.cache"
@@ -27,11 +27,10 @@
     ~/.xinitrc: "xinitrc"
     ~/.config/fish: "config/fish/"
     ~/.config/qtile/config.py: "config/qtile/config.py"
-    ~/.config/termite/confif: "config/termite/config"
+    ~/.config/termite/config: "config/termite/config"
     ~/.pip/pip.conf: "pip/pip.conf"
     ~/.subversion/config: "subversion/config"
-    ~/.vim/vimrc: "vim/vimrc"
-    ~/.vim/bundle/vundle: "vim/bundle/vundle/"
+    ~/.vim: "vim/"
     ~/.wallpapers: "wallpapers/"
     ~/.screenlayout: "screenlayout/"
 - shell:
