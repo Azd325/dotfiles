@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles are using https://github.com/anishathalye/dotbot libary to install it very easy to every system. 
+My dotfiles are using https://github.com/anishathalye/dotbot libary to orgnaize and install them everywhere.
 
 
 ## Install
