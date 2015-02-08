@@ -25,6 +25,7 @@
     ~/.mongorc.js: "mongorc.js"
     ~/.tmux.conf: "tmux.conf"
     ~/.xinitrc: "xinitrc"
+    ~/.config/dircolors: "config/dircolors/"
     ~/.config/fish: "config/fish/"
     ~/.config/qtile/config.py: "config/qtile/config.py"
     ~/.config/termite/config: "config/termite/config"
