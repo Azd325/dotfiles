@@ -1,7 +1,7 @@
 # Path to your custom folder (default path is $FISH/custom)
 set fish_custom $HOME/.config/fish/custom
 
-# Load oh-my-fish configuration.
+. $fish_custom/variables.load
 
 . $fish_custom/plugins/virtualfish/virtual.fish
 . $fish_custom/plugins/virtualfish/auto_activation.fish
