@@ -1,6 +1,0 @@
-set -U EDITOR "vim"
-set -U BROWSER "chromium"
-set -U JAVA_HOME /usr/lib/jvm/java-default-runtime
-set -U VIRTUALFISH_COMPAT_ALIASES 1
-set -U GOPATH "$HOME/tim/go"
-set -U CCACHE_PATH /usr/bin

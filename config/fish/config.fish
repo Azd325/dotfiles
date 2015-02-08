@@ -1,8 +1,18 @@
-# Path to your custom folder (default path is $FISH/custom)
-set fish_custom $HOME/.config/fish/custom
+set -g  XDG_CONFIG_HOME $HOME/.config
+set -g  XDG_CACHE_HOME $HOME/.cache
+set -g  XDG_DATA_HOME $HOME/.local/share
 
-. $fish_custom/variables.load
+set -gx EDITOR vim
+set -gx SUDO_EDITOR vim
+set -gx BROWSER "chromium"
+set -gx JAVA_HOME /usr/lib/jvm/java-default-runtime
 
+
+
+
+set fish_custom $HOME/.config/fish/
+
+set -g VIRTUALFISH_COMPAT_ALIASES
 . $fish_custom/plugins/virtualfish/virtual.fish
 . $fish_custom/plugins/virtualfish/auto_activation.fish
 . $fish_custom/plugins/virtualfish/global_requirements.fish
