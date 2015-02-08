@@ -8,8 +8,6 @@ set -gx BROWSER "chromium"
 set -gx JAVA_HOME /usr/lib/jvm/java-default-runtime
 
 
-
-
 set fish_custom $HOME/.config/fish/
 
 set -g VIRTUALFISH_COMPAT_ALIASES
@@ -21,3 +19,4 @@ set -g VIRTUALFISH_COMPAT_ALIASES
 test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
 
 alias startx='ssh-agent startx'
+alias gnome-terminal='gnome-terminal --hide-menubar'
