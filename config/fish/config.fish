@@ -20,7 +20,6 @@ if test go
 	set -gx PATH ~/go/bin $PATH
 end
 
-
 ### Aliases
 
 alias startx='ssh-agent startx'
