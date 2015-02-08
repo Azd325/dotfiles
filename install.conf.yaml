@@ -5,6 +5,9 @@
     - 
       - "git submodule foreach git pull origin master"
       - "Updating submodules"
+    -
+      - "bash base16-eighties.dark.sh"
+      - "Set base16 for gnome-terminal"
 - clean: 
     - "~"
     - "~/.cache"
