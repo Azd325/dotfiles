@@ -6,7 +6,9 @@ set -gx EDITOR vim
 set -gx SUDO_EDITOR vim
 set -gx BROWSER "chromium"
 set -gx JAVA_HOME /usr/lib/jvm/java-default-runtime
+set -gx LC_ALL en_US.UTF-8 # Fucking Ruby
 
+set -gx PATH /home/tim/.gem/ruby/2.2.0/bin $PATH
 
 set fish_custom $HOME/.config/fish
 
