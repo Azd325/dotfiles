@@ -12,14 +12,13 @@ if test ruby
 	set -gx PATH /home/tim/.gem/ruby/2.2.0/bin $PATH
 end
 
-
 set fish_custom $HOME/.config/fish
 
 set -g VIRTUALFISH_COMPAT_ALIASES
-. $fish_custom/plugins/virtualfish/virtual.fish
-. $fish_custom/plugins/virtualfish/auto_activation.fish
-. $fish_custom/plugins/virtualfish/global_requirements.fish
-. $fish_custom/plugins/virtualfish/projects.fish
+source $fish_custom/plugins/virtualfish/virtual.fish
+source $fish_custom/plugins/virtualfish/auto_activation.fish
+source $fish_custom/plugins/virtualfish/global_requirements.fish
+source $fish_custom/plugins/virtualfish/projects.fish
 
 test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
 
