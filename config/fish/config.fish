@@ -22,13 +22,6 @@ end
 
 ### Aliases
 
-if test go
-	mkdir -p ~/go
-	set -gx GOPATH ~/go
-	set -gx PATH ~/go/bin $PATH
-end
-
-# Aliases
 alias startx='ssh-agent startx'
 alias gnome-terminal='gnome-terminal --hide-menubar'
 
