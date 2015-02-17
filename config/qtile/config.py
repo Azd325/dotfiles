@@ -88,11 +88,11 @@ screens = [
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
+                widget.Notify(timeout=5),
                 widget.Systray(),
                 widget.Clock(format='%d-%m-%y %I:%M %p'),
                 widget.Battery(),
                 widget.BitcoinTicker(),
-                widget.Notify(),
                 widget.Pacman()
             ],
             20,
