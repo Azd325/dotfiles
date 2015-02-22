@@ -28,7 +28,7 @@
 [core]
 	pager = less -r
 	editor = vim
-	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
 	excludesfile = /home/tim/.gitignore
 	autocrlf = false
 	filemode = false
@@ -51,3 +51,5 @@
 	default = simple
 [branch]
 	autosetuprebase = always
+[apply]
+	whitespace = fix
