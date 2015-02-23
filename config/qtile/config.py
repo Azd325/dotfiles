@@ -90,7 +90,7 @@ screens = [
                 widget.WindowName(),
                 widget.Notify(timeout=5),
                 widget.Systray(),
-                widget.Clock(format='%I:%M %p'),
+                widget.Clock(format='%H:%M'),
                 widget.Battery(),
                 widget.Pacman()
             ],
