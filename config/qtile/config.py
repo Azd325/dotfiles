@@ -69,17 +69,23 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
     )
 
+layout_wargs = {
+    'border_width': 0
+}
+
 layouts = [
     layout.Max(),
-    layout.Stack(num_stacks=2),
-    layout.MonadTall()
+    layout.Stack(num_stacks=2, **layout_wargs),
+    layout.MonadTall(**layout_wargs)
 ]
 
-widget_defaults = dict(
-    font='DejaVuSans',
-    fontsize=11,
-    padding=2,
-)
+widget_defaults = {
+    'font': 'DejaVuSans',
+    'fontsize': 11,
+    'padding': 2,
+    'foreground': "FFB347",
+    'background': "001f3f",
+}
 
 screens = [
     Screen(
@@ -88,15 +94,28 @@ screens = [
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
-                widget.Notify(timeout=5),
+                widget.Notify(default_timeout=5),
                 widget.Systray(),
                 widget.Clock(format='%H:%M'),
                 widget.Battery(),
-                widget.Pacman()
             ],
             20,
         ),
     ),
+    Screen(
+        bottom=bar.Bar(
+            [
+                widget.GroupBox(),
+                widget.Prompt(),
+                widget.WindowName(),
+                widget.Notify(default_timeout=5),
+                widget.Systray(),
+                widget.Clock(format='%H:%M'),
+                widget.Battery(),
+            ],
+            20,
+        ),
+    )
 ]
 
 # Drag floating layouts.
@@ -124,13 +143,4 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, github issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
