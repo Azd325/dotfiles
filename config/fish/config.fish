@@ -8,7 +8,7 @@ set -gx BROWSER "chromium"
 set -gx JAVA_HOME /usr/lib/jvm/java-default-runtime
 
 
-set fish_custom $HOME/.config/fish/
+set fish_custom $HOME/.config/fish
 
 set -g VIRTUALFISH_COMPAT_ALIASES
 . $fish_custom/plugins/virtualfish/virtual.fish
