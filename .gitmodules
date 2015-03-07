@@ -10,3 +10,6 @@
 [submodule "config/fish/plugins/virtualfish"]
 	path = config/fish/plugins/virtualfish
 	url = git@github.com:adambrenecki/virtualfish.git
+[submodule "/home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper"]
+	path = /home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper
+	url = git://github.com/passcod/nvm-fish-wrapper.git

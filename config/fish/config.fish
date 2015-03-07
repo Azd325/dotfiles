@@ -14,6 +14,21 @@ if test ruby
 	set -gx PATH /home/tim/.gem/ruby/2.2.0/bin $PATH
 end
 
+if test go
+	mkdir -p ~/go
+	set -gx GOPATH ~/go
+	set -gx PATH ~/go/bin $PATH
+end
+
+
+### Aliases
+
+alias startx='ssh-agent startx'
+alias gnome-terminal='gnome-terminal --hide-menubar'
+
+
+### Plugins
+
 set fish_custom $HOME/.config/fish
 
 set -g VIRTUALFISH_COMPAT_ALIASES
@@ -22,14 +37,4 @@ source $fish_custom/plugins/virtualfish/auto_activation.fish
 source $fish_custom/plugins/virtualfish/global_requirements.fish
 source $fish_custom/plugins/virtualfish/projects.fish
 
-test -s /home/tim/.nvm-fish/nvm.fish; and source /home/tim/.nvm-fish/nvm.fish
-
-if test go
-	mkdir -p ~/go
-	set -gx GOPATH ~/go
-	set -gx PATH ~/go/bin $PATH
-end
-
-# Aliases
-alias startx='ssh-agent startx'
-alias gnome-terminal='gnome-terminal --hide-menubar'
+source $fish_custom/plugins/nvm-wrapper/nvm.fish

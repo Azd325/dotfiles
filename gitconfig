@@ -24,7 +24,7 @@
 [help]
     	autocorrect = 1
 [color]
-    	ui = auto
+	ui = true
 [core]
 	pager = less -r
 	editor = vim
