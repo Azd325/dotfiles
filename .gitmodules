@@ -13,3 +13,6 @@
 [submodule "/home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper"]
 	path = /home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper
 	url = git://github.com/passcod/nvm-fish-wrapper.git
+[submodule "config/fish/plugins/nvm-wrapper"]
+	path = config/fish/plugins/nvm-wrapper
+	url = git://github.com/passcod/nvm-fish-wrapper.git
