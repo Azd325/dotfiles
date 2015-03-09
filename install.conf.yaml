@@ -23,6 +23,7 @@
     - "~/.screenlayout"
 - link: 
     ~/.gemrc: "gemrc"
+    ~/.gitattributes: "gitattributes"
     ~/.gitconfig: "gitconfig"
     ~/.gitignore: "gitignore"
     ~/.mongorc.js: "mongorc.js"
