@@ -9,9 +9,10 @@
 	d = diff --color-words
 	s-u = submodule update --init --recursive
 	s-s = submodule status
-	ls = ls-files
-	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-	ll = log --stat --abbrev-commit
+    ls = ls-files
+    l = log --graph --abbrev-commit --decorate --date=relative --all
+	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	lll = log --stat --abbrev-commit
 	score = shortlog -sn
 	switch = !legit switch \"$@\"
 	branches = !legit branches
