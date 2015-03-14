@@ -75,7 +75,6 @@ layout_wargs = {
 
 layouts = [
     layout.Max(),
-    layout.Stack(num_stacks=2, **layout_wargs),
     layout.MonadTall(**layout_wargs)
 ]
 
@@ -102,20 +101,6 @@ screens = [
             20,
         ),
     ),
-    Screen(
-        bottom=bar.Bar(
-            [
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Notify(default_timeout=5),
-                widget.Systray(),
-                widget.Clock(format='%H:%M'),
-                widget.Battery(),
-            ],
-            20,
-        ),
-    )
 ]
 
 # Drag floating layouts.
