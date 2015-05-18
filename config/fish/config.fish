@@ -30,10 +30,6 @@ alias gnome-terminal='gnome-terminal --hide-menubar'
 
 set fish_custom $HOME/.config/fish
 
-set -g VIRTUALFISH_COMPAT_ALIASES
-source $fish_custom/plugins/virtualfish/virtual.fish
-source $fish_custom/plugins/virtualfish/auto_activation.fish
-source $fish_custom/plugins/virtualfish/global_requirements.fish
-source $fish_custom/plugins/virtualfish/projects.fish
-
 source $fish_custom/plugins/nvm-wrapper/nvm.fish
+
+eval (python -m virtualfish compat_aliases)
