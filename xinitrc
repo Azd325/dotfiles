@@ -11,6 +11,8 @@ xsetroot -cursor_name left_ptr &
 
 nitrogen --restore
 
+udiskie -2 &
+
 SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass ssh-add &
 
 exec qtile

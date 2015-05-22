@@ -27,7 +27,7 @@ keys = [
 
     # Switch window focus to other pane(s) of stack
     Key(
-        [mod], "x",
+        [mod], "space",
         lazy.layout.next()
     ),
 
@@ -45,10 +45,10 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("gnome-terminal --hide-menubar")),
+    Key([mod], "Return", lazy.spawn("xterm")),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.nextlayout()),
+    Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "w", lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
@@ -128,7 +128,6 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
-wmname = "LG3D"
 
 @hook.subscribe.client_new
 def dialogs(window):
