@@ -45,7 +45,7 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("xterm")),
+    Key([mod], "Return", lazy.spawn("gnome-terminal")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
