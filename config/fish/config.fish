@@ -24,6 +24,7 @@ end
 
 alias startx='ssh-agent startx'
 alias gnome-terminal='gnome-terminal --hide-menubar'
+alias idea='intellij-idea-ultimate-edition'
 
 
 ### Plugins
