@@ -9,6 +9,8 @@ unclutter -grab -noevents -root &
 # Use a basic cursor
 xsetroot -cursor_name left_ptr &
 
+setxkbmap -layout de
+
 nitrogen --restore
 
 udiskie -2 &
