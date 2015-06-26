@@ -10,3 +10,6 @@
 [submodule "config/fish/plugins/nvm-wrapper"]
 	path = config/fish/plugins/nvm-wrapper
 	url = git://github.com/passcod/nvm-fish-wrapper.git
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git
