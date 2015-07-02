@@ -1,15 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
-	url = http://github.com/gmarik/vundle.git
-[submodule "/home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper"]
-	path = /home/tim/projects/dotfiles/config/fish/plugins/nvm-wrapper
-	url = git://github.com/passcod/nvm-fish-wrapper.git
-[submodule "config/fish/plugins/nvm-wrapper"]
-	path = config/fish/plugins/nvm-wrapper
-	url = git://github.com/passcod/nvm-fish-wrapper.git
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
