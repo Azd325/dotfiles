@@ -88,7 +88,7 @@ widget_defaults = {
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.GroupBox(),
                 widget.Prompt(),
