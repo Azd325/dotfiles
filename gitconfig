@@ -35,7 +35,8 @@
 	filemode = false
 [merge]
 	conflictstyle = diff3
-	tool = vimdiff
+    tool = vimdiff
+    verbosity = 2
 [rerere]
     	enabled = 1
 [pack]
