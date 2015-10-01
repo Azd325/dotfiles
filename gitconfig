@@ -1,6 +1,6 @@
 [user]
 	name = Tim Kleinschmidt
-    	email = tim.kleinschmidt@gmail.com
+    email = tim.kleinschmidt@gmail.com
 [alias]
 	st = status
 	ci = commit
@@ -23,13 +23,13 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 [help]
-    	autocorrect = 1
+    autocorrect = 1
 [color]
 	ui = true
 [core]
 	pager = less -r
 	editor = vim
-	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+    whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
 	excludesfile = /home/tim/.gitignore
 	autocrlf = false
 	filemode = false
@@ -38,20 +38,20 @@
     tool = vimdiff
     verbosity = 2
 [rerere]
-    	enabled = 1
+    enabled = 1
 [pack]
-    	threads = 4
+    threads = 4
 [cola]
 	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
 [gui]
-    	editor = vim
+    editor = vim
 [format]
-    	pretty = oneline
+    pretty = oneline
 [github]
-    	user = Azd325
+    user = Azd325
 [push]
 	default = simple
 [branch]
 	autosetuprebase = always
 [apply]
-	whitespace = fix
+    whitespace = warn
