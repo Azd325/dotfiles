@@ -3,6 +3,8 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh 
+
 /usr/bin/VBoxClient-all
 
 # Hide the cursor when not used
