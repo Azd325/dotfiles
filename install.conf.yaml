@@ -19,6 +19,7 @@
     - "~/.wallpapers"
     - "~/.screenlayout"
 - link: 
+    ~/.cookiecutterrc: "cookiecutterrc"
     ~/.gemrc: "gemrc"
     ~/.gitattributes: "gitattributes"
     ~/.gitconfig: "gitconfig"
