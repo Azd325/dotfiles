@@ -5,3 +5,4 @@
 ghostdriver.log
 *.iml
 .idea/
+.venv
