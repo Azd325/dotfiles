@@ -69,21 +69,28 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
     )
 
-layout_wargs = {
+layout_kwargs = {
     'border_width': 0
 }
 
 layouts = [
     layout.Max(),
-    layout.MonadTall(**layout_wargs)
+    layout.MonadTall(**layout_kwargs)
 ]
 
 widget_defaults = {
-    'font': 'DejaVuSans',
-    'fontsize': 11,
+    'font': 'Source Code Pro',
+    'fontsize': 13,
     'padding': 2,
-    'foreground': "FFB347",
-    'background': "001f3f",
+    'background': "002b36",
+    'foreground': "859900",
+    'error_message': '',  # Battery
+    'default_timeout': 5,  # notify
+    'format': '%H:%M:%S',  # clock
+    'active': '93a1a1',  # groupbox
+    'inactive': '586e75',  # groupbox
+    'rounded': False,  # groupbox
+    'this_current_screen_border': 'cb4b16'  # groupbox
 }
 
 screens = [
@@ -93,12 +100,12 @@ screens = [
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
-                widget.Notify(default_timeout=5),
+                widget.Notify(),
                 widget.Systray(),
-                widget.Clock(format='%H:%M'),
-                widget.Battery(),
+                widget.Clock(),
+                widget.Battery()
             ],
-            20,
+            22
         ),
     ),
 ]
