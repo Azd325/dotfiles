@@ -32,4 +32,4 @@ alias idea='intellij-idea-ultimate-edition'
 set fish_custom $HOME/.config/fish
 
 source ~/projects/dotfiles/config/fish/plugins/nvm/nvm.fish 
-eval (python -m virtualfish compat_aliases)
+eval (python -m virtualfish auto_activation global_requirements)
