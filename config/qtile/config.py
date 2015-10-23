@@ -81,7 +81,7 @@ layouts = [
 widget_defaults = {
     'font': 'Source Code Pro',
     'fontsize': 13,
-    'padding': 2,
+    'padding': 1,
     'background': "002b36",
     'foreground': "859900",
     'error_message': '',  # Battery
