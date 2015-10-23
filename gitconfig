@@ -55,3 +55,12 @@
 	autosetuprebase = always
 [apply]
     whitespace = warn
+[fetch]
+    prune = true
+# show git notes and automatically rewrite them after git commit --amend and git rebase[notes]
+[notes]
+    rewriteRef = refs/notes/*
+    displayRef = *
+    rewriteMode = concatenate
+[core]
+    pager = less -RS                                # the text viewer for things like "git log"
