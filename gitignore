@@ -6,3 +6,4 @@ ghostdriver.log
 *.iml
 .idea/
 .venv
+virtualenvs/*

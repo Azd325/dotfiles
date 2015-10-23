@@ -37,6 +37,7 @@
     ~/.vim: "vim/"
     ~/.wallpapers: "wallpapers/"
     ~/.screenlayout: "screenlayout/"
+    ~/.virtualenvs: "virtualenvs/"
 - shell:
     -
       - "vim +PluginInstall +qall"
