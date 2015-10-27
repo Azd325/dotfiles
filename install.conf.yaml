@@ -1,7 +1,7 @@
 - shell: 
     - 
-      - "mkdir -p ~/{.pip,.config/{qtile,termite},.cache/pip,.subversion}"
-      - "Checking folder structure exists"
+      - "mkdir -p ~/{.pip,.config/{fish,qtile,termite},.cache/pip,.subversion}"
+      - "Checking folder structure"
     - 
       - "git submodule foreach git pull origin master"
       - "Updating submodules"
@@ -13,11 +13,10 @@
     - "~/.config/qtile"
     - "~/.config/termite"
     - "~/.pip"
-    - "~/.subversion"
     - "~/.vim"
-    - "~/.vim/bundle"
     - "~/.wallpapers"
     - "~/.screenlayout"
+    - "~/.virtualenvs"
 - link: 
     ~/.cookiecutterrc: "cookiecutterrc"
     ~/.gemrc: "gemrc"
@@ -31,6 +30,7 @@
     ~/.Xresources: "Xresources"
     ~/.config/fish: "config/fish/"
     ~/.config/qtile/config.py: "config/qtile/config.py"
+    ~/.config/scripts: "config/scripts/"
     ~/.config/termite/config: "config/termite/config"
     ~/.pip/pip.conf: "pip/pip.conf"
     ~/.subversion/config: "subversion/config"
