@@ -2,20 +2,38 @@ set shell=/bin/bash
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
+set encoding=utf-8
+
+set rtp+=~/.vim/bundle/vundle
 
 call vundle#begin()
 
+" Package Manager
 Plugin 'gmarik/vundle'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Status line
+Plugin 'bling/vim-airline'
+" Git integration
 Plugin 'tpope/vim-fugitive'
+" Super searching
+Plugin 'kien/ctrlp.vim'
+" File Browsing
 Plugin 'scrooloose/nerdtree'
+" Syntax Checking/Highlighting
+Plugin 'scrooloose/syntastic'
+" Code Folding
+Plugin 'tmhedberg/SimpylFold'
+" Base16 Theme
+Plugin 'chriskempson/base16-vim'
+" Editorconfig support
+Plugin 'editorconfig/editorconfig-vim'
+" To have livestyle support
+Plugin 'mattn/livestyle-vim'
+
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'chriskempson/base16-vim'
+
 Plugin 'mattn/emmet-vim'
-Plugin 'mattn/livestyle-vim'
-Plugin 'editorconfig/editorconfig-vim'
+
 Plugin 'wting/rust.vim'
 
 call vundle#end()  
@@ -102,3 +120,19 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 syntax enable
 " Enable 256 colors
 set t_Co=256
+
+" Split config
+set splitbelow
+set splitright
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
