@@ -136,8 +136,9 @@ cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
 
+
 @hook.subscribe.client_new
 def dialogs(window):
-    if(window.window.get_wm_type() == 'dialog'
-        or window.window.get_wm_transient_for()):
+    wm_type = window.window.get_wm_type()
+    if(wm_type == 'dialog' or window.window.get_wm_transient_for()):
         window.floating = True
