@@ -33,6 +33,7 @@
     ~/.config/scripts: "config/scripts/"
     ~/.config/termite/config: "config/termite/config"
     ~/.pip/pip.conf: "pip/pip.conf"
+    ~/.pkgbuilds: "pkgbuilds/"
     ~/.subversion/config: "subversion/config"
     ~/.vim: "vim/"
     ~/.wallpapers: "wallpapers/"
