@@ -6,13 +6,17 @@
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "pkgbuilds/docker-compose"]
 	path = pkgbuilds/docker-compose
-	url = https://aur.archlinux.org/docker-compose.git
+    url = https://aur.archlinux.org/docker-compose.git
+    ignore = dirty
 [submodule "pkgbuilds/gitkraken"]
 	path = pkgbuilds/gitkraken
-	url = ssh+git://aur@aur.archlinux.org/gitkraken.git
+    url = ssh+git://aur@aur.archlinux.org/gitkraken.git
+    ignore = dirty
 [submodule "pkgbuilds/cargo-bin"]
 	path = pkgbuilds/cargo-bin
-	url = ssh+git://aur@aur.archlinux.org/cargo-bin.git
+    url = ssh+git://aur@aur.archlinux.org/cargo-bin.git
+    ignore = dirty
 [submodule "pkgbuilds/intellij-idea-ue-eap"]
 	path = pkgbuilds/intellij-idea-ue-eap
-	url = https://aur.archlinux.org/intellij-idea-ue-eap.git
+    url = https://aur.archlinux.org/intellij-idea-ue-eap.git
+    ignore = dirty
