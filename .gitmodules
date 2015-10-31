@@ -20,3 +20,11 @@
 	path = pkgbuilds/intellij-idea-ue-eap
     url = https://aur.archlinux.org/intellij-idea-ue-eap.git
     ignore = dirty
+[submodule "pkgbuilds/git-cola"]
+	path = pkgbuilds/git-cola
+	url = https://aur.archlinux.org/git-cola.git
+    ignore = dirty
+[submodule "pkgbuilds/qtile"]
+	path = pkgbuilds/qtile
+	url = https://aur.archlinux.org/qtile.git
+    ignore = dirty
