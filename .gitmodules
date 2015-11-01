@@ -28,3 +28,7 @@
 	path = pkgbuilds/qtile
 	url = https://aur.archlinux.org/qtile.git
     ignore = dirty
+[submodule "pkgbuilds/docker-machine"]
+	path = pkgbuilds/docker-machine
+    url = https://aur.archlinux.org/docker-machine.git
+    ignore = dirty
