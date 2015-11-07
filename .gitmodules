@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
-	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "pkgbuilds/gitkraken"]
 	path = pkgbuilds/gitkraken
     url = ssh+git://aur@aur.archlinux.org/gitkraken.git
