@@ -1,11 +1,11 @@
-- shell: 
-    - 
+- shell:
+    -
       - "mkdir -p ~/{.pip,.config/{fish,qtile,termite},.cache/pip,.subversion}"
       - "Checking folder structure"
-    - 
+    -
       - "git submodule foreach git pull origin master"
       - "Updating submodules"
-- clean: 
+- clean:
     - "~"
     - "~/.cache"
     - "~/.config"
@@ -17,7 +17,7 @@
     - "~/.wallpapers"
     - "~/.screenlayout"
     - "~/.virtualenvs"
-- link: 
+- link:
     ~/.cookiecutterrc: "cookiecutterrc"
     ~/.gemrc: "gemrc"
     ~/.gitattributes: "gitattributes"
