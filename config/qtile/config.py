@@ -80,7 +80,7 @@ layouts = [
 ]
 
 widget_defaults = {
-    'font': 'Source Code Pro',
+    'font': 'Noto Sans Bold',
     'fontsize': 13,
     'padding': 2,
     'background': "00bcd4",
