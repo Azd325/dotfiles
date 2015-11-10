@@ -82,16 +82,16 @@ layouts = [
 widget_defaults = {
     'font': 'Source Code Pro',
     'fontsize': 13,
-    'padding': 1,
-    'background': "002b36",
-    'foreground': "859900",
+    'padding': 2,
+    'background': "00bcd4",
+    'foreground': "ffffff",
     'error_message': '',  # Battery
     'default_timeout': 5,  # notify
     'format': '%H:%M:%S',  # clock
-    'active': '93a1a1',  # groupbox
-    'inactive': '586e75',  # groupbox
+    'active': 'ffffff',  # groupbox
+    'inactive': '333333',  # groupbox
     'rounded': False,  # groupbox
-    'this_current_screen_border': 'cb4b16'  # groupbox
+    'this_current_screen_border': '333333'  # groupbox
 }
 
 screens = [
@@ -106,7 +106,7 @@ screens = [
                 widget.Clock(),
                 widget.Battery()
             ],
-            22
+            25
         ),
     ),
 ]
