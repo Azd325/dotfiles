@@ -2,6 +2,7 @@ from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
+TERMINAL = "termite"
 mod = "mod4"
 
 keys = [
@@ -45,7 +46,7 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("gnome-terminal")),
+    Key([mod], "Return", lazy.spawn(TERMINAL)),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
