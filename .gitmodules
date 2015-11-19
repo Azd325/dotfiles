@@ -25,3 +25,11 @@
 	path = pkgbuilds/docker-machine
     url = https://aur.archlinux.org/docker-machine.git
     ignore = dirty
+[submodule "pkgbuilds/webstorm-eap"]
+	path = pkgbuilds/webstorm-eap
+	url = https://aur.archlinux.org/webstorm-eap.git
+    ignore = dirty
+[submodule "pkgbuilds/pycharm-professional"]
+	path = pkgbuilds/pycharm-professional
+	url = https://aur.archlinux.org/pycharm-professional.git
+    ignore = dirty
