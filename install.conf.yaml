@@ -22,7 +22,6 @@
     ~/.config/fish: "config/fish/"
     ~/.config/nvim/init.vim: "config/nvim/init.vim"
     ~/.config/qtile/config.py: "config/qtile/config.py"
-    ~/.config/scripts: "config/scripts/"
     ~/.config/termite/config: "config/termite/config"
     ~/.cookiecutterrc: "cookiecutterrc"
     ~/.gemrc: "gemrc"
