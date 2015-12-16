@@ -2,7 +2,7 @@ from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
-TERMINAL = "termite"
+TERMINAL = "gnome-terminal"
 mod = "mod4"
 
 keys = [
