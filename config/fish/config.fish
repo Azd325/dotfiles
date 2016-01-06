@@ -11,7 +11,7 @@ set -gx LC_ALL en_US.UTF-8 # Fucking Ruby
 set -gx PATH /usr/local/bin/ $PATH
 
 if test ruby
-	set -gx PATH /home/tim/.gem/ruby/2.2.0/bin $PATH
+	set -gx PATH /home/tim/.gem/ruby/2.3.0/bin $PATH
 end
 
 if test go

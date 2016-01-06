@@ -37,11 +37,11 @@
 	path = pkgbuilds/leiningen
 	url = https://aur.archlinux.org/leiningen.git
 	ignore = dirty
-[submodule "pkgbuilds/boot"]
-	path = pkgbuilds/boot
-	url = https://aur.archlinux.org/boot.git
-	ignore = dirty
 [submodule "pkgbuilds/avocode"]
 	path = pkgbuilds/avocode
 	url = ssh+git://aur@aur.archlinux.org/avocode.git
+	ignore = dirty
+[submodule "pkgbuilds/boot"]
+	path = pkgbuilds/boot
+	url = https://aur.archlinux.org/boot.git
 	ignore = dirty
