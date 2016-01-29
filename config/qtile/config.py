@@ -3,7 +3,7 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
 TERMINAL = "gnome-terminal"
-mod = "mod4"
+mod = "mod1"
 
 keys = [
     # Switch between windows in current stack pane
