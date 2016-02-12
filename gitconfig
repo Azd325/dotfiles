@@ -1,6 +1,6 @@
 [user]
 	name = Tim Kleinschmidt
-    email = tim.kleinschmidt@gmail.com
+	email = tim.kleinschmidt@gmail.com
 [alias]
 	st = status
 	ci = commit
@@ -9,8 +9,8 @@
 	d = diff --color-words
 	s-u = submodule update --init --recursive
 	s-s = submodule status
-    ls = ls-files
-    l = log --graph --abbrev-commit --decorate --date=relative --all
+	ls = ls-files
+	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
 	score = shortlog -sn
@@ -23,44 +23,52 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 [help]
-    autocorrect = 1
+	autocorrect = 1
 [color]
 	ui = true
 [core]
 	pager = less -r
 	editor = vim
-    whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
-	excludesfile = /home/tim/.gitignore
+	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+	excludesfile = /Users/tim/.gitignore_global
 	autocrlf = false
 	filemode = false
 [merge]
 	conflictstyle = diff3
-    tool = vimdiff
-    verbosity = 2
+	tool = vimdiff
+	verbosity = 2
 [rerere]
-    enabled = 1
+	enabled = 1
 [pack]
-    threads = 4
+	threads = 4
 [cola]
 	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
 [gui]
-    editor = vim
+	editor = vim
 [format]
-    pretty = oneline
+	pretty = oneline
 [github]
-    user = Azd325
+	user = Azd325
 [push]
 	default = simple
 [branch]
 	autosetuprebase = always
 [apply]
-    whitespace = warn
+	whitespace = warn
 [fetch]
-    prune = true
+	prune = true
 # show git notes and automatically rewrite them after git commit --amend and git rebase[notes]
 [notes]
-    rewriteRef = refs/notes/*
-    displayRef = *
-    rewriteMode = concatenate
+	rewriteRef = refs/notes/*
+	displayRef = *
+	rewriteMode = concatenate
 [core]
-    pager = less -RS                                # the text viewer for things like "git log"
+	pager = less -RS                                # the text viewer for things like "git log"
+[credential]
+	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

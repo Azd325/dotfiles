@@ -1,2 +1,4 @@
 config/fish/fish_history
 config/fish/fishd.*
+
+virtualenvs
