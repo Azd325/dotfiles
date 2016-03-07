@@ -7,21 +7,9 @@
 	co = checkout
 	br = branch
 	d = diff --color-words
-	s-u = submodule update --init --recursive
-	s-s = submodule status
-	ls = ls-files
 	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
-	score = shortlog -sn
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
 [help]
 	autocorrect = 1
 [color]
@@ -40,7 +28,7 @@
 [rerere]
 	enabled = 1
 [pack]
-	threads = 4
+	threads = 8
 [cola]
 	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
 [gui]
@@ -68,7 +56,14 @@
 	helper = osxkeychain
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/tim/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
