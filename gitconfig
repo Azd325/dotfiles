@@ -15,7 +15,7 @@
 [color]
 	ui = true
 [core]
-	pager = less -r
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
 	excludesfile = /Users/tim/.gitignore_global
@@ -50,20 +50,22 @@
 	rewriteRef = refs/notes/*
 	displayRef = *
 	rewriteMode = concatenate
-[core]
-	pager = less -RS                                # the text viewer for things like "git log"
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Users/tim/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-[pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
+[commit]
+	template = /Users/tim/.stCommitMsg
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
