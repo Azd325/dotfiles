@@ -10,6 +10,7 @@
 	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
+	up = pull --rebase --autostash
 [help]
 	autocorrect = 1
 [color]
