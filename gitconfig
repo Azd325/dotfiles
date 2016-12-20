@@ -1,20 +1,22 @@
 [user]
 	name = Tim Kleinschmidt
-	email = tim.kleinschmidt@gmail.com
+	email = tim.kleinschmidt@gmail.com 
+[push]
+	default = current
+[color]
+	ui = auto
 [alias]
 	st = status
 	ci = commit
 	co = checkout
-	br = branch
-	d = diff --color-words
+	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+	pf = push --force-with-lease
 	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
 	up = pull --rebase --autostash
 [help]
 	autocorrect = 1
-[color]
-	ui = true
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
@@ -30,16 +32,8 @@
 	enabled = 1
 [pack]
 	threads = 8
-[cola]
-	fontdiff = Anonymous Pro for Powerline,9,-1,5,50,0,0,0,0,0
-[gui]
-	editor = vim
 [format]
 	pretty = oneline
-[github]
-	user = Azd325
-[push]
-	default = simple
 [branch]
 	autosetuprebase = always
 [apply]
@@ -51,22 +45,3 @@
 	rewriteRef = refs/notes/*
 	displayRef = *
 	rewriteMode = concatenate
-[credential]
-	helper = osxkeychain
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
-[commit]
-	template = /Users/tim/.stCommitMsg
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
