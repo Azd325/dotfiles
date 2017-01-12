@@ -43,13 +43,23 @@ values."
      helm
      html
      javascript
-     git
-     markdown
-     (osx :variables osx-use-option-as-meta nil)
+     (geolocation :variables
+                  geolocation-enable-location-service t
+                  geolocation-enable-weather-forecast t)
+     (git :variables
+          git-magit-status-fullscreen t)
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
+     (osx :variables 
+          osx-use-option-as-meta nil)
+     php
      python
      spell-checking
+     spotify
      sql
      syntax-checking
+     themes-megapack
+     yaml
      ;; better-defaults
      ;; org
      ;; (shell :variables
