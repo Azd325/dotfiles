@@ -51,8 +51,7 @@ values."
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      org
-     (osx :variables 
-          osx-use-option-as-meta nil)
+     osx
      php
      python
      spell-checking
