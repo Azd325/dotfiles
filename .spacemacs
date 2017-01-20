@@ -44,6 +44,7 @@ values."
      html
      javascript
      (geolocation :variables
+                  geolocation-enable-automatic-theme-changer t
                   geolocation-enable-location-service t
                   geolocation-enable-weather-forecast t)
      (git :variables
@@ -320,6 +321,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (editorconfig-mode 1)
+  (setq sunshine-appid ""
+        sunshine-units 'metric
+        sunshine-location "Berlin/Germany"
+        sunshine-show-icons t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
