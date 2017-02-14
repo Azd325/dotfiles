@@ -15,7 +15,7 @@
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
 	up = pull --rebase --autostash
-	grep = grep --break --heading
+	g = grep --break --heading
 [help]
 	autocorrect = 1
 [core]
