@@ -15,6 +15,7 @@
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
 	up = pull --rebase --autostash
+	grep = grep --break --heading
 [help]
 	autocorrect = 1
 [core]
@@ -28,6 +29,9 @@
 	conflictstyle = diff3
 	tool = vimdiff
 	verbosity = 2
+[grep]
+	extendRegexp = true
+	lineNumber = true
 [rerere]
 	enabled = 1
 [pack]
