@@ -55,6 +55,7 @@ values."
      osx
      php
      python
+     semantic
      spell-checking
      spotify
      sql
