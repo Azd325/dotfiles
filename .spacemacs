@@ -319,10 +319,9 @@ you should place your code here."
   (setq sunshine-appid ""
         sunshine-units 'metric
         sunshine-location "Berlin/Germany"
-        sunshine-show-icons t)
-  ; Magit auto-complete
-  (setq magit-repository-directories '("~/Projects/"))
-  )
+        sunshine-show-icons t
+        ; Magit auto-complete
+        magit-repository-directories '("~/Projects/")))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
