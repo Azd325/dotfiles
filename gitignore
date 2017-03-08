@@ -1,9 +1,0 @@
-.DS_Store
-*.pyc
-.svn
-*.swp
-ghostdriver.log
-*.iml
-.idea/
-.venv
-virtualenvs/*
