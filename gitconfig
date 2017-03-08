@@ -20,7 +20,6 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
-	excludesfile = /Users/tim/.gitignore_global
 	autocrlf = false
 	filemode = false
 [merge]
