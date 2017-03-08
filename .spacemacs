@@ -47,12 +47,10 @@ values."
      osx
      php
      python
-     semantic
      spell-checking
      spotify
      sql
      syntax-checking
-     themes-megapack
      yaml
      ;; better-defaults
      ;; (shell :variables
