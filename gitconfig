@@ -6,14 +6,12 @@
 [color]
 	ui = auto
 [alias]
-	st = status
-	ci = commit
-	co = checkout
 	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	lll = log --stat --abbrev-commit
 	up = pull --rebase --autostash
 	g = grep --break --heading
+	forget="! /usr/local/bin/git fetch -p && /usr/local/bin/git branch -vv | awk '/: gone]/{print $1}' | xargs /usr/local/bin/git branch -D"
 [help]
 	autocorrect = 1
 [core]
