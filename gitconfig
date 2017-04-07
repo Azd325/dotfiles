@@ -40,6 +40,9 @@
 	whitespace = warn
 [fetch]
 	prune = true
+	fsckobjects = true
+[transfer]
+	fsckobjects = true
 [rebase]
 	autosquash = true
 # show git notes and automatically rewrite them after git commit --amend and git rebase[notes]
