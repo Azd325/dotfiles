@@ -5,6 +5,8 @@
 	default = current
 [color]
 	ui = auto
+[status]
+	showUntrackedFiles = all
 [alias]
 	l = log --graph --abbrev-commit --decorate --date=relative --all
 	ll = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
