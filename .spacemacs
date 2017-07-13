@@ -36,15 +36,10 @@ values."
      helm
      html
      javascript
-     (geolocation :variables
-                  geolocation-enable-automatic-theme-changer t
-                  geolocation-enable-location-service t
-                  geolocation-enable-weather-forecast t)
      git
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      org
-     osx
      php
      python
      spell-checking
@@ -140,7 +135,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+                         spacemacs-light
+                         twilight-anti-bright
+                         twilight-bright)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -240,7 +237,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -272,7 +269,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -314,7 +311,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default mac-right-option-modifier nil)
-  ; magit status buffer in fullscreen 
+  ; magit status buffer in fullscreen
   (setq-default git-magit-status-fullscreen t)
   )
 
@@ -326,11 +323,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (editorconfig-mode 1)
-  (setq sunshine-appid ""
-        sunshine-units 'metric
-        sunshine-location "Berlin/Germany"
-        sunshine-show-icons t
-        writeroom-width 150
+  (setq writeroom-width 150
         ; Magit auto-complete
         magit-repository-directories '("~/Projects/")))
 
