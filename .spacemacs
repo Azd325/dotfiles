@@ -326,6 +326,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (editorconfig-mode 1)
   (setq writeroom-width 150
+        clojure-align-forms-automatically t
         ; Magit auto-complete
         magit-repository-directories '("~/Projects/")
         shell-default-shell 'eshell
