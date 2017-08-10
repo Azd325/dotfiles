@@ -43,6 +43,7 @@
 	fsckobjects = true
 [rebase]
 	autosquash = true
+	autoStash = true
 # show git notes and automatically rewrite them after git commit --amend and git rebase[notes]
 [notes]
 	rewriteRef = refs/notes/*
