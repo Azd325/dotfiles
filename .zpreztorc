@@ -35,10 +35,15 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'autosuggestions' \
   'homebrew' \
   'osx' \
   'python' \
-  'git'
+  'git' \
+  'docker' \
+  'archive' \
+  'ssh' \
+  'utility'
 #
 # Autosuggestions
 #
