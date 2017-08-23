@@ -1,7 +1,0 @@
-#ipython
-#pip-tools
-#isort
-#see
-#percol
-#ptpython
-#flake8
