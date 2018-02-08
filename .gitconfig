@@ -66,3 +66,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[fsck]
+	zeroPaddedFilemode = false
