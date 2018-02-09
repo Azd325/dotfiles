@@ -22,8 +22,9 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
 	excludesfile = /Users/tim/.gitignore_global
-	autocrlf = false
+	autocrlf = input
 	filemode = false
+	safecrlf = true
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
