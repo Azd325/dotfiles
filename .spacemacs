@@ -31,8 +31,6 @@ values."
    '(
      auto-completion
      clojure
-     (colors :variables
-             colors-colorize-identifiers 'all)
      django
      emacs-lisp
      evil-commentary
@@ -47,16 +45,10 @@ values."
      python
      shell
      spell-checking
-     spotify
      sql
      syntax-checking
      (themes-megapack     :packages (twilight-anti-bright twilight-bright)) ;; <http://themegallery.robdor.com/>
      yaml
-     ;; better-defaults
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -138,7 +130,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(monokai
+                         spacemacs-dark
                          spacemacs-light
                          twilight-anti-bright
                          twilight-bright)
@@ -327,8 +320,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (editorconfig-mode 1)
-  (setq writeroom-width 150
-        clojure-align-forms-automatically t
+  (setq clojure-align-forms-automatically t
         ; Magit auto-complete
         magit-repository-directories '("~/Projects/")
         shell-default-shell 'eshell
