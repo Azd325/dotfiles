@@ -57,7 +57,6 @@ This function should only modify configuration layer settings."
      auto-completion
      clojure
      django
-     editorconfig
      html
      javascript
      git
