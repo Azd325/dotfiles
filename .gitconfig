@@ -22,12 +22,9 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
 	excludesfile = /Users/tim/.gitignore_global
-	autocrlf = input
+	autocrlf = false
 	filemode = false
-	safecrlf = true
 [merge]
-	conflictstyle = diff3
-	tool = vimdiff
 	verbosity = 2
 [rerere]
 	enabled = 1
@@ -67,5 +64,3 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-[fsck]
-	zeroPaddedFilemode = false
