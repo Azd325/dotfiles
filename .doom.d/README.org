@@ -11,7 +11,7 @@
 * Theme
 
 #+BEGIN_SRC emacs-lisp
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-palenight)
 #+END_SRC
 
 * Fonts

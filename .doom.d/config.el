@@ -1,7 +1,7 @@
 (setq user-full-name "Tim kleinschmidt"
       user-mail-address "tim.kleinschmidt@gmail.com")
 
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-palenight)
 
 (setq doom-font (font-spec :family "JetBrains Mono" :size 12 :line-spacing 1.2)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono")
