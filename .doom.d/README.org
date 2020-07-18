@@ -1,0 +1,85 @@
+#+TITLE: Doom Config
+#+PROPERTY: header-args :tangle config.el
+
+* User
+
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "Tim kleinschmidt"
+      user-mail-address "tim.kleinschmidt@gmail.com")
+#+END_SRC
+
+* Theme
+
+#+BEGIN_SRC emacs-lisp
+(setq doom-theme 'doom-nord)
+#+END_SRC
+
+* Fonts
+
+#+BEGIN_SRC emacs-lisp
+(setq doom-font (font-spec :family "JetBrains Mono" :size 12 :line-spacing 1.2)
+      doom-variable-pitch-font (font-spec :family "JetBrains Mono")
+      doom-unicode-font (font-spec :family "DejaVu Sans")
+      doom-big-font (font-spec :family "JetBrains Mono" :size 20))
+#+END_SRC
+
+* Ivy
+
+I prefer search matching to be ordered; it's more precise
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
+#+END_SRC
+
+* LINE SETTINGS
+
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type nil)
+#+END_SRC
+
+* German Keyboard
+
+#+BEGIN_SRC emacs-lisp
+(setq ns-right-alternate-modifier 'none)
+#+END_SRC
+
+* Misc editor settings
+
+#+BEGIN_SRC emacs-lisp
+(setq company-idle-delay nil)
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+#+END_SRC
+
+* Org Mode
+
+#+BEGIN_SRC emacs-lisp
+(setq org-directory "~/Google Drive/Documents/emacs/org/"
+      org-archive-location (concat org-directory ".archive/%s::")
+      org-roam-directory (concat org-directory "notes/")
+      org-journal-encrypt-journal t)
+#+END_SRC
+
+* Magit
+
+#+BEGIN_SRC emacs-lisp
+(setq magit-repository-directories '(("~/" . 2))
+      magit-save-repository-buffers nil
+      transient-values '((magit-commit "--gpg-sign=3F74D3A286A02EED")
+                         (magit-rebase "--autosquash" "--gpg-sign=3F74D3A286A02EED")
+                         (magit-pull "--rebase" "--gpg-sign=3F74D3A286A02EED")))
+#+END_SRC
+
+* ClojureScript
+
+#+BEGIN_SRC emacs-lisp
+(setq cider-boot-parameters "dev --cider"
+      clojure-align-forms-automatically t)
+
+(defun clojurescript-mode-before-save-hook ()
+  (interactive)
+  (when (eq major-mode 'clojurescript-mode)
+    (indent-region (point-min) (point-max))))
+
+(add-hook 'before-save-hook #'clojurescript-mode-before-save-hook)
+#+END_SRC
