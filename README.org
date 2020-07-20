@@ -107,4 +107,3 @@ Install quicklook plugins
 #+BEGIN_SRC shell
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo
 #+END_SRC
-=
