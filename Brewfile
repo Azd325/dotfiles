@@ -35,6 +35,7 @@ brew "git-delta"
 brew "pyenv"
 brew "cmake"
 brew "git-absorb"
+brew "chezmoi"
 
 tap "schniz/tap"
 brew "fnm"
