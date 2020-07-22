@@ -46,7 +46,6 @@ I prefer search matching to be ordered; it's more precise
 * Misc editor settings
 
 #+BEGIN_SRC emacs-lisp
-(setq company-idle-delay nil)
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 #+END_SRC

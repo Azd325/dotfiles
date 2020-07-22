@@ -14,7 +14,6 @@
 
 (setq ns-right-alternate-modifier 'none)
 
-(setq company-idle-delay nil)
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 
