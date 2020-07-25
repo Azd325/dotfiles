@@ -36,6 +36,7 @@ brew "pyenv"
 brew "cmake"
 brew "git-absorb"
 brew "chezmoi"
+brew "languagetool"
 
 tap "schniz/tap"
 brew "fnm"
