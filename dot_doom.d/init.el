@@ -90,7 +90,7 @@
        latex             ; writing papers in Emacs has never been so fun
        markdown          ; writing docs for people to ignore
        nix
-       yaml
+       (yaml +lsp)
        (org
         +dragndrop
         +gnuplot
