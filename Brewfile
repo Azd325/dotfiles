@@ -37,6 +37,8 @@ brew "cmake"
 brew "git-absorb"
 brew "chezmoi"
 brew "languagetool"
+brew "yarn"
+brew "ffmpeg"
 
 tap "schniz/tap"
 brew "fnm"
