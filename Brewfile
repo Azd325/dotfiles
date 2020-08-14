@@ -20,7 +20,7 @@ cask "visual-studio-code"
 cask "telegram"
 
 tap "d12frosted/emacs-plus"
-brew "emacs-plus", args: ["with-emacs-27-branch", "HEAD"]
+brew "emacs-plus", args: ["with-jansson"]
 
 brew "shellcheck"
 brew "coreutils"
