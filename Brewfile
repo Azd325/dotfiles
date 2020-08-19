@@ -18,6 +18,7 @@ cask "gpg-suite"
 cask "gas-mask"
 cask "visual-studio-code"
 cask "telegram"
+cask "istat-menus"
 
 tap "d12frosted/emacs-plus"
 brew "emacs-plus", args: ["with-jansson"]
