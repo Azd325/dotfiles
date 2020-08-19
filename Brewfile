@@ -40,6 +40,7 @@ brew "chezmoi"
 brew "languagetool"
 brew "yarn"
 brew "ffmpeg"
+brew "pandoc"
 
 tap "schniz/tap"
 brew "fnm"
@@ -55,3 +56,9 @@ cask 'quicklook-json'
 tap 'homebrew/cask-fonts'
 cask "font-jetbrains-mono"
 cask "font-source-code-pro"
+
+# Work
+brew "terminal-notifier"
+brew "boot-clj"
+brew "borkdude/brew/clj-kondo"
+brew "node@10"
