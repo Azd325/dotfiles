@@ -12,8 +12,6 @@
 
 (setq display-line-numbers-type nil)
 
-(setq ns-right-alternate-modifier 'none)
-
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 

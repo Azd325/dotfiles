@@ -37,12 +37,6 @@ I prefer search matching to be ordered; it's more precise
 (setq display-line-numbers-type nil)
 #+END_SRC
 
-* German Keyboard
-
-#+BEGIN_SRC emacs-lisp
-(setq ns-right-alternate-modifier 'none)
-#+END_SRC
-
 * Misc editor settings
 
 #+BEGIN_SRC emacs-lisp
