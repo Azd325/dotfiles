@@ -72,7 +72,6 @@
         +dictionary
         +docsets)        ; ...or in Dash docsets locally
        lsp
-       macos             ; MacOS-specific commands
        (magit +forge)             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pdf               ; pdf enhancements
@@ -80,6 +79,9 @@
        ;;tmux              ; an API for interacting with tmux
        taskrunner
                                         ;,upload            ; map local to remote projects via ssh/ftp
+
+       :os
+       (:if IS-MAC macos)
 
        :lang
        (clojure)           ; java with a lisp
