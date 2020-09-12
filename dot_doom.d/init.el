@@ -55,7 +55,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       vterm
+       term
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
