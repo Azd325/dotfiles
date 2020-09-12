@@ -19,6 +19,7 @@ cask "gas-mask"
 cask "visual-studio-code"
 cask "telegram"
 cask "istat-menus"
+cask "firefox"
 
 tap "d12frosted/emacs-plus"
 brew "emacs-plus", args: ["with-jansson"]
@@ -41,6 +42,7 @@ brew "languagetool"
 brew "yarn"
 brew "ffmpeg"
 brew "pandoc"
+brew "youtube-dl"
 
 tap "schniz/tap"
 brew "fnm"
