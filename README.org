@@ -11,8 +11,6 @@
   - [[#nvm][NVM]]
   - [[#zsh][Zsh]]
   - [[#miscellaneous][Miscellaneous]]
-- [[#depcreated][Depcreated]]
-  - [[#install-brew-cask-packages][Install brew cask packages]]
 
 ** Prerequisites
 *** You need to copy your ssh-keys to the new maschine and correct the file mode.
@@ -93,17 +91,3 @@ defaults write com.apple.screencapture location /Users/tim/Downloads/ && killall
 #+END_SRC
 
 
-
-* Depcreated
-** Install brew cask packages
-#+BEGIN_SRC shell
-brew install git diff-so-fancy zsh mosh tmux pandoc terminal-notifier hub ctags
-brew cask install iterm2  Alfred tuxera-ntfs istat-menus vlc
-brew cask install vagrant-manager google-backup-and-sync little-snitch micro-snitch
-brew cask install jdownloader calibre daisydisk iina dash
-#+END_SRC
-
-Install quicklook plugins
-#+BEGIN_SRC shell
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook suspicious-package quicklookase qlvideo
-#+END_SRC
