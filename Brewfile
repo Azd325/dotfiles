@@ -5,62 +5,63 @@ cask "appcleaner"
 cask "coconutbattery"
 cask "docker"
 cask "enpass"
-cask "iterm2"
+cask "firefox"
+cask "gas-mask"
 cask "google-chrome"
+cask "gpg-suite"
+cask "istat-menus"
+cask "iterm2"
 cask "keka"
 cask "moneymoney"
 cask "portfolioperformance"
 cask "spotify"
+cask "telegram"
 cask "vagrant"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
-cask "gpg-suite"
-cask "gas-mask"
 cask "visual-studio-code"
-cask "telegram"
-cask "istat-menus"
-cask "firefox"
 
 tap "d12frosted/emacs-plus"
 brew "emacs-plus", args: ["with-jansson"]
 
-brew "shellcheck"
-brew "coreutils"
-brew "fzf"
-brew 'git'
-brew "ripgrep"
-brew "fd"
-brew "editorconfig"
-cask "adoptopenjdk8"
-brew "clojure-lsp"
-brew "git-delta"
-brew "pyenv"
-brew "cmake"
-brew "git-absorb"
 brew "chezmoi"
-brew "languagetool"
-brew "yarn"
+brew "clojure-lsp"
+brew "cmake"
+brew "coreutils"
+brew "editorconfig"
+brew "fd"
 brew "ffmpeg"
+brew "fzf"
+brew "git-absorb"
+brew "git-delta"
+brew "languagetool"
 brew "pandoc"
+brew "pyenv"
+brew "ripgrep"
+brew "shellcheck"
+brew "yarn"
 brew "youtube-dl"
+brew "git"
 
 tap "schniz/tap"
 brew "fnm"
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'qlstephen'
-cask 'quicklook-csv'
-cask 'quicklook-json'
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
 
 # Fonts
-tap 'homebrew/cask-fonts'
+tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
 cask "font-source-code-pro"
 
 # Work
-brew "terminal-notifier"
 brew "boot-clj"
 brew "borkdude/brew/clj-kondo"
 brew "node@10"
+brew "terminal-notifier"
+cask "adoptopenjdk8"
+
