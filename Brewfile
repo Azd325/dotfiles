@@ -46,6 +46,8 @@ brew "yarn"
 brew "youtube-dl"
 brew "git"
 
+brew "zsh"
+
 tap "schniz/tap"
 brew "fnm"
 
