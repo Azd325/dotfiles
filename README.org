@@ -10,6 +10,7 @@
   - [[#emacs][Emacs]]
   - [[#nvm][NVM]]
   - [[#zsh][Zsh]]
+  - [[#github-cli][GitHub CLI]]
   - [[#miscellaneous][Miscellaneous]]
 
 ** Prerequisites
@@ -71,6 +72,12 @@ nvm install node
 Install oh my zsh
 #+BEGIN_SRC shell
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+#+END_SRC
+
+** GitHub CLI
+
+#+BEGIN_SRC shell
+gh auth login --web
 #+END_SRC
 
 ** Miscellaneous
