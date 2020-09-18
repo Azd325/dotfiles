@@ -12,6 +12,9 @@ if ! zgen saved; then
   zgen save
 fi
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
