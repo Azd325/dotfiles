@@ -1,0 +1,2 @@
+# pyenv
+eval "$(pyenv init -)"
