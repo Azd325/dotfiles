@@ -20,6 +20,7 @@ cask "vagrant"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
+cask "vmware-fusion"
 
 tap "d12frosted/emacs-plus"
 brew "emacs-plus", args: ["with-jansson"]
