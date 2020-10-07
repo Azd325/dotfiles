@@ -2,6 +2,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 
 cask "appcleaner"
+cask "beekeeper-studio"
 cask "coconutbattery"
 cask "docker"
 cask "enpass"
