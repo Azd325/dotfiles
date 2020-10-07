@@ -1,21 +1,24 @@
+[user]
+	signingkey = 3F74D3A286A02EED
+	name = Tim Kleinschmidt
+	email = tim.kleinschmidt@gmail.com
 [github]
   	user = azd325
 [core]
   	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
 	excludesfile = /Users/tim/.gitignore
-[interactive]
-    diffFilter = delta --color-only
-[pull]
-	rebase = true
+    whitespace = trailing-space
+[commit]
+	gpgsign = true
 [rebase]
-	autoStash = true
+	autosquash = true
+[push]
+	default = current
 [fetch]
 	prune = true
 [merge]
 	conflictStyle = diff3
-[user]
-	signingkey = 3F74D3A286A02EED
-	name = Tim Kleinschmidt
-	email = tim.kleinschmidt@gmail.com
-[commit]
-	gpgsign = true
+[pull]
+	rebase = true
+[interactive]
+    diffFilter = delta --color-only
