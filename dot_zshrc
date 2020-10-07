@@ -5,15 +5,27 @@ export ZGEN_SOURCE="$ZGEN_DIR/zgen.zsh"
 source $ZGEN_SOURCE
 if ! zgen saved; then
   echo "Initializing zgen"
-  zgen load zsh-users/zsh-history-substring-search
+  zgen load denysdovhan/spaceship-prompt spaceship
+  zgen load junegunn/fzf shell
   zgen load zdharma/history-search-multi-word
   zgen load zsh-users/zsh-completions src
-  zgen load junegunn/fzf shell
+  zgen load zsh-users/zsh-history-substring-search
+  zgen load zsh-users/zsh-syntax-highlighting
   zgen save
 fi
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+setopt HIST_SAVE_NO_DUPS    # Do not write a duplicate event to the history file.
+
+setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+autoload -Uz compinit; compinit
 
 # pyenv
 eval "$(pyenv init -)"
