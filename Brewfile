@@ -73,6 +73,7 @@ cask "font-source-code-pro"
 brew "boot-clj"
 brew "borkdude/brew/clj-kondo"
 brew "node@10"
+brew "rabbitmq"
 brew "terminal-notifier"
 cask "adoptopenjdk8"
 
