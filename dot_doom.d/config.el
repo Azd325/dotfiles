@@ -35,3 +35,5 @@
     (indent-region (point-min) (point-max))))
 
 (add-hook 'before-save-hook #'clojurescript-mode-before-save-hook)
+
+(setq-hook! 'yaml-mode-hook +format-with-lsp nil)

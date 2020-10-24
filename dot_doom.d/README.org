@@ -76,3 +76,10 @@ I prefer search matching to be ordered; it's more precise
 
 (add-hook 'before-save-hook #'clojurescript-mode-before-save-hook)
 #+END_SRC
+
+* Disable Formatter
+
+
+#+begin_src emacs-lisp
+(setq-hook! 'yaml-mode-hook +format-with-lsp nil)
+#+end_src
