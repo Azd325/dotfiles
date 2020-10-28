@@ -16,11 +16,25 @@
 
 * Fonts
 
+Settings related to fonts within Doom Emacs:
+
++ ‘doom-font’ – standard monospace font that is used for most things in Emacs.
++ ‘doom-variable-pitch-font’ – variable font which is useful in some Emacs plugins.
++ ‘doom-big-font’ – used in doom-big-font-mode; useful for presentations.
++ ‘font-lock-comment-face’ – for comments.
++ ‘font-lock-keyword-face’ – for keywords with special significance, like ‘for’ and ‘if’ in C.
+
+
 #+BEGIN_SRC emacs-lisp
 (setq doom-font (font-spec :family "JetBrains Mono" :size 12 :line-spacing 1.2)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono")
-      doom-unicode-font (font-spec :family "DejaVu Sans")
       doom-big-font (font-spec :family "JetBrains Mono" :size 20))
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
 #+END_SRC
 
 * Ivy
@@ -50,6 +64,7 @@ I prefer search matching to be ordered; it's more precise
 (setq org-directory "~/Google Drive/Documents/emacs/org/"
       org-archive-location (concat org-directory ".archive/%s::")
       org-roam-directory (concat org-directory "notes/")
+      org-hide-emphasis-markers t
       org-journal-encrypt-journal t)
 #+END_SRC
 

@@ -5,8 +5,13 @@
 
 (setq doom-font (font-spec :family "JetBrains Mono" :size 12 :line-spacing 1.2)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono")
-      doom-unicode-font (font-spec :family "DejaVu Sans")
       doom-big-font (font-spec :family "JetBrains Mono" :size 20))
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
 
 (add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
 
@@ -18,6 +23,7 @@
 (setq org-directory "~/Google Drive/Documents/emacs/org/"
       org-archive-location (concat org-directory ".archive/%s::")
       org-roam-directory (concat org-directory "notes/")
+      org-hide-emphasis-markers t
       org-journal-encrypt-journal t)
 
 (setq magit-repository-directories '(("~/" . 2))
