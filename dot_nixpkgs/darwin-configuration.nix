@@ -4,12 +4,18 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    vim
-    gitAndTools.gitFull
-    tmux
+    chezmoi
+    ffmpeg
     fzf
-    ripgrep
+    gitAndTools.gitFull
     htop
+    ripgrep
+    rsync
+    shellcheck
+    shfmt
+    tmux
+    vim
+    youtube-dl
     ];
 
   # Use a custom configuration.nix location.
