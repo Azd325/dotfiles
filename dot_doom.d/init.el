@@ -99,8 +99,8 @@
         +journal
         +jupyter
         +pandoc
-        +pomodoro
         +present
+        +pretty
         +roam)
        (php               ; perl's insecure younger brother
         +lsp)
