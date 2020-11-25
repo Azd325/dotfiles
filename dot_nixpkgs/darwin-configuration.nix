@@ -5,10 +5,14 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     chezmoi
+    direnv
     ffmpeg
     fzf
+    gitAndTools.delta
+    gitAndTools.git-absorb
     gitAndTools.gitFull
     htop
+    pandoc
     ripgrep
     rsync
     shellcheck
