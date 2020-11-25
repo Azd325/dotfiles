@@ -12,6 +12,7 @@
     gitAndTools.git-absorb
     gitAndTools.gitFull
     htop
+    nixfmt
     pandoc
     ripgrep
     rsync
