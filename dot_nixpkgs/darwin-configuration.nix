@@ -11,6 +11,7 @@
     gitAndTools.delta
     gitAndTools.git-absorb
     gitAndTools.gitFull
+    graphviz
     htop
     nixfmt
     pandoc
