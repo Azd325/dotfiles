@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     chezmoi
     direnv
+    fd
     ffmpeg
     fzf
     gitAndTools.delta
@@ -22,6 +23,7 @@
     tmux
     vim
     youtube-dl
+    zsh
   ];
 
   # Use a custom configuration.nix location.
