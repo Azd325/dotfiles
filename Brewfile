@@ -62,9 +62,3 @@ cask "qlmarkdown"
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
-
-# Fonts
-tap "homebrew/cask-fonts"
-cask "font-fira-code"
-cask "font-jetbrains-mono"
-cask "font-source-code-pro"
