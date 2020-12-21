@@ -15,6 +15,7 @@
     graphviz
     htop
     nixfmt
+    nixpkgs-review
     pandoc
     ripgrep
     rsync
