@@ -9,6 +9,7 @@
     fd
     ffmpeg
     fzf
+    duf
     gitAndTools.delta
     gitAndTools.git-absorb
     gitAndTools.gitFull

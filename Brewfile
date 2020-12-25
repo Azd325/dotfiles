@@ -53,9 +53,6 @@ brew "yarn"
 tap "schniz/tap"
 brew "fnm"
 
-tap "muesli/tap"
-brew "duf"
-
 # Quicklook
 cask "qlcolorcode"
 cask "qlmarkdown"
