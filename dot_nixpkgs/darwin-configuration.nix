@@ -16,15 +16,16 @@
   environment.systemPackages = with pkgs; [
     chezmoi
     direnv
+    duf
     fd
     ffmpeg
     fzf
-    duf
     gitAndTools.delta
     gitAndTools.git-absorb
     gitAndTools.gitFull
     graphviz
     htop
+    magic-wormhole
     nixfmt
     nixpkgs-review
     pandoc
@@ -33,6 +34,7 @@
     shellcheck
     shfmt
     tmux
+    vagrant
     vim
     youtube-dl
     zsh
