@@ -1,6 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  # Show all file extensions in the Finder.
+  system.defaults.finder.AppleShowAllExtensions = true;
+  # Add a quit option to the Finder.
+  system.defaults.finder.QuitMenuItem = true;
+  # Choose whether to display a warning when changing a file extension.
+  system.defaults.finder.FXEnableExtensionChangeWarning = false;
+  # Choose the delay of the auto-hidden document-proxy icon.
+  #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
+  system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
