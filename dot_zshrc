@@ -33,3 +33,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # fnm
 eval "$(fnm env --multi)"
+
+
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
