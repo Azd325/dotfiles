@@ -14,6 +14,7 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    boot
     chezmoi
     direnv
     duf
@@ -21,6 +22,7 @@
     ffmpeg
     fzf
     gitAndTools.delta
+    gitAndTools.gh
     gitAndTools.git-absorb
     gitAndTools.gitFull
     graphviz
@@ -36,6 +38,7 @@
     tmux
     vagrant
     vim
+    yarn
     youtube-dl
     zsh
   ];
