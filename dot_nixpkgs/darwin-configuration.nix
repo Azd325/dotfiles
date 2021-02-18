@@ -11,6 +11,8 @@
   #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
   system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
 
+  users.nix.configureBuildUsers = true;
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
