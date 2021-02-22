@@ -55,6 +55,49 @@
     ];
   };
 
+  homebrew.enable = true;
+  homebrew.autoUpdate = true;
+  homebrew.cleanup = "zap";
+  homebrew.global.brewfile = true;
+  homebrew.global.noLock = true;
+
+  homebrew.taps = [
+    "d12frosted/emacs-plus"
+    "homebrew/cask"
+    "homebrew/cask-drivers"
+    "homebrew/core"
+  ];
+
+  homebrew.brews = [ "emacs-plus" "gdal" ];
+  homebrew.casks = [
+    "appcleaner"
+    "coconutbattery"
+    "daisydisk"
+    "docker"
+    "enpass"
+    "firefox"
+    "garmin-express"
+    "gas-mask"
+    "google-backup-and-sync"
+    "google-chrome"
+    "istat-menus"
+    "iterm2"
+    "gpg-suite"
+    "keka"
+    "libreoffice"
+    "microsoft-auto-update"
+    "microsoft-office"
+    "moneymoney"
+    "portfolioperformance"
+    "postgres"
+    "postico"
+    "pycharm-ce"
+    "spotify"
+    "telegram"
+    "tunnelblick"
+    "visual-studio-code"
+  ];
+
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
