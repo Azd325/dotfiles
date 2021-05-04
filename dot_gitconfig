@@ -12,6 +12,7 @@
 	gpgsign = true
 [rebase]
 	autosquash = true
+    autoStash = true
 [push]
 	default = current
 [fetch]

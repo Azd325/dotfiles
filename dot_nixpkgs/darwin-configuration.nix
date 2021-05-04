@@ -18,8 +18,10 @@
   environment.systemPackages = with pkgs; [
     boot
     chezmoi
+    coreutils
     direnv
     duf
+    exiftool
     fd
     ffmpeg
     fzf
@@ -38,9 +40,8 @@
     shellcheck
     shfmt
     tmux
-    vagrant
     vim
-    yarn
+    #yarn
     youtube-dl
     zsh
   ];
@@ -62,14 +63,16 @@
   homebrew.global.noLock = true;
 
   homebrew.taps = [
+    "AdoptOpenJDK/openjdk"
     "d12frosted/emacs-plus"
     "homebrew/cask"
     "homebrew/cask-drivers"
     "homebrew/core"
   ];
 
-  homebrew.brews = [ "emacs-plus" "gdal" ];
+  homebrew.brews = [ "emacs-plus" "gdal" "fnm" ];
   homebrew.casks = [
+    "adoptopenjdk8"
     "appcleaner"
     "coconutbattery"
     "daisydisk"
@@ -80,9 +83,9 @@
     "gas-mask"
     "google-backup-and-sync"
     "google-chrome"
+    "gpg-suite"
     "istat-menus"
     "iterm2"
-    "gpg-suite"
     "keka"
     "libreoffice"
     "microsoft-auto-update"

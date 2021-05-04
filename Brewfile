@@ -1,13 +1,11 @@
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 
-cask "adoptopenjdk8"
 cask "gpg-suite"
 cask "rabbitmq"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vmware-fusion"
-
 
 brew "borkdude/brew/clj-kondo"
 brew "clojure-lsp"
@@ -19,9 +17,6 @@ brew "pyenv"
 brew "pyenv-virtualenv"
 brew "rabbitmq"
 brew "terminal-notifier"
-
-tap "schniz/tap"
-brew "fnm"
 
 # Quicklook
 cask "qlcolorcode"

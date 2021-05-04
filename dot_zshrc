@@ -36,3 +36,10 @@ eval "$(fnm env --multi)"
 
 
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+
+
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        java -version
+ }
