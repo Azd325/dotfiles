@@ -69,7 +69,7 @@
     "homebrew/cask-drivers"
     "homebrew/core"
   ];
-
+  homebrew.masApps = { Enpass = 732710998; };
   homebrew.brews = [ "emacs-plus" "gdal" "fnm" ];
   homebrew.casks = [
     "adoptopenjdk8"
@@ -77,7 +77,6 @@
     "coconutbattery"
     "daisydisk"
     "docker"
-    "enpass"
     "firefox"
     "garmin-express"
     "gas-mask"
