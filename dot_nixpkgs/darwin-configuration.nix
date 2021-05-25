@@ -73,6 +73,7 @@
   homebrew.brews = [ "emacs-plus" "gdal" "fnm" ];
   homebrew.casks = [
     "adoptopenjdk8"
+    "adoptopenjdk11"
     "appcleaner"
     "coconutbattery"
     "daisydisk"
