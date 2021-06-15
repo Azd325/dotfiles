@@ -25,6 +25,7 @@
     fd
     ffmpeg
     fzf
+    gifsicle
     gitAndTools.delta
     gitAndTools.gh
     gitAndTools.git-absorb
