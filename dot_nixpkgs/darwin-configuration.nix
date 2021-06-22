@@ -41,6 +41,7 @@
     shellcheck
     shfmt
     tmux
+    vagrant
     vim
     #yarn
     youtube-dl
@@ -99,6 +100,7 @@
     "spotify"
     "telegram"
     "tunnelblick"
+    "virtualbox"
     "visual-studio-code"
   ];
 
