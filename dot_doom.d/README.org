@@ -80,6 +80,22 @@ I prefer search matching to be ordered; it's more precise
                          (magit-pull "--rebase" "--gpg-sign=3F74D3A286A02EED")))
 #+END_SRC
 
+** Magit performance
+
+
+#+begin_src emacs-lisp
+(remove-hook! magit-status-sections 'magit-insert-tags-header)
+(remove-hook! magit-status-sections 'magit-insert-status-headers)
+(remove-hook! magit-status-sections 'magit-insert-rebase-sequence)
+(remove-hook! magit-status-sections 'magit-insert-unpushed-to-upstream-or-recent)
+(remove-hook! magit-status-sections 'magit-insert-unpushed-to-pushremote)
+(remove-hook! magit-status-sections 'magit-insert-unpulled-from-pushremote)
+(remove-hook! magit-status-sections 'magit-insert-unpulled-from-upstream)
+(add-hook! magit-status-sections :append 'magit-insert-untracked-files)
+(add-hook! magit-status-sections :append 'magit-insert-unstaged-changes)
+(add-hook! magit-status-sections :append 'magit-insert-staged-changes)
+#+end_src
+
 * ClojureScript
 
 #+BEGIN_SRC emacs-lisp

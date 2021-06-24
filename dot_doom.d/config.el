@@ -34,6 +34,17 @@
                          (magit-rebase "--autosquash" "--gpg-sign=3F74D3A286A02EED")
                          (magit-pull "--rebase" "--gpg-sign=3F74D3A286A02EED")))
 
+(remove-hook! magit-status-sections 'magit-insert-tags-header)
+(remove-hook! magit-status-sections 'magit-insert-status-headers)
+(remove-hook! magit-status-sections 'magit-insert-rebase-sequence)
+(remove-hook! magit-status-sections 'magit-insert-unpushed-to-upstream-or-recent)
+(remove-hook! magit-status-sections 'magit-insert-unpushed-to-pushremote)
+(remove-hook! magit-status-sections 'magit-insert-unpulled-from-pushremote)
+(remove-hook! magit-status-sections 'magit-insert-unpulled-from-upstream)
+(add-hook! magit-status-sections :append 'magit-insert-untracked-files)
+(add-hook! magit-status-sections :append 'magit-insert-unstaged-changes)
+(add-hook! magit-status-sections :append 'magit-insert-staged-changes)
+
 (setq cider-boot-parameters "dev --cider"
       clojure-align-forms-automatically t)
 
