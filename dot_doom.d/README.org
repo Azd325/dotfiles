@@ -116,3 +116,12 @@ I prefer search matching to be ordered; it's more precise
 #+begin_src emacs-lisp
 (setq-hook! 'yaml-mode-hook +format-with-lsp nil)
 #+end_src
+
+
+* Colors
+
+This makes identifiers more identifiable without to activate select them.
+
+#+begin_src emacs-lisp
+(add-hook 'prog-mode-hook #'rainbow-identifiers-mode)
+#+end_src

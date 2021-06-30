@@ -56,3 +56,5 @@
 (add-hook 'before-save-hook #'clojurescript-mode-before-save-hook)
 
 (setq-hook! 'yaml-mode-hook +format-with-lsp nil)
+
+(add-hook 'prog-mode-hook #'rainbow-identifiers-mode)
