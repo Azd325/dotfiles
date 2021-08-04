@@ -43,3 +43,5 @@ jdk() {
         export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
         java -version
  }
+
+export PATH="$HOME/.poetry/bin:$PATH"
