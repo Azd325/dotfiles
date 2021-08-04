@@ -37,6 +37,7 @@
     nixfmt
     nixpkgs-review
     pandoc
+    qrencode
     ripgrep
     rsync
     shellcheck
@@ -45,6 +46,7 @@
     vagrant
     vim
     youtube-dl
+    zbar
     zsh
   ];
 
