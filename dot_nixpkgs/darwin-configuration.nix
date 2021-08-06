@@ -76,8 +76,8 @@
   homebrew.masApps = { Enpass = 732710998; };
   homebrew.brews = [ "emacs-plus" "gdal" "fnm" ];
   homebrew.casks = [
-    "adoptopenjdk8"
     "adoptopenjdk11"
+    "adoptopenjdk8"
     "appcleaner"
     "coconutbattery"
     "daisydisk"
