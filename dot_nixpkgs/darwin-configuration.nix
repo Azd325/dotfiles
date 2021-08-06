@@ -100,6 +100,7 @@
     "postico"
     "pycharm-ce"
     "spotify"
+    "teamviewer"
     "telegram"
     "tunnelblick"
     "virtualbox"
