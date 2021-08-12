@@ -104,6 +104,7 @@
     "telegram"
     "tunnelblick"
     "virtualbox"
+    "virtualbox-extension-pack"
     "visual-studio-code"
   ];
 
