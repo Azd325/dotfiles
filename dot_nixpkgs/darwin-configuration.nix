@@ -74,7 +74,7 @@
     "homebrew/core"
   ];
   homebrew.masApps = { Enpass = 732710998; };
-  homebrew.brews = [ "emacs-plus" "gdal" "fnm" ];
+  homebrew.brews = [ "emacs-plus" "gdal" "fnm" "rabbitmq" ];
   homebrew.casks = [
     "adoptopenjdk11"
     "adoptopenjdk8"
