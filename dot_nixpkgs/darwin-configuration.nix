@@ -33,7 +33,7 @@
     gitAndTools.gitFull
     graphviz
     htop
-    magic-wormhole
+    #magic-wormhole
     nixfmt
     nixpkgs-review
     pandoc
