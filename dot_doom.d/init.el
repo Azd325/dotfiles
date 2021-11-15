@@ -72,7 +72,7 @@
         +dictionary
         +docsets)        ; ...or in Dash docsets locally
        lsp
-       (magit +forge)             ; a git porcelain for Emacs
+       magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pdf               ; pdf enhancements
        rgb               ; creating color strings
