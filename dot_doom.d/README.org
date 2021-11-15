@@ -37,14 +37,6 @@ Settings related to fonts within Doom Emacs:
   '(font-lock-keyword-face :slant italic))
 #+END_SRC
 
-* Ivy
-
-I prefer search matching to be ordered; it's more precise
-
-#+BEGIN_SRC emacs-lisp
-(add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
-#+END_SRC
-
 * LINE SETTINGS
 
 #+BEGIN_SRC emacs-lisp

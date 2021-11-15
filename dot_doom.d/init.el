@@ -11,9 +11,10 @@
 (doom! :completion
        (company +auto
                 +childframe)
-       (ivy +fuzzy
-            +prescient
-            +icons)
+       ;(ivy +fuzzy
+       ;     +prescient
+       ;     +icons)
+       vertico
 
        :ui
        deft

@@ -13,8 +13,6 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
-(add-to-list 'ivy-re-builders-alist '(counsel-projectile-find-file . ivy--regex-plus))
-
 (setq display-line-numbers-type nil)
 
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
