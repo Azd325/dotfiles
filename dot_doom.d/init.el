@@ -96,13 +96,14 @@
        (yaml +lsp)
        (org
         +dragndrop
-        +gnuplot
+        ;+gnuplot
         +journal
-        +jupyter
+        ;+jupyter
         +pandoc
         +present
         +pretty
-        +roam)
+        ;+roam
+        )
        (php               ; perl's insecure younger brother
         +lsp)
        (python            ; beautiful is better than ugly
