@@ -22,6 +22,7 @@
     coreutils
     direnv
     duf
+    editorconfig-core-c
     exiftool
     fd
     ffmpeg
