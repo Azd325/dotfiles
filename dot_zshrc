@@ -45,3 +45,4 @@ jdk() {
  }
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
