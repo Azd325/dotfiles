@@ -76,6 +76,7 @@
   ];
   homebrew.masApps = { Enpass = 732710998; };
   homebrew.brews = [
+    "coreutils"
     "emacs-plus"
     "gdal"
     "grep"
