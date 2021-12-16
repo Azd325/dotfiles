@@ -20,11 +20,8 @@
 
 (setq org-directory "~/Google Drive/Documents/emacs/org/"
       org-archive-location (concat org-directory ".archive/%s::")
-      org-roam-directory (concat org-directory "notes/")
-      org-roam-db-location (concat org-roam-directory ".org-roam.db")
       org-hide-emphasis-markers t
-      org-startup-folded 'overview
-      org-journal-encrypt-journal t)
+      org-startup-folded 'overview)
 
 (setq magit-repository-directories '(("~/" . 2))
       magit-save-repository-buffers nil
