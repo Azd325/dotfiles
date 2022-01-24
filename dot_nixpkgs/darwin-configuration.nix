@@ -90,7 +90,7 @@
     "brave-browser"
     "coconutbattery"
     "daisydisk"
-    #"docker"
+    "docker"
     #"firefox"
     "garmin-express"
     "gas-mask"
