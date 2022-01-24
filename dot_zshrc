@@ -27,10 +27,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 autoload -Uz compinit; compinit
 
-# pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # fnm
 eval "$(fnm env --multi)"
 
@@ -47,3 +43,7 @@ jdk() {
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# pyenv
+eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
