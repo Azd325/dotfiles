@@ -5,7 +5,7 @@
 [github]
   	user = azd325
 [core]
-  	pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+  	pager = delta
 	excludesfile = /Users/tim/.gitignore
     whitespace = trailing-space
 [commit]
@@ -25,3 +25,8 @@
     diffFilter = delta --color-only
 [init]
     defaultBranch = main
+[delta]
+    navigate = true
+[diff]
+    colorMoved = default
+    line-numbers = true
