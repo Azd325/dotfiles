@@ -78,6 +78,7 @@
   homebrew.brews =
     [ "coreutils" "emacs-plus" "gdal" "grep" "fnm" "rabbitmq" "pyenv" ];
   homebrew.casks = [
+    "android-studio"
     "adoptopenjdk11"
     "adoptopenjdk8"
     "appcleaner"
