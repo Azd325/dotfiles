@@ -18,8 +18,12 @@
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 
-(setq org-directory "~/Google Drive/Documents/emacs/org/"
+(setq org-directory "~/Documents/org"
       org-archive-location (concat org-directory ".archive/%s::")
+      org-roam-directory (concat org-directory "notes/")
+      org-roam-db-location (concat org-roam-directory ".org-roam.db")
+      org-journal-encrypt-journal t
+      org-journal-file-format "%Y%m%d.org"
       org-hide-emphasis-markers t
       org-startup-folded 'overview)
 

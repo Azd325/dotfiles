@@ -152,6 +152,8 @@
        (org
         +pandoc
         +pretty
+        +roam
+        +journal
         +present
         +dragndrop)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
