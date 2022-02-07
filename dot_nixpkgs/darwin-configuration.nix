@@ -110,6 +110,7 @@
     "virtualbox"
     "virtualbox-extension-pack"
     "visual-studio-code"
+    "zotero"
   ];
 
   # Use a custom configuration.nix location.
