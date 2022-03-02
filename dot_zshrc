@@ -44,6 +44,10 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_SDK=$ANDROID_SDK_ROOT
+export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
+
 # pyenv
 eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
