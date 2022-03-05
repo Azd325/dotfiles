@@ -46,3 +46,6 @@
 (setq-hook! 'yaml-mode-hook +format-with-lsp nil)
 
 (add-hook 'prog-mode-hook #'rainbow-identifiers-mode)
+
+(use-package wakatime-mode :ensure t)
+(global-wakatime-mode)

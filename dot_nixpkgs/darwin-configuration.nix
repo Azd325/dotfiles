@@ -47,6 +47,7 @@
     tmux
     vagrant
     vim
+    wakatime
     youtube-dl
     zbar
     zsh
