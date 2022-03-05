@@ -38,6 +38,7 @@
     nixfmt
     nixpkgs-review
     pandoc
+    php74
     qrencode
     ripgrep
     rsync
