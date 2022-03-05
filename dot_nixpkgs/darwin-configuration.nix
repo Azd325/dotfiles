@@ -86,6 +86,7 @@
     "adoptopenjdk8"
     "appcleaner"
     "brave-browser"
+    "calibre"
     "coconutbattery"
     "daisydisk"
     "docker"
