@@ -33,6 +33,8 @@
                          (magit-rebase "--autosquash" "--gpg-sign=3F74D3A286A02EED")
                          (magit-pull "--rebase" "--gpg-sign=3F74D3A286A02EED")))
 
+(remove-hook 'server-switch-hook 'magit-commit-diff)
+
 (setq cider-boot-parameters "dev --cider"
       clojure-align-forms-automatically t)
 
