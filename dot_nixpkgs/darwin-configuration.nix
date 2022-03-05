@@ -85,6 +85,7 @@
     "adoptopenjdk11"
     "adoptopenjdk8"
     "appcleaner"
+    "app-tamer"
     "brave-browser"
     "calibre"
     "coconutbattery"
