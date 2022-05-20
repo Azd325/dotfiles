@@ -101,6 +101,7 @@
     "iterm2"
     "keka"
     "libreoffice"
+    "logseq"
     "microsoft-auto-update"
     "microsoft-office"
     "moneymoney"
