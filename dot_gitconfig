@@ -30,3 +30,5 @@
 [diff]
     colorMoved = default
     line-numbers = true
+[gpg]
+	program = /usr/local/bin/gpg
