@@ -16,40 +16,22 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    #yarn
-    boot
-    chezmoi
     coreutils
     direnv
     duf
     editorconfig-core-c
-    exiftool
     fd
-    ffmpeg
     fzf
-    gifsicle
-    gitAndTools.delta
-    gitAndTools.gh
     gitAndTools.git-absorb
     gitAndTools.gitFull
-    graphviz
-    htop
-    #magic-wormhole
     nixfmt
-    nixpkgs-review
-    pandoc
-    php74
-    qrencode
     ripgrep
     rsync
     shellcheck
     shfmt
     tmux
-    vagrant
     vim
-    wakatime
     youtube-dl
-    zbar
     zsh
   ];
 
@@ -81,20 +63,16 @@
     [ "coreutils" "emacs-plus" "gdal" "grep" "fnm" "rabbitmq" "pyenv" ];
   homebrew.casks = [
     "adobe-digital-editions"
-    "android-studio"
     "adoptopenjdk11"
     "adoptopenjdk8"
     "appcleaner"
     "app-tamer"
-    "brave-browser"
     "calibre"
     "coconutbattery"
     "daisydisk"
     "docker"
-    #"firefox"
     "garmin-express"
     "gas-mask"
-    #"google-backup-and-sync"
     "google-chrome"
     "gpg-suite"
     "istat-menus"
@@ -104,17 +82,14 @@
     "logseq"
     "microsoft-auto-update"
     "microsoft-office"
+    "microsoft-teams"
     "moneymoney"
     "portfolioperformance"
-    "postgres"
+    "postgres-unofficial"
     "postico"
     "pycharm-ce"
-    "spotify"
-    "teamviewer"
     "telegram"
     "tunnelblick"
-    "virtualbox"
-    "virtualbox-extension-pack"
     "visual-studio-code"
     "zotero"
   ];
