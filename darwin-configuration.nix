@@ -94,6 +94,17 @@
     "zotero"
   ];
 
+  nix.gc.automatic = true;
+
+  # Sandbox causes failure: https://github.com/NixOS/nix/issues/4119
+  nix.useSandbox = false;
+
+  nix.extraOptions = ''
+    auto-optimise-store = true
+    experimental-features = nix-command flakes
+    max-jobs = auto  # Allow building multiple derivations in parallel
+   '';
+
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
