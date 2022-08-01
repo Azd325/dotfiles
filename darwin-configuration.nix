@@ -1,6 +1,19 @@
 { config, pkgs, ... }:
 
 {
+  nix.binaryCaches = [
+    "https://cache.nixos.org/"
+  ];
+  nix.binaryCachePublicKeys = [
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+  ];
+  # https://github.com/LnL7/nix-darwin/issues/477
+  users.users.timkleinschmidt = {
+    name = "timkleinschmidt";
+    home = "/Users/timkleinschmidt";
+    description = "timkleinschmidt";
+  };
+  users.nix.configureBuildUsers = true;
   # Show all file extensions in the Finder.
   system.defaults.finder.AppleShowAllExtensions = true;
   # Add a quit option to the Finder.
@@ -11,29 +24,9 @@
   #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
   system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
 
-  users.nix.configureBuildUsers = true;
+  system.keyboard.enableKeyMapping = true;
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-    coreutils
-    direnv
-    duf
-    editorconfig-core-c
-    fd
-    fzf
-    gitAndTools.git-absorb
-    gitAndTools.gitFull
-    nixfmt
-    ripgrep
-    rsync
-    shellcheck
-    shfmt
-    tmux
-    vim
-    youtube-dl
-    zsh
-  ];
+  system.keyboard.remapCapsLockToEscape = true;
 
   fonts = {
     fontDir.enable = true;
