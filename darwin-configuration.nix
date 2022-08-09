@@ -53,7 +53,7 @@
   ];
   homebrew.masApps = { Enpass = 732710998; };
   homebrew.brews =
-    [ "coreutils" "emacs-plus" "gdal" "grep" "fnm" "rabbitmq" "pyenv" ];
+    [ "coreutils" "emacs-plus" "gdal" "grep" "rabbitmq" "pyenv" ];
   homebrew.casks = [
     "adobe-digital-editions"
     "adoptopenjdk11"

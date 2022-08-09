@@ -36,6 +36,7 @@
     editorconfig-core-c
     fd
     fzf
+    fnm
     gitAndTools.git-absorb
     gitAndTools.gitFull
     niv # easy dependency management for nix projects
