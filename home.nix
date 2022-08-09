@@ -3,6 +3,15 @@
 {
   home.stateVersion = "22.05";
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+    PATH = "/Applications/Postgres.app/Contents/Versions/latest/bin:\${PATH}";
+    LC_ALL = "en_US.UTF-8";
+    LANG = "en_US.UTF-8";
+  };
+
+  programs.zsh.enable = true;
+
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
 
   # Direnv, load and unload environment variables depending on the current directory.
