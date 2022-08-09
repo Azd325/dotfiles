@@ -3,6 +3,8 @@
 {
   home.stateVersion = "22.05";
 
+  home.username = "timkleinschmidt";
+  home.homeDirectory = "/Users/timkleinschmidt";
   home.sessionVariables = {
     EDITOR = "vim";
     PATH = "/Applications/Postgres.app/Contents/Versions/latest/bin:\${PATH}";
