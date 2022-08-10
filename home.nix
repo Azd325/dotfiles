@@ -12,7 +12,11 @@
     LANG = "en_US.UTF-8";
   };
 
-  programs.zsh.enable = true;
+  programs.zsh = { enable = true; };
+  programs.starship = { enable = true; };
+
+    enable = true;
+  };
 
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
 
@@ -49,6 +53,5 @@
     vim
     wget
     youtube-dl
-    zsh
   ];
 }
