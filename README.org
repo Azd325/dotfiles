@@ -6,11 +6,8 @@
 * Table of contents :toc:
   - [[#prerequisites][Prerequisites]]
 - [[#install][Install]]
-  - [[#brew][Brew]]
+  - [[#general][General]]
   - [[#emacs][Emacs]]
-  - [[#nvm][NVM]]
-  - [[#zsh][Zsh]]
-  - [[#github-cli][GitHub CLI]]
   - [[#miscellaneous][Miscellaneous]]
 
 ** Prerequisites
@@ -23,31 +20,37 @@ chmod 644 ~/.ssh/known_hosts
 chmod 755 ~/.ssh
 #+END_SRC
 
-*** Installing brew
-
-#+BEGIN_SRC shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#+END_SRC
-
-*** Install chezmoi
-
-#+BEGIN_SRC shell
-brew install chezmoi
-#+END_SRC
-
 *** Cloning the dotfiles
 
 #+BEGIN_SRC shell
-chezmoi init git@github.com:Azd325/dotfiles.git
+git clone git@github.com:Azd325/dotfiles.git ∼/
 #+END_SRC
+
+*** Installing nix
+
+#+begin_src shell
+curl -L https://nixos.org/nix/install | sh
+#+end_src
+
+
+*** Setup nix config
+
+#+begin_src shell
+mkdir -p ~/.config/nix
+cat <<EOF > ~/.config/nix/nix.conf
+experimental-features = nix-command flakes
+EOF
+#+end_src
 
 * Install
-** Brew
-*** Install packages wiht brew bundle
 
-#+BEGIN_SRC shell
-brew bundle
-#+END_SRC
+** General
+
+#+begin_src shell
+cd ∼/dotfiles
+nix build .#darwinConfigurations.BER.system
+./result/sw/bin/darwin-rebuild --show-trace switch --flake .
+#+end_src
 
 ** Emacs
 *** Install doom-emacs with my configuration
@@ -59,38 +62,9 @@ cp --recursive ~/Projects/dotfiles/.doom.d ~/.doom.d
 ~/.emacs.d/bin/doom sync
 #+END_SRC
 
-** NVM
-
-#+BEGIN_SRC
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-source .zshrc
-nvm install node
-#+END_SRC
-
-** Zsh
-
-Install oh my zsh
-#+BEGIN_SRC shell
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-#+END_SRC
-
-** GitHub CLI
-
-#+BEGIN_SRC shell
-gh auth login --web
-#+END_SRC
 
 ** Miscellaneous
 *** macOS
-**** Alfred/Spotlight
-
-Replace spotlight with alfred. Uncheck all spotlight indexes in the system preferences and deactivate the shortcuts for it.
-
-**** Enable repeating key presses
-#+BEGIN_SRC shell
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-#+END_SRC
-
 **** Change default screenshot folder
 
 #+BEGIN_SRC shell
