@@ -17,7 +17,23 @@
   programs.zsh = { enable = true; };
   programs.starship = { enable = true; };
 
+  programs.git = {
+    package = pkgs.gitAndTools.gitFull;
     enable = true;
+    delta.enable = true;
+    lfs.enable = true;
+    userName = "Tim Kleinschmidt";
+    userEmail = "tim.kleinschmidt@gmail.com";
+    signing = {
+      key = "3F74D3A286A02EED";
+      signByDefault = true;
+    };
+    extraConfig = {
+      github = { user = "Azd325"; };
+      pull = { rebase = true; };
+      fetch = { prune = true; };
+      merge = { conflictstyle = "diff3"; };
+    };
   };
 
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
@@ -44,7 +60,6 @@
     fzf
     fnm
     gitAndTools.git-absorb
-    gitAndTools.gitFull
     niv # easy dependency management for nix projects
     nixfmt
     ripgrep
