@@ -17,6 +17,9 @@
   programs.zsh = {
     enable = true;
     initExtra = ''
+      # FNM
+      eval "$(fnm env --use-on-cd)"
+
       # Pyenv
       export PYENV_ROOT=$HOME/.pyenv
       if [[ -e $PYENV_ROOT ]]; then
