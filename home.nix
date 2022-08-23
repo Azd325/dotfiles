@@ -33,7 +33,7 @@
       pull = { rebase = true; };
       rebase = { autoStash = true; };
       fetch = { prune = true; };
-      merge = { conflictstyle = "diff3"; };
+      merge = { conflictStyle = "zdiff3"; };
     };
   };
 
