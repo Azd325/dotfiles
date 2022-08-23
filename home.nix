@@ -42,6 +42,7 @@
       signByDefault = true;
     };
     extraConfig = {
+      diff = { algorithm = "histogram"; };
       github = { user = "Azd325"; };
       pull = { rebase = true; };
       rebase = { autoStash = true; };
