@@ -14,7 +14,17 @@
     GEOS_LIBRARY_PATH = "/opt/homebrew/opt/geos/lib/libgeos_c.dylib";
   };
 
-  programs.zsh = { enable = true; };
+  programs.zsh = {
+    enable = true;
+    initExtra = ''
+      # Pyenv
+      export PYENV_ROOT=$HOME/.pyenv
+      if [[ -e $PYENV_ROOT ]]; then
+        export PATH=$PYENV_ROOT/bin:$PATH
+        eval "$(pyenv init --path)"
+      fi
+    '';
+  };
   programs.starship = { enable = true; };
 
   programs.git = {
