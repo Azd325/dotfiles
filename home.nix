@@ -16,6 +16,8 @@
 
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
     initExtra = ''
       # FNM
       eval "$(fnm env --use-on-cd)"
