@@ -1,12 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  nix.binaryCaches = [
-    "https://cache.nixos.org/"
-  ];
-  nix.binaryCachePublicKeys = [
-    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-  ];
+  nix.binaryCaches = [ "https://cache.nixos.org/" ];
+  nix.binaryCachePublicKeys =
+    [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
   # https://github.com/LnL7/nix-darwin/issues/477
   users.users.timkleinschmidt = {
     name = "timkleinschmidt";
@@ -57,7 +54,6 @@
   homebrew.casks = [
     "adobe-digital-editions"
     "adoptopenjdk11"
-    "adoptopenjdk8"
     "appcleaner"
     "app-tamer"
     "calibre"
@@ -96,7 +92,7 @@
     auto-optimise-store = true
     experimental-features = nix-command flakes
     max-jobs = auto  # Allow building multiple derivations in parallel
-   '';
+  '';
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
