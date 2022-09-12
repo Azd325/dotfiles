@@ -1,16 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  nix.binaryCaches = [ "https://cache.nixos.org/" ];
-  nix.binaryCachePublicKeys =
-    [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
   # https://github.com/LnL7/nix-darwin/issues/477
   users.users.timkleinschmidt = {
     name = "timkleinschmidt";
     home = "/Users/timkleinschmidt";
     description = "timkleinschmidt";
   };
-  users.nix.configureBuildUsers = true;
+  nix.configureBuildUsers = true;
   # Show all file extensions in the Finder.
   system.defaults.finder.AppleShowAllExtensions = true;
   # Add a quit option to the Finder.
@@ -88,8 +85,13 @@
 
   nix.gc.automatic = true;
 
-  # Sandbox causes failure: https://github.com/NixOS/nix/issues/4119
-  nix.useSandbox = false;
+  nix.settings = {
+    # Sandbox causes failure: https://github.com/NixOS/nix/issues/4119
+    sandbox = false;
+    substituters = [ "https://cache.nixos.org/" ];
+    trusted-public-keys =
+      [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
+  };
 
   nix.extraOptions = ''
     auto-optimise-store = true
