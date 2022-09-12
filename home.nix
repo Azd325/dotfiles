@@ -52,6 +52,7 @@
       merge = { conflictStyle = "zdiff3"; };
     };
   };
+  programs.vscode = { enable = true; };
 
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
 

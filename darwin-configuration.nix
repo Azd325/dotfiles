@@ -35,53 +35,56 @@
     ];
   };
 
-  homebrew.enable = true;
-  homebrew.autoUpdate = true;
-  homebrew.cleanup = "zap";
-  homebrew.global.brewfile = true;
-  homebrew.global.noLock = true;
-
-  homebrew.taps = [
-    "AdoptOpenJDK/openjdk"
-    "d12frosted/emacs-plus"
-    "homebrew/cask"
-    "homebrew/cask-drivers"
-    "homebrew/core"
-  ];
-  homebrew.masApps = { Enpass = 732710998; };
-  homebrew.brews =
-    [ "coreutils" "emacs-plus" "gdal" "grep" "rabbitmq" "pyenv" ];
-  homebrew.casks = [
-    "adobe-digital-editions"
-    "adoptopenjdk11"
-    "appcleaner"
-    "app-tamer"
-    "calibre"
-    "coconutbattery"
-    "daisydisk"
-    "docker"
-    "garmin-express"
-    "gas-mask"
-    "google-chrome"
-    "gpg-suite"
-    "istat-menus"
-    "iterm2"
-    "keka"
-    "libreoffice"
-    "logseq"
-    "microsoft-auto-update"
-    "microsoft-office"
-    "microsoft-teams"
-    "moneymoney"
-    "portfolioperformance"
-    "postgres-unofficial"
-    "postico"
-    "pycharm-ce"
-    "telegram"
-    "tunnelblick"
-    "visual-studio-code"
-    "zotero"
-  ];
+  homebrew = {
+    enable = true;
+    global = {
+      brewfile = true;
+      lockfiles = true;
+    };
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = true;
+    };
+    taps = [
+      "AdoptOpenJDK/openjdk"
+      "d12frosted/emacs-plus"
+      "homebrew/cask"
+      "homebrew/cask-drivers"
+      "homebrew/core"
+    ];
+    masApps = { Enpass = 732710998; };
+    brews = [ "coreutils" "emacs-plus" "gdal" "grep" "rabbitmq" "pyenv" ];
+    casks = [
+      "adobe-digital-editions"
+      "adoptopenjdk11"
+      "appcleaner"
+      "app-tamer"
+      "calibre"
+      "coconutbattery"
+      "daisydisk"
+      "docker"
+      "garmin-express"
+      "gas-mask"
+      "google-chrome"
+      "gpg-suite"
+      "istat-menus"
+      "iterm2"
+      "keka"
+      "libreoffice"
+      "logseq"
+      "microsoft-auto-update"
+      "microsoft-office"
+      "microsoft-teams"
+      "moneymoney"
+      "portfolioperformance"
+      "postgres-unofficial"
+      "postico"
+      "pycharm-ce"
+      "telegram"
+      "tunnelblick"
+      "zotero"
+    ];
+  };
 
   nix.gc.automatic = true;
 
