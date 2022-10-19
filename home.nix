@@ -7,7 +7,8 @@
   home.homeDirectory = "/Users/timkleinschmidt";
   home.sessionVariables = {
     EDITOR = "vim";
-    PATH = "/Applications/Postgres.app/Contents/Versions/latest/bin:\${PATH}";
+    PATH =
+      "/Users/timkleinschmidt/.emacs.d/bin/:/Applications/Postgres.app/Contents/Versions/latest/bin:\${PATH}";
     LC_ALL = "en_US.UTF-8";
     LANG = "en_US.UTF-8";
     GDAL_LIBRARY_PATH = "/opt/homebrew/opt/gdal/lib/libgdal.dylib";
@@ -89,4 +90,7 @@
     wget
     youtube-dl
   ];
+
+  home.file.".doom.d" = { source = files/doom-emacs; };
+
 }
