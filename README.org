@@ -57,7 +57,6 @@ nix build .#darwinConfigurations.BER.system
 
 #+BEGIN_SRC shell
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-cp --recursive ~/Projects/dotfiles/.doom.d ~/.doom.d
 ~/.emacs.d/bin/doom install
 ~/.emacs.d/bin/doom sync
 #+END_SRC
