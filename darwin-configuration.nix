@@ -19,6 +19,8 @@
         FXEnableExtensionChangeWarning = false;
       };
 
+      screencapture.location = "~/Downloads/";
+
       # Choose the delay of the auto-hidden document-proxy icon.
       #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
       NSGlobalDomain.NSTableViewDefaultSizeMode = 1;

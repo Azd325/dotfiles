@@ -8,7 +8,6 @@
 - [[#install][Install]]
   - [[#general][General]]
   - [[#emacs][Emacs]]
-  - [[#miscellaneous][Miscellaneous]]
 
 ** Prerequisites
 *** You need to copy your ssh-keys to the new maschine and correct the file mode.
@@ -60,14 +59,4 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 ~/.emacs.d/bin/doom sync
 #+END_SRC
-
-
-** Miscellaneous
-*** macOS
-**** Change default screenshot folder
-
-#+BEGIN_SRC shell
-defaults write com.apple.screencapture location /Users/tim/Downloads/ && killall SystemUIServer
-#+END_SRC
-
 
