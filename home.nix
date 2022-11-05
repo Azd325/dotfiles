@@ -82,6 +82,7 @@
     gh
     niv # easy dependency management for nix projects
     nixfmt
+    nixpkgs-review
     ripgrep
     rsync
     shellcheck
