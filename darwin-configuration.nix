@@ -8,19 +8,27 @@
     description = "timkleinschmidt";
   };
   nix.configureBuildUsers = true;
-  # Show all file extensions in the Finder.
-  system.defaults.finder.AppleShowAllExtensions = true;
-  # Add a quit option to the Finder.
-  system.defaults.finder.QuitMenuItem = true;
-  # Choose whether to display a warning when changing a file extension.
-  system.defaults.finder.FXEnableExtensionChangeWarning = false;
-  # Choose the delay of the auto-hidden document-proxy icon.
-  #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
-  system.defaults.NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
+  system = {
+    defaults = {
+      finder = {
+        # Show all file extensions in the Finder.
+        AppleShowAllExtensions = true;
+        # Add a quit option to the Finder.
+        QuitMenuItem = true;
+        # Choose whether to display a warning when changing a file extension.
+        FXEnableExtensionChangeWarning = false;
+      };
 
-  system.keyboard.enableKeyMapping = true;
+      # Choose the delay of the auto-hidden document-proxy icon.
+      #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
+      NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
+    };
 
-  system.keyboard.remapCapsLockToEscape = true;
+    keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToEscape = true;
+    };
+  };
 
   fonts = {
     fontDir.enable = true;
