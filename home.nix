@@ -79,6 +79,7 @@
     fzf
     fnm
     gitAndTools.git-absorb
+    gh
     niv # easy dependency management for nix projects
     nixfmt
     ripgrep
