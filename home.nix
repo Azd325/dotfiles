@@ -68,6 +68,8 @@
   programs.htop.enable = true;
   programs.htop.settings.show_program_path = true;
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     cachix # adding/managing alternative binary caches hosted by Cachix
     coreutils
@@ -91,6 +93,12 @@
     vim
     wget
     youtube-dl
+
+    # fonts
+    fira-code
+    fira-code-symbols
+    jetbrains-mono
+    source-code-pro
   ];
 
   home.file.".doom.d" = { source = files/doom-emacs; };

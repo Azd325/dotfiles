@@ -32,16 +32,6 @@
     };
   };
 
-  fonts = {
-    fontDir.enable = true;
-    fonts = with pkgs; [
-      fira-code
-      fira-code-symbols
-      jetbrains-mono
-      source-code-pro
-    ];
-  };
-
   homebrew = {
     enable = true;
     global = {
