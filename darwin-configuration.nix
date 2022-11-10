@@ -73,7 +73,6 @@
       "microsoft-office"
       "microsoft-teams"
       "moneymoney"
-      "portfolioperformance"
       "postgres-unofficial"
       "postico"
       "pycharm-ce"
