@@ -79,6 +79,7 @@
       "pycharm-ce"
       "telegram"
       "tunnelblick"
+      "warp"
       "zotero"
     ];
   };
