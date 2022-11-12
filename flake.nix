@@ -57,8 +57,5 @@
             };
           };
       };
-
-      # My `nix-darwin` modules that are pending upstream, or patched versions waiting on upstream
-      # fixes.
     };
 }
