@@ -58,7 +58,7 @@
         "type": "github"
       }
     },
-    "nixpkgs": {
+    "nixpkgs-stable": {
       "locked": {
         "lastModified": 1668133646,
         "narHash": "sha256-a3mV1MIkbxbW/t0nrxSCbEQbm2DL16toW3TwSwzRz6k=",
@@ -95,7 +95,7 @@
         "comma": "comma",
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },

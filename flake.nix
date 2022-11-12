@@ -3,7 +3,7 @@
 
   inputs = {
     # Package sets
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-22.05-darwin";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-22.05-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     # Environment/system management
@@ -20,7 +20,7 @@
 
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, darwin, home-manager, ... }@inputs:
     let
 
       inherit (darwin.lib) darwinSystem;
