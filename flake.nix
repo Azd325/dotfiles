@@ -20,11 +20,8 @@
       inherit (inputs.nixpkgs-unstable.lib)
         attrValues makeOverridable optionalAttrs singleton;
 
-      # Configuration for `nixpkgs`
       nixpkgsConfig = { config = { allowUnfree = true; }; };
     in {
-      # My `nix-darwin` configs
-
       darwinConfigurations = rec {
         BER = darwinSystem {
           system = "aarch64-darwin";
