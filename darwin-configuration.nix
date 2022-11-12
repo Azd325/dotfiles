@@ -59,7 +59,6 @@
       "calibre"
       "coconutbattery"
       "daisydisk"
-      "docker"
       "garmin-express"
       "gas-mask"
       "google-chrome"

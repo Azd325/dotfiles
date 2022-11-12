@@ -75,6 +75,7 @@
     coreutils
     curl
     direnv
+    docker
     duf
     editorconfig-core-c
     fd
