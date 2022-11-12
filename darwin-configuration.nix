@@ -86,8 +86,7 @@
   nix.gc.automatic = true;
 
   nix.settings = {
-    # Sandbox causes failure: https://github.com/NixOS/nix/issues/4119
-    sandbox = false;
+    sandbox = true;
     substituters = [ "https://cache.nixos.org/" ];
     trusted-public-keys =
       [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
