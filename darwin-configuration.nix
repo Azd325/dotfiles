@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # https://github.com/LnL7/nix-darwin/issues/477
-  users.users.timkleinschmidt = {
-    name = "timkleinschmidt";
-    home = "/Users/timkleinschmidt";
-    description = "timkleinschmidt";
-  };
   nix.configureBuildUsers = true;
   system = {
     defaults = {

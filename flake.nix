@@ -21,23 +21,59 @@
         attrValues makeOverridable optionalAttrs singleton;
 
       nixpkgsConfig = { config = { allowUnfree = true; }; };
+
+      homeManagerStateVersion = "22.11";
+
+      primaryUserInfo = {
+        username = "timkleinschmidt";
+        fullName = "Tim Kleinschmidt";
+        email = "tim.kleinschmidt@gmail.com";
+      };
+
+      nixDarwinCommonModules = attrValues self.darwinModules ++ [
+        home-manager.darwinModules.home-manager
+        ({ config, ... }:
+          let inherit (config.users) primaryUser;
+          in {
+            nixpkgs = nixpkgsConfig;
+            # Hack to support legacy worklows that use `<nixpkgs>` etc.
+            # nix.nixPath = { nixpkgs = "${primaryUser.nixConfigDirectory}/nixpkgs.nix"; };
+            nix.nixPath = { nixpkgs = "${inputs.nixpkgs-unstable}"; };
+            # `home-manager` config
+            users.users.${primaryUser.username}.home =
+              "/Users/${primaryUser.username}";
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${primaryUser.username} = {
+              imports = attrValues self.homeManagerModules;
+              home.stateVersion = homeManagerStateVersion;
+              home.user-info = config.users.primaryUser;
+            };
+            # Add a registry entry for this flake
+            nix.registry.my.flake = self;
+          })
+      ];
     in {
+      darwinModules = {
+        tim-bootstrap = import ./darwin-configuration.nix;
+        users-primaryUser = import ./modules/darwin/users.nix;
+      };
+      homeManagerModules = {
+        home-user-info = { lib, ... }: {
+          options.home.user-info = (self.darwinModules.users-primaryUser {
+            inherit lib;
+          }).options.users.primaryUser;
+        };
+      };
+
       darwinConfigurations = rec {
         BER = darwinSystem {
           system = "aarch64-darwin";
-          modules = [
-            # Main `nix-darwin` config
-            ./darwin-configuration.nix
-            # `home-manager` module
-            home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-              # `home-manager` config
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.timkleinschmidt = import ./home.nix;
-            }
-          ];
+          modules = nixDarwinCommonModules ++ [{
+            users.primaryUser = primaryUserInfo;
+            networking.computerName = "Tim’s 💻";
+            networking.hostName = "BER";
+          }];
         };
       };
 
