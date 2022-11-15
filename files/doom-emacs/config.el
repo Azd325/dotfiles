@@ -99,12 +99,11 @@
 
 
 ;; Clojurescript
-(setq cider-boot-parameters "dev --cider"
-      clojure-align-forms-automatically t)
+(setq cider-boot-parameters "dev --cider")
 
-(defun clojurescript-mode-before-save-hook ()
-  (interactive)
-  (when (eq major-mode 'clojurescript-mode)
-    (indent-region (point-min) (point-max))))
-
-(add-hook 'before-save-hook #'clojurescript-mode-before-save-hook)
+(with-eval-after-load "format-all"
+  (define-format-all-formatter cljfmt
+    (:executable "cljfmt")
+    (:install "")
+    (:modes clojure-mode clojurec-mode clojurescript-mode)
+    (:format (format-all--buffer-easy executable "fix" "-"))))
