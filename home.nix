@@ -61,37 +61,19 @@
 
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
-    cachix # adding/managing alternative binary caches hosted by Cachix
-    coreutils
-    curl
-    direnv
-    docker
-    duf
-    editorconfig-core-c
-    fd
-    fzf
-    fnm
-    gitAndTools.git-absorb
-    gh
-    niv # easy dependency management for nix projects
-    nixfmt
-    nixpkgs-review
-    ripgrep
-    rsync
-    shellcheck
-    shfmt
-    tmux
-    vim
-    wget
-    youtube-dl
+  home.packages = lib.attrValues ({
+    inherit (pkgs) cachix niv nixfmt nixpkgs-review;
+
+    inherit (pkgs)
+      coreutils curl direnv docker duf editorconfig-core-c fd fzf fnm gh ripgrep
+      rsync shellcheck shfmt tmux vim wget youtube-dl;
+
+    # git
+    inherit (pkgs.gitAndTools) git-absorb;
 
     # fonts
-    fira-code
-    fira-code-symbols
-    jetbrains-mono
-    source-code-pro
-  ];
+    inherit (pkgs) fira-code fira-code-symbols jetbrains-mono source-code-pro;
+  });
 
   home.file.".doom.d" = { source = files/doom-emacs; };
   home.file.".shadow-cljs" = { source = files/shadow-cljs; };
