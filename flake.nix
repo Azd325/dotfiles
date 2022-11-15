@@ -55,10 +55,14 @@
       ];
     in {
       darwinModules = {
-        tim-bootstrap = import ./darwin-configuration.nix;
+        tim-bootstrap = import ./darwin/bootstrap.nix;
+        tim-general = import ./darwin/general.nix;
+        tim-homebrew = import ./darwin/homebrew.nix;
+
         users-primaryUser = import ./modules/darwin/users.nix;
       };
       homeManagerModules = {
+        tim-home = import ./home.nix;
         home-user-info = { lib, ... }: {
           options.home.user-info = (self.darwinModules.users-primaryUser {
             inherit lib;
