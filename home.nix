@@ -48,6 +48,7 @@
       fetch = { prune = true; };
       merge = { conflictStyle = "zdiff3"; };
     };
+    ignores = [ ".envrc" ];
   };
   programs.vscode = { enable = true; };
 
