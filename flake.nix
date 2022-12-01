@@ -16,7 +16,6 @@
   outputs = { self, darwin, home-manager, ... }@inputs:
     let
 
-      inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib)
         attrValues makeOverridable optionalAttrs singleton;
 
@@ -71,7 +70,7 @@
       };
 
       darwinConfigurations = rec {
-        BER = darwinSystem {
+        BER = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [{
             users.primaryUser = primaryUserInfo;
