@@ -74,6 +74,8 @@
 
     # fonts
     inherit (pkgs) fira-code fira-code-symbols jetbrains-mono source-code-pro;
+
+    inherit (pkgs) discord;
   });
 
   home.file.".doom.d" = { source = files/doom-emacs; };

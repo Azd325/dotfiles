@@ -47,7 +47,6 @@ in {
     "calibre"
     "coconutbattery"
     "daisydisk"
-    "discord"
     "firefox"
     "garmin-express"
     "gas-mask"
