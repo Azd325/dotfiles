@@ -67,7 +67,7 @@
 
     inherit (pkgs)
       coreutils curl direnv docker duf editorconfig-core-c fd fzf fnm gh ripgrep
-      rsync shellcheck shfmt tmux vim wget youtube-dl wireguard-tools;
+      rsync shellcheck shfmt tmux vim wget youtube-dl wireguard-tools gnupg;
 
     # git
     inherit (pkgs.gitAndTools) git-absorb;
