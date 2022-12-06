@@ -34,8 +34,15 @@ in {
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
   # installed in `../home/default.nix` whenever possible.
-  homebrew.brews =
-    [ "coreutils" "emacs-plus" "gdal" "grep" "rabbitmq" "pyenv" ];
+  homebrew.brews = [
+    "coreutils"
+    "emacs-plus"
+    "gdal"
+    "grep"
+    "magic-wormhole"
+    "rabbitmq"
+    "pyenv"
+  ];
 
   # If an app isn't available in the Mac App Store, or the version in the App Store has
   # limitiations, e.g., Transmit, install the Homebrew Cask.
