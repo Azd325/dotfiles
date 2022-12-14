@@ -1,19 +1,39 @@
-{ lib, pkgs }:
+{ pkgs }:
 
 let
-  packages = lib.attrValues ({
-    inherit (pkgs) cachix niv nixfmt nixpkgs-review;
+  nixTools = with pkgs; [ cachix niv nixfmt nixpkgs-review ];
 
-    inherit (pkgs)
-      coreutils curl direnv docker duf editorconfig-core-c fd fzf fnm gh ripgrep
-      rsync shellcheck shfmt tmux vim wget youtube-dl wireguard-tools gnupg;
+  gitTools = with pkgs.gitAndTools; [ git-absorb ];
 
-    # git
-    inherit (pkgs.gitAndTools) git-absorb;
+  fonts = with pkgs; [
+    fira-code
+    fira-code-symbols
+    jetbrains-mono
+    source-code-pro
+  ];
 
-    # fonts
-    inherit (pkgs) fira-code fira-code-symbols jetbrains-mono source-code-pro;
+  guiTools = with pkgs; [ discord ];
 
-    inherit (pkgs) discord;
-  });
-in packages
+  homePackages = with pkgs; [
+    coreutils
+    curl
+    direnv
+    docker
+    duf
+    editorconfig-core-c
+    fd
+    fzf
+    fnm
+    gh
+    ripgrep
+    rsync
+    shellcheck
+    shfmt
+    tmux
+    vim
+    wget
+    youtube-dl
+    wireguard-tools
+    gnupg
+  ];
+in nixTools ++ fonts ++ gitTools ++ guiTools ++ homePackages

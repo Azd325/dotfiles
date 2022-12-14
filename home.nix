@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   home.sessionVariables = {
@@ -62,7 +62,7 @@
 
   fonts.fontconfig.enable = true;
 
-  home.packages = import ./home/packages.nix { inherit lib pkgs; };
+  home.packages = import ./home/packages.nix { inherit pkgs; };
 
   home.file.".doom.d" = { source = files/doom-emacs; };
   home.file.".shadow-cljs" = { source = files/shadow-cljs; };
