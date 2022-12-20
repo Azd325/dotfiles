@@ -14,6 +14,8 @@ let
 
   guiTools = with pkgs; [ discord ];
 
+  pythonPackages = with pkgs; [ poetry ];
+
   homePackages = with pkgs; [
     coreutils
     curl
@@ -36,4 +38,4 @@ let
     wireguard-tools
     gnupg
   ];
-in nixTools ++ fonts ++ gitTools ++ guiTools ++ homePackages
+in nixTools ++ fonts ++ gitTools ++ pythonPackages ++ guiTools ++ homePackages
