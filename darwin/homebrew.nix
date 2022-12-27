@@ -55,6 +55,7 @@ in {
     "calibre"
     "coconutbattery"
     "daisydisk"
+    "docker"
     "firefox"
     "garmin-express"
     "gas-mask"

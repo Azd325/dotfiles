@@ -20,7 +20,7 @@ let
     coreutils
     curl
     direnv
-    docker
+    # docker
     duf
     editorconfig-core-c
     fd
