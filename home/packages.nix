@@ -16,6 +16,8 @@ let
 
   pythonPackages = with pkgs; [ poetry ];
 
+  devPackages = with pkgs; [ clj-kondo ];
+
   homePackages = with pkgs; [
     coreutils
     curl
@@ -38,4 +40,5 @@ let
     wireguard-tools
     gnupg
   ];
-in nixTools ++ fonts ++ gitTools ++ pythonPackages ++ guiTools ++ homePackages
+in nixTools ++ fonts ++ gitTools ++ pythonPackages ++ guiTools ++ devPackages
+++ homePackages
