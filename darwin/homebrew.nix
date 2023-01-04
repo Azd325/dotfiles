@@ -61,6 +61,7 @@ in {
     "gas-mask"
     "google-chrome"
     "gpg-suite"
+    "hot"
     "istat-menus"
     "iterm2"
     "keka"
