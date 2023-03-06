@@ -1,2 +1,4 @@
 .DS_Store
 result
+/.clj-kondo/
+/.lsp/
