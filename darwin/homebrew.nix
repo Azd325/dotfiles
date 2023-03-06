@@ -42,6 +42,7 @@ in {
     "magic-wormhole"
     "rabbitmq"
     "pyenv"
+    "rbenv"
   ];
 
   # If an app isn't available in the Mac App Store, or the version in the App Store has
@@ -49,6 +50,7 @@ in {
   homebrew.casks = [
     "adobe-digital-editions"
     "adoptopenjdk11"
+    "android-studio"
     "app-tamer"
     "appcleaner"
     "balenaetcher"
