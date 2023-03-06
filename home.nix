@@ -66,5 +66,6 @@
 
   home.file.".doom.d" = { source = files/doom-emacs; };
   home.file.".shadow-cljs" = { source = files/shadow-cljs; };
+  home.file.".yarnrc.yml" = { source = files/.yarnrc.yml; };
 
 }
