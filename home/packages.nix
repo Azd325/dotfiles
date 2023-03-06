@@ -1,7 +1,7 @@
 { pkgs }:
 
 let
-  nixTools = with pkgs; [ cachix niv nixfmt nixpkgs-review ];
+  nixTools = with pkgs; [ nixfmt nixpkgs-review ];
 
   gitTools = with pkgs.gitAndTools; [ git-absorb ];
 
