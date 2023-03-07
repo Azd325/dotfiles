@@ -28,6 +28,7 @@ in {
     Keynote = 409183694;
     Numbers = 409203825;
     Pages = 409201541;
+    TestFlight = 899247664;
     WireGuard = 1451685025;
     Xcode = 497799835;
   };
