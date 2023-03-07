@@ -70,6 +70,7 @@ in {
     "keka"
     "libreoffice"
     "logseq"
+    "lulu"
     "micro-snitch"
     "microsoft-auto-update"
     "microsoft-office"
