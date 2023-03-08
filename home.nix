@@ -50,7 +50,16 @@
     };
     ignores = [ ".envrc" ];
   };
-  programs.vscode = { enable = true; };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      betterthantomorrow.calva
+      editorconfig.editorconfig
+      ms-azuretools.vscode-docker
+      ms-python.python
+    ];
+  };
 
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
 
