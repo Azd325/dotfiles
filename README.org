@@ -28,17 +28,7 @@ git clone git@github.com:Azd325/dotfiles.git ∼/
 *** Installing nix
 
 #+begin_src shell
-curl -L https://nixos.org/nix/install | sh
-#+end_src
-
-
-*** Setup nix config
-
-#+begin_src shell
-mkdir -p ~/.config/nix
-cat <<EOF > ~/.config/nix/nix.conf
-experimental-features = nix-command flakes
-EOF
+curl -L https://nixos.org/nix/install | sh # restart afterwards
 #+end_src
 
 * Install
@@ -47,7 +37,7 @@ EOF
 
 #+begin_src shell
 cd ∼/dotfiles
-nix build .#darwinConfigurations.BER.system
+nix --experimental-features 'nix-command flakes' build .#darwinConfigurations.BER.system
 ./result/sw/bin/darwin-rebuild --show-trace switch --flake .
 #+end_src
 
@@ -55,8 +45,6 @@ nix build .#darwinConfigurations.BER.system
 *** Install doom-emacs with my configuration
 
 #+BEGIN_SRC shell
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
-~/.emacs.d/bin/doom sync
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
 #+END_SRC
-
