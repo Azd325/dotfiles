@@ -54,6 +54,7 @@ in {
     "android-studio"
     "app-tamer"
     "appcleaner"
+    "arc"
     "balenaetcher"
     "calibre"
     "coconutbattery"
