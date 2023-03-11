@@ -61,6 +61,8 @@
     ];
   };
 
+  programs.emacs = { enable = true; };
+
   # https://github.com/malob/nixpkgs/blob/master/home/default.nix
 
   programs.direnv.enable = true;

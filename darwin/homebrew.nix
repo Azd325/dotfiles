@@ -19,7 +19,6 @@ in {
     "homebrew/cask"
     "homebrew/cask-drivers"
     "homebrew/core"
-    "d12frosted/emacs-plus"
   ];
 
   # Prefer installing application from the Mac App Store
@@ -37,12 +36,12 @@ in {
   # installed in `../home/default.nix` whenever possible.
   homebrew.brews = [
     "coreutils"
-    "emacs-plus"
     "gdal"
     "grep"
     "magic-wormhole"
-    "rabbitmq"
+    "pango"
     "pyenv"
+    "rabbitmq"
     "rbenv"
   ];
 
