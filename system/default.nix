@@ -13,6 +13,9 @@
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
+      # Recommended when using `direnv` etc.
+      keep-derivations = true;
+      keep-outputs = true;
     };
   };
 
