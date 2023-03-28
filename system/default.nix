@@ -9,8 +9,10 @@
   services.nix-daemon.enable = true;
   nixpkgs.config.allowUnfree = true;
   nix = {
+    configureBuildUsers = true;
     package = pkgs.nix;
     settings = {
+      trusted-users = [ "@admin" ];
       experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
       # Recommended when using `direnv` etc.
