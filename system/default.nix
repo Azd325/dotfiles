@@ -14,7 +14,8 @@
     settings = {
       trusted-users = [ "@admin" ];
       experimental-features = [ "nix-command" "flakes" ];
-      auto-optimise-store = true;
+      # https://github.com/NixOS/nix/issues/7273
+      auto-optimise-store = false;
       # Recommended when using `direnv` etc.
       keep-derivations = true;
       keep-outputs = true;
