@@ -12,7 +12,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, darwin, home-manager, self, ... }:
+  outputs = { nixpkgs, darwin, home-manager, self, ... }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
