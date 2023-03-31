@@ -12,3 +12,9 @@ trim_trailing_whitespace = true
 [*.{yaml,yml}]
 indent_size = 2
 indent_style = space
+
+# Lua
+# http://lua-users.org/wiki/LuaStyleGuide
+[*.{lua,luacheckrc}]
+indent_size = 2
+indent_style = space
