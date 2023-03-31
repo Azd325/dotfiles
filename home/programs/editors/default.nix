@@ -1,5 +1,5 @@
-{ ... }: {
-  imports = [ ./vscode ];
+{ pkgs, ... }: {
+  imports = [ ./nvim ./vscode ];
   # programs.emacs = { enable = true; };
 
   programs.helix = {
@@ -13,13 +13,4 @@
       };
     };
   };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-  };
-
 }
