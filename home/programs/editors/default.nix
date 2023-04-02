@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   imports = [ ./nvim ./vscode ];
   # programs.emacs = { enable = true; };
 
