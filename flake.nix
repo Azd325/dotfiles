@@ -10,6 +10,9 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    devenv.url = "github:cachix/devenv/latest";
+    devenv.inputs.nixpkgs.follows = "nixpkgs";
+
     rose-pine-warp = {
       url = "github:thanhsonng/rose-pine-warp";
       flake = false;
@@ -17,12 +20,13 @@
 
   };
 
-  outputs = { nixpkgs, darwin, home-manager, rose-pine-warp, self, ... }:
+  outputs =
+    { nixpkgs, darwin, home-manager, devenv, rose-pine-warp, self, ... }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       extraArgs = {
-        inherit nixpkgs home-manager rose-pine-warp;
+        inherit nixpkgs home-manager devenv rose-pine-warp;
         myFlake = self;
       };
     in {
