@@ -1,8 +1,12 @@
-
-
-{ pkgs, ... }:
+{ pkgs, devenv, ... }:
 let
-  nixTools = with pkgs; [ nixfmt nixpkgs-review statix ];
+  nixTools = with pkgs; [
+    cachix
+    devenv.packages.${system}.devenv
+    nixfmt
+    nixpkgs-review
+    statix
+  ];
 
   gitTools = with pkgs.gitAndTools; [ git-absorb ];
 
