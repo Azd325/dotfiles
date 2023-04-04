@@ -6,6 +6,8 @@
       editorconfig.editorconfig
       ms-azuretools.vscode-docker
       ms-python.python
+      ms-vscode.makefile-tools
+      oderwat.indent-rainbow
     ];
   };
 }
