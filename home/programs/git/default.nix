@@ -12,12 +12,21 @@
       signByDefault = true;
     };
     extraConfig = {
+      core = {
+        commitgraph = true;
+        fsmonitor = true;
+        untrackedcache = true;
+      };
       diff = { algorithm = "histogram"; };
       github = { user = "Azd325"; };
       pull = { rebase = true; };
       rebase = { autoStash = true; };
-      fetch = { prune = true; };
+      fetch = {
+        prune = true;
+        writeCommitGraph = true;
+      };
       merge = { conflictStyle = "zdiff3"; };
+      feature = { manyFiles = true; };
     };
     ignores = [ ".envrc" ];
   };
