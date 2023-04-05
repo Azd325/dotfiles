@@ -76,6 +76,7 @@
       "postgres-unofficial"
       "postico"
       "pycharm-ce"
+      "raycast"
       "telegram"
       "tunnelblick"
       "warp"
