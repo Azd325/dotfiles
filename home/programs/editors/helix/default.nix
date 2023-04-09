@@ -5,6 +5,7 @@
     pkgs.python311Packages.python-lsp-server
     pkgs.python311Packages.black
     pkgs.nil
+    pkgs.nixfmt
   ];
 
   programs.helix = {
@@ -26,8 +27,14 @@
           args = [ "--quiet -" ];
         };
       }
+      {
+        name = "nix";
+        auto-format = true;
+        formatter = { command = "${pkgs.nixfmt.out}/bin/nixfmt"; };
+      }
     ];
     settings = {
+      editor = { line-number = "relative"; };
       theme = "rose_pine";
       keys.normal = {
         space.space = "file_picker";
