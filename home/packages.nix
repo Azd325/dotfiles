@@ -27,9 +27,7 @@ let
     du-dust # fancy version of `du`
     duf
     editorconfig-core-c
-    exa # fancy version of `ls`
     fd # fancy version of `find`
-    fzf
     gh
     gnugrep
     gnumake

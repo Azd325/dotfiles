@@ -1,11 +1,21 @@
 { ... }: {
   imports = [ ./editors ./git ./shells ];
 
+  # fancy version of ls
+  # https://nix-community.github.io/home-manager/options.html#opt-programs.exa.enable
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+  };
+
   # Direnv, load and unload environment variables depending on the current directory.
   # https://direnv.net
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.direnv.enable
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+
+  # https://nix-community.github.io/home-manager/options.html#opt-programs.fzf.enable
+  programs.fzf.enable = true;
 
   programs.htop.enable = true;
   programs.htop.settings.show_program_path = true;
