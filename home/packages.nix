@@ -17,7 +17,7 @@ let
     source-code-pro
   ];
 
-  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck ];
+  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck poetry ];
 
   homePackages = with pkgs; [
     bandwhich # display current network utilization by process
