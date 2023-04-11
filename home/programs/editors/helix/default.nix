@@ -24,7 +24,7 @@
         auto-format = true;
         formatter = {
           command = "${pkgs.python311Packages.black.out}/bin/black";
-          args = [ "--quiet -" ];
+          args = [ "--quiet" "-" ];
         };
       }
       {
