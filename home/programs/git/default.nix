@@ -17,6 +17,7 @@
         fsmonitor = true;
         untrackedcache = true;
       };
+      init = { defaultBranch = "main"; };
       diff = { algorithm = "histogram"; };
       github = { user = "Azd325"; };
       pull = { rebase = true; };
