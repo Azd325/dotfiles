@@ -10,6 +10,7 @@
 
   home = {
     sessionPath = [
+      "$HOME/.local/bin"
       "/Users/timkleinschmidt/.config/emacs/bin"
       "/Applications/Postgres.app/Contents/Versions/latest/bin"
     ];
