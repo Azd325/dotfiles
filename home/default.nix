@@ -10,8 +10,11 @@
 
   home = {
     sessionPath = [
+      # own scripts
       "$HOME/.local/bin"
+      # Doom Emacs binary
       "/Users/timkleinschmidt/.config/emacs/bin"
+      # postgres helper e.g createdb, dropdb, psql
       "/Applications/Postgres.app/Contents/Versions/latest/bin"
     ];
     sessionVariables = {
