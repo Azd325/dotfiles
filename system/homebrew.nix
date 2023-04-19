@@ -66,6 +66,7 @@
       "istat-menus"
       "iterm2"
       "keka"
+      "keybase"
       "libreoffice"
       "logseq"
       "lulu"
