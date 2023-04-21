@@ -6,6 +6,7 @@
     pkgs.python311Packages.black
     pkgs.nil
     pkgs.nixfmt
+    pkgs.clojure-lsp
   ];
 
   programs.helix = {
