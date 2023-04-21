@@ -32,6 +32,15 @@
         auto-format = true;
         formatter = { command = "${pkgs.nixfmt.out}/bin/nixfmt"; };
       }
+      {
+        name = "clojure";
+        auto-format = true;
+        formatter = {
+          # binary not managed by nix
+          command = "cljfmt";
+          args = [ "fix" "-" ];
+        };
+      }
     ];
     settings = {
       editor = { line-number = "relative"; };
