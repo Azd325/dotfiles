@@ -75,6 +75,7 @@
       "microsoft-office"
       "microsoft-teams"
       "moneymoney"
+      "pika"
       "postgres-unofficial"
       "postico"
       "pycharm-ce"
