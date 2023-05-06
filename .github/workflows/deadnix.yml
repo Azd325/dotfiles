@@ -1,11 +1,22 @@
-on: [push]
-
+---
 name: Dead code analysis
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deadnix:
-    name: Deadnix
     runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v3
       - uses: cachix/install-nix-action@v20
