@@ -3,6 +3,7 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
+      bungcip.better-toml
       editorconfig.editorconfig
       eamodio.gitlens
       github.copilot
