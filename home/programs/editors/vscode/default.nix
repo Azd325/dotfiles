@@ -4,6 +4,7 @@
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       editorconfig.editorconfig
+      github.copilot
       kahole.magit
       ms-azuretools.vscode-docker
       ms-python.python
@@ -16,6 +17,7 @@
         colorTheme = "Rosé Pine";
         iconTheme = "rose-pine-icons";
       };
+      editor = { inlineSuggest = { enabled = true; }; };
     };
   };
 }
