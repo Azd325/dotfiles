@@ -6,6 +6,7 @@
       editorconfig.editorconfig
       eamodio.gitlens
       github.copilot
+      github.vscode-github-actions
       kahole.magit
       ms-azuretools.vscode-docker
       ms-python.python
