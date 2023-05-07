@@ -13,6 +13,7 @@
       ms-vscode.makefile-tools
       mvllow.rose-pine
       oderwat.indent-rainbow
+      redhat.vscode-yaml
     ];
     userSettings = {
       workbench = {
@@ -20,6 +21,7 @@
         iconTheme = "rose-pine-icons";
       };
       editor = { inlineSuggest = { enabled = true; }; };
+      redhat = { telemetry = { enabled = false; }; };
     };
   };
 }
