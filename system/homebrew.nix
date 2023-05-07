@@ -46,7 +46,7 @@
     # If an app isn't available in the Mac App Store, or the version in the App Store has
     # limitiations, e.g., Transmit, install the Homebrew Cask.
     casks = [
-      # "adobe-digital-editions" # rosetta missing
+      "adobe-digital-editions"
       "adoptopenjdk11"
       "android-studio"
       "app-tamer"
