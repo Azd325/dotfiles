@@ -4,6 +4,7 @@
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       editorconfig.editorconfig
+      eamodio.gitlens
       github.copilot
       kahole.magit
       ms-azuretools.vscode-docker
