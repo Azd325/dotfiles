@@ -16,7 +16,6 @@
       "d12frosted/emacs-plus"
     ];
 
-    # Prefer installing application from the Mac App Store
     masApps = {
       Endel = 1346247457;
       Enpass = 732710998;
@@ -28,8 +27,6 @@
       Xcode = 497799835;
     };
 
-    # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
-    # installed in `../home/default.nix` whenever possible.
     brews = [
       "coreutils"
       "gdal"
@@ -43,8 +40,6 @@
       "rbenv"
     ];
 
-    # If an app isn't available in the Mac App Store, or the version in the App Store has
-    # limitiations, e.g., Transmit, install the Homebrew Cask.
     casks = [
       "adobe-digital-editions"
       "adoptopenjdk11"
