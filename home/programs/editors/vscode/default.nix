@@ -13,7 +13,6 @@
       ms-python.python
       ms-vscode.makefile-tools
       mvllow.rose-pine
-      oderwat.indent-rainbow
       redhat.vscode-yaml
     ];
     userSettings = {
