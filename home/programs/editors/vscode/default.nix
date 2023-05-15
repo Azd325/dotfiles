@@ -19,6 +19,7 @@
       workbench = {
         colorTheme = "Rosé Pine";
         iconTheme = "rose-pine-icons";
+        tree = { indent = 20; };
       };
       editor = { inlineSuggest = { enabled = true; }; };
       redhat = { telemetry = { enabled = false; }; };
