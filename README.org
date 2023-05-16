@@ -22,7 +22,8 @@ chmod 755 ~/.ssh
 *** Cloning the dotfiles
 
 #+BEGIN_SRC shell
-git clone git@github.com:Azd325/dotfiles.git ∼/
+mkdir -p .config/
+git clone git@github.com:Azd325/dotfiles.git ∼/.config/nixpkgs
 #+END_SRC
 
 *** Installing nix
@@ -33,12 +34,19 @@ curl -L https://nixos.org/nix/install | sh # restart afterwards
 
 * Install
 
-** General
+** First install
 
 #+begin_src shell
-cd ∼/dotfiles
+cd ~/.config/nixpkgs
 nix --experimental-features 'nix-command flakes' build .#darwinConfigurations.BER.system
-./result/sw/bin/darwin-rebuild --show-trace switch --flake .
+./result/sw/bin/darwin-rebuild switch --flake .
+#+end_src
+
+** Update
+
+#+begin_src shell
+nix flake udpate
+darwin-rebuild switch --flake ~/.config/nixpkgs
 #+end_src
 
 ** Emacs
