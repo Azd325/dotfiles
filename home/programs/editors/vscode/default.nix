@@ -6,6 +6,7 @@
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       bungcip.better-toml
+      dracula-theme.theme-dracula
       editorconfig.editorconfig
       eamodio.gitlens
       github.copilot
@@ -14,13 +15,11 @@
       ms-azuretools.vscode-docker
       ms-python.python
       ms-vscode.makefile-tools
-      mvllow.rose-pine
       redhat.vscode-yaml
     ];
     userSettings = {
       workbench = {
-        colorTheme = "Rosé Pine";
-        iconTheme = "rose-pine-icons";
+        colorTheme = "Dracula";
         tree = { indent = 20; };
       };
       editor = {
