@@ -23,7 +23,11 @@
         iconTheme = "rose-pine-icons";
         tree = { indent = 20; };
       };
-      editor = { inlineSuggest = { enabled = true; }; };
+      editor = {
+        inlineSuggest = { enabled = true; };
+        fontFamily = "JetBrains Mono";
+        fontSize = 15;
+      };
       redhat = { telemetry = { enabled = false; }; };
     };
   };
