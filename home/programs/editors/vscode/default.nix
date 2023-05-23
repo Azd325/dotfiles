@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
+    enableExtensionUpdateCheck = false;
+    enableUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       bungcip.better-toml
