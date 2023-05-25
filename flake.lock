@@ -238,24 +238,7 @@
         "darwin": "darwin",
         "devenv": "devenv",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
-        "rose-pine-warp": "rose-pine-warp"
-      }
-    },
-    "rose-pine-warp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1677757043,
-        "narHash": "sha256-Ah4YXn28FJD1vAL549cRFHLIec+0SHj7Q6AEUhAV+3g=",
-        "owner": "thanhsonng",
-        "repo": "rose-pine-warp",
-        "rev": "0cf71ee97fb5d43b7204ec94035ed710d47ad598",
-        "type": "github"
-      },
-      "original": {
-        "owner": "thanhsonng",
-        "repo": "rose-pine-warp",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
