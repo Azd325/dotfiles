@@ -1,7 +1,7 @@
 { ... }: {
   imports = [ ./files ./packages.nix ./programs ];
 
-  home.stateVersion = "23.05";
+  home.stateVersion = "23.11";
 
   home.username = "timkleinschmidt";
   home.homeDirectory = "/Users/timkleinschmidt";
