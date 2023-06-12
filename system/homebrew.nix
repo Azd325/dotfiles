@@ -76,6 +76,7 @@
       "postico"
       "pycharm-ce"
       "raycast"
+      "signal"
       "steam"
       "telegram"
       "tunnelblick"
