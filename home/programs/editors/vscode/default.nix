@@ -5,8 +5,8 @@
       betterthantomorrow.calva
       bungcip.better-toml
       dracula-theme.theme-dracula
-      editorconfig.editorconfig
       eamodio.gitlens
+      editorconfig.editorconfig
       github.copilot
       github.vscode-github-actions
       kahole.magit
