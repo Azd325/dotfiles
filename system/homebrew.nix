@@ -82,7 +82,6 @@
       "tunnelblick"
       "warp"
       "wow"
-      "zotero"
     ];
   };
 
