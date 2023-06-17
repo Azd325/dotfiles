@@ -78,6 +78,7 @@
       "raycast"
       "signal"
       "steam"
+      "utm"
       "telegram"
       "tunnelblick"
       "warp"
