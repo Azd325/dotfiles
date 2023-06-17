@@ -43,4 +43,7 @@
     terminal = "screen-256color";
   };
 
+  programs.atuin = {
+    enable = true;
+  };
 }
