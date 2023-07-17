@@ -10,9 +10,7 @@
 
     taps = [
       "AdoptOpenJDK/openjdk"
-      "homebrew/cask"
       "homebrew/cask-drivers"
-      "homebrew/core"
       "d12frosted/emacs-plus"
     ];
 
