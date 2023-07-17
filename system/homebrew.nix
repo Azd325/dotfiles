@@ -68,6 +68,7 @@
       "lulu"
       "micro-snitch"
       "microsoft-auto-update"
+      "microsoft-edge"
       "microsoft-office"
       "microsoft-teams"
       "moneymoney"
