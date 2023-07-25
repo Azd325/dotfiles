@@ -9,8 +9,8 @@
     global.brewfile = true;
 
     taps = [
-      "AdoptOpenJDK/openjdk"
       "homebrew/cask-drivers"
+      "homebrew/cask-versions"
       "d12frosted/emacs-plus"
     ];
 
@@ -40,7 +40,6 @@
 
     casks = [
       "adobe-digital-editions"
-      "adoptopenjdk11"
       "android-studio"
       "app-tamer"
       "appcleaner"
@@ -78,6 +77,7 @@
       "signal"
       "steam"
       "utm"
+      "temurin11"
       "telegram"
       "tunnelblick"
       "warp"
