@@ -14,7 +14,6 @@
       mechatroner.rainbow-csv
       ms-azuretools.vscode-docker
       ms-python.python
-      ms-vscode-remote.remote-containers
       ms-vscode.makefile-tools
       redhat.vscode-yaml
       tamasfe.even-better-toml

@@ -41,7 +41,6 @@
     casks = [
       "adobe-digital-editions"
       "android-studio"
-      "app-tamer"
       "appcleaner"
       "arc"
       "balenaetcher"
