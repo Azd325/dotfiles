@@ -3,7 +3,6 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
-      bungcip.better-toml
       charliermarsh.ruff
       eamodio.gitlens
       editorconfig.editorconfig
@@ -15,6 +14,7 @@
       ms-python.python
       ms-vscode.makefile-tools
       redhat.vscode-yaml
+      tamasfe.even-better-toml
     ];
   };
 }
