@@ -29,7 +29,7 @@
       "coreutils"
       "gdal"
       "grep"
-      "emacs-plus@28"
+      "emacs-plus"
       "magic-wormhole"
       "pango"
       "pyenv"
