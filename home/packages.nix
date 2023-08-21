@@ -33,6 +33,7 @@ let
     gnumake
     gnupg
     hyperfine # benchmarking tool
+    just # fancy version of `make`
     jq
     mosh # wrapper for `ssh` that better and not dropping connections
     ripgrep # better version of `grep`
