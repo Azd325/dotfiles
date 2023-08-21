@@ -4,6 +4,7 @@ let
     cachix
     devenv.packages.${system}.devenv
     nixfmt
+    nixpkgs-fmt
     nixpkgs-review
     statix
   ];
