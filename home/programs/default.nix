@@ -2,8 +2,8 @@
   imports = [ ./editors ./git ./shells ];
 
   # fancy version of ls
-  # https://nix-community.github.io/home-manager/options.html#opt-programs.exa.enable
-  programs.exa = {
+  # https://nix-community.github.io/home-manager/options.html#opt-programs.eza.enable
+  programs.eza = {
     enable = true;
     enableAliases = true;
   };
