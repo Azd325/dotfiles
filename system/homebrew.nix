@@ -23,6 +23,7 @@
       #TestFlight = 899247664;
       WireGuard = 1451685025;
       Xcode = 497799835;
+      "Structured - Tagesplaner" = 1499198946;
     };
 
     brews = [
