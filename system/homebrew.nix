@@ -62,7 +62,6 @@
       "keybase"
       "libreoffice"
       "logseq"
-      "lulu"
       "micro-snitch"
       "microsoft-auto-update"
       "microsoft-edge"
