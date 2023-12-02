@@ -21,6 +21,7 @@ let
   devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck poetry ];
 
   homePackages = with pkgs; [
+    babashka # clojure scripting
     bandwhich # display current network utilization by process
     bottom # fancy version of `top` with ASCII graphs
     coreutils
