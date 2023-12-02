@@ -48,6 +48,7 @@
       "calibre"
       "coconutbattery"
       "daisydisk"
+      "discord"
       "docker"
       "epic-games"
       "firefox"
