@@ -58,7 +58,6 @@
       "gpg-suite"
       "hot"
       "istat-menus"
-      "iterm2"
       "keka"
       "keybase"
       "libreoffice"
@@ -80,7 +79,6 @@
       "temurin11"
       "telegram"
       "tunnelblick"
-      "warp"
       "wow"
     ];
   };

@@ -1,4 +1,13 @@
 { pkgs, ... }: {
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      live_config_reload = true;
+      selection = {
+        save_to_clipboard = true;
+      };
+    };
+  };
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
