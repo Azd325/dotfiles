@@ -4,6 +4,7 @@
     extensions = with pkgs.vscode-extensions; [
       betterthantomorrow.calva
       charliermarsh.ruff
+      dracula-theme.theme-dracula
       eamodio.gitlens
       editorconfig.editorconfig
       esbenp.prettier-vscode
