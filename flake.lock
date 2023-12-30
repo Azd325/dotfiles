@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "alacritty-dracula-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695650175,
+        "narHash": "sha256-MgRH5Lc8wyZ6AQZweyL1QzO5eBzVdjbOPQeRs/Mf51M=",
+        "owner": "dracula",
+        "repo": "alacritty",
+        "rev": "9ae0fdedd423803f0401f6e7a23cd2bb88c175b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dracula",
+        "repo": "alacritty",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -238,6 +254,7 @@
     },
     "root": {
       "inputs": {
+        "alacritty-dracula-theme": "alacritty-dracula-theme",
         "darwin": "darwin",
         "devenv": "devenv",
         "home-manager": "home-manager",

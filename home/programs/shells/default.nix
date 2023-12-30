@@ -1,7 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, alacritty-dracula-theme, ... }: {
   programs.alacritty = {
     enable = true;
     settings = {
+      import = [
+        "${alacritty-dracula-theme}/dracula.toml"
+      ];
       live_config_reload = true;
       selection = {
         save_to_clipboard = true;

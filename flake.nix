@@ -12,14 +12,19 @@
 
     devenv.url = "github:cachix/devenv/main";
     devenv.inputs.nixpkgs.follows = "nixpkgs";
+
+    alacritty-dracula-theme = {
+      url = "github:dracula/alacritty";
+      flake = false;
+    };
   };
 
-  outputs = { nixpkgs, darwin, home-manager, devenv, self, ... }:
+  outputs = { nixpkgs, darwin, home-manager, devenv, alacritty-dracula-theme, self, ... }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       extraArgs = {
-        inherit nixpkgs home-manager devenv;
+        inherit nixpkgs home-manager devenv alacritty-dracula-theme;
         myFlake = self;
       };
     in {
