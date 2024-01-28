@@ -79,7 +79,6 @@
       "temurin11"
       "telegram"
       "tunnelblick"
-      "wow"
     ];
   };
 
