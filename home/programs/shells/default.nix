@@ -24,6 +24,11 @@
       selection = {
         save_to_clipboard = true;
       };
+      keyboard = {
+        bindings = [
+          { key = 36; mods = "Command"; action = "ToggleFullscreen"; }
+        ];
+      };
     };
   };
   programs.zsh = {
