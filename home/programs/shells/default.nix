@@ -5,6 +5,21 @@
       import = [
         "${alacritty-dracula-theme}/dracula.toml"
       ];
+      font = {
+        normal = {
+          family = "JetBrains Mono";
+          style = "Regular";
+        };
+        bold = {
+          family = "JetBrains Mono";
+          style = "Bold";
+        };
+        italic = {
+          family = "JetBrains Mono";
+          style = "Italic";
+        };
+        size = 16.0;
+      };
       live_config_reload = true;
       selection = {
         save_to_clipboard = true;
