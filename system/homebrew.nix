@@ -8,11 +8,7 @@
     onActivation.cleanup = "zap";
     global.brewfile = true;
 
-    taps = [
-      "homebrew/cask-drivers"
-      "homebrew/cask-versions"
-      "d12frosted/emacs-plus"
-    ];
+    taps = [ "homebrew/cask-versions" "d12frosted/emacs-plus" ];
 
     masApps = {
       Endel = 1346247457;
