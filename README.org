@@ -38,7 +38,7 @@ curl -L https://nixos.org/nix/install | sh # restart afterwards
 
 #+begin_src shell
 cd ~/.config/nixpkgs
-nix --experimental-features 'nix-command flakes' build .#darwinConfigurations.BER.system
+nix --experimental-features 'nix-command flakes' build .#aarch64
 ./result/sw/bin/darwin-rebuild switch --flake .
 #+end_src
 
@@ -46,7 +46,7 @@ nix --experimental-features 'nix-command flakes' build .#darwinConfigurations.BE
 
 #+begin_src shell
 nix flake udpate
-darwin-rebuild switch --flake ~/.config/nixpkgs
+darwin-rebuild switch --flake ".#aarch64"
 #+end_src
 
 ** Emacs

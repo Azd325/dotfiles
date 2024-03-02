@@ -19,33 +19,13 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = { nixpkgs, darwin, home-manager, devenv, alacritty-dracula-theme, self, ... }:
-    let
-      supportedSystems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
-      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-      extraArgs = {
-        inherit nixpkgs home-manager devenv alacritty-dracula-theme;
-        myFlake = self;
-      };
-    in {
-      darwinConfigurations = {
-        BER = darwin.lib.darwinSystem {
-          specialArgs = extraArgs;
-          system = "aarch64-darwin";
-          modules = [
-            ./system
-            home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = extraArgs;
-              home-manager.users.timkleinschmidt = import ./home;
-            }
-          ];
-        };
-      };
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in { default = pkgs.mkShell { buildInputs = with pkgs; [ ]; }; });
+  outputs = inputs : let
+    darwin-system = import ./system/darwin.nix {inherit inputs username;};
+    username = "timkleinschmidt";
+  in {
+    darwinConfigurations = {
+      aarch64 = darwin-system "aarch64-darwin";
+      x86_64 = darwin-system "x86_64-darwin";
     };
+  };
 }
