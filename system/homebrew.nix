@@ -56,6 +56,7 @@
       "istat-menus"
       "keka"
       "keybase"
+      "languagetool"
       "libreoffice"
       "logseq"
       "micro-snitch"
