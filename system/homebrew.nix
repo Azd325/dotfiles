@@ -72,10 +72,10 @@
       "raycast"
       "signal"
       "steam"
-      "utm"
-      "temurin11"
       "telegram"
+      "temurin11"
       "tunnelblick"
+      "utm"
     ];
   };
 
