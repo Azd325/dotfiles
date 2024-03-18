@@ -2,9 +2,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      import = [
-        "${alacritty-dracula-theme}/dracula.toml"
-      ];
+      import = [ "${alacritty-dracula-theme}/dracula.toml" ];
       font = {
         normal = {
           family = "JetBrains Mono";
@@ -21,13 +19,13 @@
         size = 16.0;
       };
       live_config_reload = true;
-      selection = {
-        save_to_clipboard = true;
-      };
+      selection = { save_to_clipboard = true; };
       keyboard = {
-        bindings = [
-          { key = 36; mods = "Command"; action = "ToggleFullscreen"; }
-        ];
+        bindings = [{
+          key = 36;
+          mods = "Command";
+          action = "ToggleFullscreen";
+        }];
       };
       window = {
         dynamic_title = true;
@@ -85,7 +83,5 @@
     terminal = "screen-256color";
   };
 
-  programs.atuin = {
-    enable = true;
-  };
+  programs.atuin = { enable = true; };
 }
