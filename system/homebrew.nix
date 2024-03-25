@@ -44,6 +44,7 @@
       "daisydisk"
       "discord"
       "docker"
+      "figma"
       "firefox"
       "garmin-express"
       "gas-mask"
