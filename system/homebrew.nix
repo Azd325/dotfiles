@@ -53,7 +53,6 @@
       "hot"
       "istat-menus"
       "keka"
-      "keybase"
       "languagetool"
       "libreoffice"
       "logseq"
