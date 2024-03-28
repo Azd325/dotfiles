@@ -54,7 +54,6 @@
       "istat-menus"
       "keka"
       "languagetool"
-      "libreoffice"
       "logseq"
       "microsoft-auto-update"
       "microsoft-edge"
