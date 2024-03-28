@@ -30,11 +30,10 @@
       window = {
         dynamic_title = true;
         startup_mode = "Maximized";
-        decorations = "buttonless";
         dynamic_padding = false;
         padding = {
-          x = 15;
-          y = 15;
+          x = 10;
+          y = 10;
         };
       };
     };
