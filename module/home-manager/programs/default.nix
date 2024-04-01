@@ -32,7 +32,13 @@
   programs.zoxide.enable = true;
 
   # https://nix-community.github.io/home-manager/options.html#opt-programs.zellij.enable
-  programs.zellij = { enable = true; };
+  programs.zellij = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      theme = "dracula";
+    };
+  };
 
   fonts.fontconfig.enable = true;
 }
