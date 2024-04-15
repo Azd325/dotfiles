@@ -6,7 +6,7 @@
     darwin.url = "github:lnl7/nix-darwin";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
 
     devenv.inputs.nixpkgs.follows = "nixpkgs";
     devenv.url = "github:cachix/devenv/main";
@@ -16,7 +16,7 @@
       flake = false;
     };
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
   };
 
   outputs = inputs : let
