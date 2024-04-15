@@ -39,8 +39,8 @@
     };
   };
   programs.zsh = {
-    autosuggestion.enable = true;
     enable = true;
+    enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
       # FNM
