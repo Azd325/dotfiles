@@ -2,7 +2,7 @@
 let
   nixTools = with pkgs; [
     cachix
-    devenv.packages.${system}.devenv
+    #devenv.packages.${system}.devenv
     nixfmt
     nixpkgs-fmt
     nixpkgs-review
