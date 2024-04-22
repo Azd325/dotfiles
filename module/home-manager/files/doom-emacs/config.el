@@ -108,6 +108,8 @@
     (:modes clojure-mode clojurec-mode clojurescript-mode)
     (:format (format-all--buffer-easy executable "fix" "-"))))
 
+(setq-hook! 'python-mode-hook +format-with 'ruff)
+
 (evil-define-key 'normal clojure-mode-map
   ">"  'sp-forward-slurp-sexp
   "<"  'sp-forward-barf-sexp)
