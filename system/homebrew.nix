@@ -8,7 +8,11 @@
     onActivation.cleanup = "zap";
     global.brewfile = true;
 
-    taps = [ "homebrew/cask-versions" "d12frosted/emacs-plus" ];
+    taps = [
+      "homebrew/cask-versions"
+      "d12frosted/emacs-plus"
+      "pulumi/tap"
+    ];
 
     masApps = {
       Endel = 1346247457;
@@ -29,6 +33,7 @@
       "emacs-plus"
       "magic-wormhole"
       "pango"
+      "pulumi"
       "pyenv"
       "fnm"
       "rabbitmq"
