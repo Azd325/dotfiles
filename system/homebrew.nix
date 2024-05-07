@@ -27,6 +27,7 @@
     };
 
     brews = [
+      "awscli"
       "coreutils"
       "gdal"
       "grep"
