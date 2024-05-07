@@ -57,6 +57,7 @@
       "gpg-suite"
       "hot"
       "istat-menus"
+      "iterm2"
       "keka"
       "languagetool"
       "logseq"
