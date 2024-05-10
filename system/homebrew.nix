@@ -67,6 +67,7 @@
       "microsoft-office"
       "microsoft-teams"
       "pika"
+      "portfolioperformance"
       "postgres-unofficial"
       "postico"
       "pycharm-ce"
