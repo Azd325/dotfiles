@@ -6,7 +6,7 @@ let
   system-config = import ../module/configuration.nix;
   home-manager-config = import ../module/home-manager;
   extraArgs = {
-    inherit (inputs) devenv alacritty-dracula-theme;
+    inherit (inputs) alacritty-dracula-theme;
   };
 in
 inputs.darwin.lib.darwinSystem {

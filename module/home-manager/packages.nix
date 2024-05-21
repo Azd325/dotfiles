@@ -1,8 +1,7 @@
-{ pkgs, devenv, ... }:
+{ pkgs, ... }:
 let
   nixTools = with pkgs; [
     cachix
-    #devenv.packages.${system}.devenv
     nixfmt
     nixpkgs-fmt
     nixpkgs-review

@@ -8,9 +8,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/release-23.11";
 
-    devenv.inputs.nixpkgs.follows = "nixpkgs";
-    devenv.url = "github:cachix/devenv/main";
-
     alacritty-dracula-theme = {
       url = "github:dracula/alacritty";
       flake = false;
