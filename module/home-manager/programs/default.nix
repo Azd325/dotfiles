@@ -5,7 +5,6 @@
   # https://nix-community.github.io/home-manager/options.html#opt-programs.eza.enable
   programs.eza = {
     enable = true;
-    enableAliases = true;
   };
 
   # Direnv, load and unload environment variables depending on the current directory.
