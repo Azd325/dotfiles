@@ -76,6 +76,7 @@
       "temurin11"
       "tunnelblick"
       "utm"
+      "zed"
     ];
   };
 
