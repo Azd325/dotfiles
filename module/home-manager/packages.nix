@@ -43,7 +43,7 @@ let
     shfmt
     wget
     wireguard-tools
-    youtube-dl
+    yt-dlp
   ];
 
 in {
