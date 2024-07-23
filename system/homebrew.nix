@@ -31,6 +31,7 @@
       "coreutils"
       "gdal"
       "grep"
+      "gitu"
       "emacs-plus"
       "magic-wormhole"
       "pango"
