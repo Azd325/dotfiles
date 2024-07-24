@@ -76,7 +76,7 @@
       "raycast"
       "stats"
       "telegram"
-      "temurin11"
+      "temurin@11"
       "tunnelblick"
       "utm"
       "zed"
