@@ -76,7 +76,6 @@
       "stats"
       "telegram"
       "temurin@11"
-      "tunnelblick"
       "utm"
       "zed"
     ];
