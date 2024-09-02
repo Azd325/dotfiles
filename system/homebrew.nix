@@ -37,7 +37,6 @@
       "pulumi"
       "pyenv"
       "fnm"
-      "rabbitmq"
       "rbenv"
     ];
 
