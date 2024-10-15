@@ -54,7 +54,6 @@
       "firefox"
       "font-geist-mono"
       "font-sf-mono"
-      "garmin-express"
       "gas-mask"
       "google-chrome"
       "gpg-suite"
