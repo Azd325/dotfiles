@@ -5,9 +5,6 @@
 let
   system-config = import ../module/configuration.nix;
   home-manager-config = import ../module/home-manager;
-  extraArgs = {
-    inherit (inputs) alacritty-dracula-theme;
-  };
 in
 inputs.darwin.lib.darwinSystem {
   inherit system;
@@ -62,7 +59,6 @@ inputs.darwin.lib.darwinSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users."${username}" = home-manager-config;
-      home-manager.extraSpecialArgs = extraArgs;
     }
   ];
 }

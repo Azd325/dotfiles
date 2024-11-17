@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "alacritty-dracula-theme": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1695650175,
-        "narHash": "sha256-MgRH5Lc8wyZ6AQZweyL1QzO5eBzVdjbOPQeRs/Mf51M=",
-        "owner": "dracula",
-        "repo": "alacritty",
-        "rev": "9ae0fdedd423803f0401f6e7a23cd2bb88c175b2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dracula",
-        "repo": "alacritty",
-        "type": "github"
-      }
-    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -23,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1731768170,
-        "narHash": "sha256-9Zj2baKY3KaKzs5+nqZgIwr/o/iibhENFxjOnpU+IOU=",
+        "lastModified": 1731809072,
+        "narHash": "sha256-pOsDJQR0imnFLfpvTmRpHcP0tflyxtP/QIzokrKSP8U=",
         "owner": "lnl7",
         "repo": "nix-darwin",
-        "rev": "2bcef10f4319f34ddebadb5f37eaa81ca2510730",
+        "rev": "34588d57cfc41c6953c54c93b6b685cab3b548ee",
         "type": "github"
       },
       "original": {
@@ -75,7 +59,6 @@
     },
     "root": {
       "inputs": {
-        "alacritty-dracula-theme": "alacritty-dracula-theme",
         "darwin": "darwin",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
