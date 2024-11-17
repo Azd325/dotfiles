@@ -47,7 +47,7 @@ nix --experimental-features 'nix-command flakes' build .#aarch64
 ** Update
 
 #+begin_src shell
-nix flake udpate
+nix flake update
 darwin-rebuild switch --flake ".#aarch64"
 #+end_src
 
