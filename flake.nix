@@ -2,6 +2,8 @@
   description = "My personal NixOS configuration";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     darwin.url = "github:lnl7/nix-darwin";
 
@@ -13,7 +15,6 @@
       flake = false;
     };
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
   outputs = inputs : let
