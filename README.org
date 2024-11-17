@@ -6,7 +6,8 @@
 * Table of contents :toc:
   - [[#prerequisites][Prerequisites]]
 - [[#install][Install]]
-  - [[#general][General]]
+  - [[#first-install][First install]]
+  - [[#update][Update]]
   - [[#emacs][Emacs]]
 
 ** Prerequisites
