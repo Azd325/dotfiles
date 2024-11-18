@@ -17,15 +17,11 @@ let
     source-code-pro
   ];
 
-  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck poetry ];
+  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck ];
 
   homePackages = with pkgs; [
-    babashka # clojure scripting
-    bandwhich # display current network utilization by process
-    bottom # fancy version of `top` with ASCII graphs
     coreutils
     curl
-    du-dust # fancy version of `du`
     duf
     editorconfig-core-c
     fd # fancy version of `find`
@@ -34,7 +30,6 @@ let
     gnumake
     gnupg
     hyperfine # benchmarking tool
-    just # fancy version of `make`
     jq
     mosh # wrapper for `ssh` that better and not dropping connections
     ripgrep # better version of `grep`
@@ -43,7 +38,6 @@ let
     shfmt
     wget
     wireguard-tools
-    yt-dlp
   ];
 
 in {
