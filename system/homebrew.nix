@@ -72,6 +72,7 @@
       "postico"
       "pycharm-ce"
       "raycast"
+      "session-manager-plugin"
       "stats"
       "telegram"
       "temurin@11"
