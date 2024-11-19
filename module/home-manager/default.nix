@@ -1,7 +1,7 @@
 { config, ... }: {
   imports = [ ./files ./packages.nix ./programs ];
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   home.username = "timkleinschmidt";
   home.homeDirectory = "/Users/timkleinschmidt";
