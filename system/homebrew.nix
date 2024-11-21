@@ -55,7 +55,6 @@
       "font-geist-mono"
       "font-sf-mono"
       "gas-mask"
-      "google-chrome"
       "gpg-suite"
       "hot"
       "iterm2"
