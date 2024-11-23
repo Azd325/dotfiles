@@ -52,6 +52,7 @@
       "gas-mask"
       "gpg-suite"
       "hot"
+      "iina"
       "iterm2"
       "keka"
       "languagetool"
