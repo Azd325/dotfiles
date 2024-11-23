@@ -60,6 +60,7 @@
       "microsoft-auto-update"
       "microsoft-edge"
       "microsoft-office"
+      "obsidian"
       "microsoft-teams"
       "pika"
       "postgres-unofficial"
