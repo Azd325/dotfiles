@@ -37,8 +37,21 @@ inputs.darwin.lib.darwinSystem {
             # Choose whether to display a warning when changing a file extension.
             FXEnableExtensionChangeWarning = false;
           };
+          menuExtraClock = {
+            # Show a 24-hour clock
+            Show24Hour = true;
+            # Show the date when space is available
+            ShowDate = 2;
+            # Hide the seconds
+            ShowSeconds = false;
+          };
 
-          screencapture.location = "~/Downloads/";
+          screencapture = {
+            location = "~/Downloads/";
+            show-thumbnail = false;
+          };
+
+          screensaver.askForPassword = true;
 
           # Choose the delay of the auto-hidden document-proxy icon.
           #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
