@@ -56,7 +56,6 @@
       "iterm2"
       "keka"
       "languagetool"
-      "logseq"
       "microsoft-auto-update"
       "microsoft-edge"
       "microsoft-office"
