@@ -19,6 +19,10 @@ let
 
   devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck ];
 
+  devOpsPackages = with pkgs; [
+    awscli2
+  ];
+
   homePackages = with pkgs; [
     coreutils
     curl
@@ -41,6 +45,6 @@ let
   ];
 
 in {
-  home.packages = nixTools ++ gitTools ++ fonts ++ devPackages ++ homePackages;
+  home.packages = nixTools ++ gitTools ++ fonts ++ devPackages ++ devOpsPackages ++ homePackages;
   programs.home-manager.enable = true;
 }

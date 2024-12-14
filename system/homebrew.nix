@@ -22,7 +22,6 @@
     };
 
     brews = [
-      "awscli"
       "coreutils"
       "emacs-plus"
       "fnm"
