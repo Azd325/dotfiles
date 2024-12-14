@@ -41,6 +41,6 @@ let
   ];
 
 in {
-  home.packages = nixTools ++ gitTools ++ fonts ++ homePackages ++ devPackages;
+  home.packages = nixTools ++ gitTools ++ fonts ++ devPackages ++ homePackages;
   programs.home-manager.enable = true;
 }
