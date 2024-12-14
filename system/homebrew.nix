@@ -33,7 +33,6 @@
       "pulumi"
       "pyenv"
       "rbenv"
-      "siderolabs/tap/sidero-tools"
     ];
 
     casks = [
