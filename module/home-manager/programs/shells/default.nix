@@ -1,6 +1,9 @@
 { pkgs, ... }: {
   programs.zsh = {
     enable = true;
+    shellAliases = {
+      k = "kubectl";
+    };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
@@ -13,6 +16,9 @@
         export PATH=$PYENV_ROOT/bin:$PATH
         eval "$(pyenv init --path)"
       fi
+
+      # kubectl
+      source <(kubectl completion zsh)
     '';
   };
   programs.starship = { enable = true; };
