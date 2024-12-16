@@ -37,6 +37,7 @@ inputs.darwin.lib.darwinSystem {
             # Choose whether to display a warning when changing a file extension.
             FXEnableExtensionChangeWarning = false;
           };
+
           menuExtraClock = {
             # Show a 24-hour clock
             Show24Hour = true;
@@ -56,6 +57,15 @@ inputs.darwin.lib.darwinSystem {
           # Choose the delay of the auto-hidden document-proxy icon.
           #system.defaults.NSGlobalDomain.NSToolbarTitleViewRolloverDelay = 0;
           NSGlobalDomain.NSTableViewDefaultSizeMode = 1;
+
+          CustomUserPreferences = {
+            "com.apple.desktopservices" = {
+              # Avoid creating .DS_Store files on network or USB volumes
+              DSDontWriteNetworkStores = true;
+              DSDontWriteUSBStores = true;
+            };
+          };
+
         };
 
         keyboard = {
