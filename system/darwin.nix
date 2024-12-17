@@ -36,6 +36,12 @@ inputs.darwin.lib.darwinSystem {
             QuitMenuItem = true;
             # Choose whether to display a warning when changing a file extension.
             FXEnableExtensionChangeWarning = false;
+            # Whether to show external disks on desktop.
+            ShowExternalHardDrivesOnDesktop = false;
+            # Keep folders on top when sorting by name.
+            _FXSortFoldersFirst = true;
+            # When performing a search, search the current folder by default
+            FXDefaultSearchScope = "SCcf";
           };
 
           menuExtraClock = {
