@@ -49,6 +49,7 @@
       "font-geist-mono"
       "font-sf-mono"
       "gas-mask"
+      "ghostty"
       "gpg-suite"
       "hot"
       "iina"
