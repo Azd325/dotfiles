@@ -23,6 +23,7 @@ let
     awscli2
     kubelogin
     kubelogin-oidc
+    kubernetes-helm
     omnictl
     talosctl
   ];
