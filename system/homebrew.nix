@@ -38,6 +38,7 @@
     casks = [
       "adobe-digital-editions"
       "android-studio"
+      "pearcleaner"
       "arc"
       "calibre"
       "coconutbattery"
