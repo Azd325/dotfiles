@@ -63,7 +63,6 @@
       "obsidian"
       "pika"
       "postgres-unofficial"
-      "postico"
       "pycharm-ce"
       "raycast"
       "session-manager-plugin"
