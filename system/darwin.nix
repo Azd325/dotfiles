@@ -12,8 +12,6 @@ inputs.darwin.lib.darwinSystem {
     {
       imports = [ ./homebrew.nix ];
 
-      # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
       users.users.${username}.home = "/Users/${username}";
 
       networking.computerName = "Tim’s 💻";

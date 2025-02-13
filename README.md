@@ -20,10 +20,11 @@ cd .config
 git clone git@github.com:Azd325/dotfiles.git nixpkgs
 ```
 
-### Installing nix
+### Installing determinate nix
 
 ``` shell
-curl -L https://nixos.org/nix/install | sh # restart afterwards
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+  sh -s -- install
 ```
 
 ## First install

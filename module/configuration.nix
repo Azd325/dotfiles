@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   nix = {
+    enable = false;
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
