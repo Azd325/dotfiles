@@ -32,13 +32,5 @@
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zoxide.enable
   programs.zoxide.enable = true;
 
-  # https://nix-community.github.io/home-manager/options.html#opt-programs.zellij.enable
-  programs.zellij = {
-    enable = true;
-    settings = {
-      theme = "dracula";
-    };
-  };
-
   fonts.fontconfig.enable = true;
 }
