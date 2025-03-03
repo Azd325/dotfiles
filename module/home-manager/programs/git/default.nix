@@ -22,7 +22,9 @@
       diff = { algorithm = "histogram"; };
       feature = { manyFiles = true; };
       fetch = {
+        all = true;
         prune = true;
+        pruneTags = true;
         writeCommitGraph = true;
       };
       github = { user = "Azd325"; };
