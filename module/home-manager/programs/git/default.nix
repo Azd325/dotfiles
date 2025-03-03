@@ -12,6 +12,7 @@
       signByDefault = true;
     };
     extraConfig = {
+      column = { ui = "auto"; };
       core = {
         commitgraph = true;
         fsmonitor = true;
