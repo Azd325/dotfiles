@@ -17,7 +17,7 @@ let
     source-code-pro
   ];
 
-  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck ];
+  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck uv ];
 
   devOpsPackages = with pkgs; [
     awscli2
