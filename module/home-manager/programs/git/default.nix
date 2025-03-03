@@ -12,6 +12,7 @@
       signByDefault = true;
     };
     extraConfig = {
+      branch = { sort = "-committerdate"; };
       column = { ui = "auto"; };
       core = {
         commitgraph = true;
