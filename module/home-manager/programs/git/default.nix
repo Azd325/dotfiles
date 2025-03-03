@@ -29,6 +29,11 @@
       init = { defaultBranch = "main"; };
       merge = { conflictStyle = "zdiff3"; };
       pull = { rebase = true; };
+      push = {
+        default = "simple";
+        autoSetupRemote = true;
+        followTags = true;
+      };
       rebase = { autoStash = true; };
       tag = { sort = "version:refname"; };
     };
