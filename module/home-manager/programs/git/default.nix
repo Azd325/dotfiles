@@ -17,17 +17,17 @@
         fsmonitor = true;
         untrackedcache = true;
       };
-      init = { defaultBranch = "main"; };
       diff = { algorithm = "histogram"; };
-      github = { user = "Azd325"; };
-      pull = { rebase = true; };
-      rebase = { autoStash = true; };
+      feature = { manyFiles = true; };
       fetch = {
         prune = true;
         writeCommitGraph = true;
       };
+      github = { user = "Azd325"; };
+      init = { defaultBranch = "main"; };
       merge = { conflictStyle = "zdiff3"; };
-      feature = { manyFiles = true; };
+      pull = { rebase = true; };
+      rebase = { autoStash = true; };
     };
     ignores = [ ".envrc" ];
   };
