@@ -30,6 +30,7 @@
       merge = { conflictStyle = "zdiff3"; };
       pull = { rebase = true; };
       rebase = { autoStash = true; };
+      tag = { sort = "version:refname"; };
     };
     ignores = [ ".envrc" ];
   };
