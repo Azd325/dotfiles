@@ -33,6 +33,7 @@
         writeCommitGraph = true;
       };
       github = { user = "Azd325"; };
+      help = { autocorrect = "prompt"; };
       init = { defaultBranch = "main"; };
       merge = { conflictStyle = "zdiff3"; };
       pull = { rebase = true; };
