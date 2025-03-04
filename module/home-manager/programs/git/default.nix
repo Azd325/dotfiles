@@ -14,9 +14,7 @@
     extraConfig = {
       branch = { sort = "-committerdate"; };
       column = { ui = "auto"; };
-      commit = {
-        verbose = true;
-      };
+      commit = { verbose = true; };
       core = {
         commitgraph = true;
         fsmonitor = true;
