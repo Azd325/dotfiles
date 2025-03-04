@@ -43,7 +43,11 @@
         autoSetupRemote = true;
         followTags = true;
       };
-      rebase = { autoStash = true; };
+      rebase = {
+        autoSquash = true;
+        autoStash = true;
+        updateRefs = true;
+      };
       rerere = {
         enabled = true;
         autoupdate = true;
