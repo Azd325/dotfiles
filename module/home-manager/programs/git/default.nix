@@ -19,7 +19,12 @@
         fsmonitor = true;
         untrackedcache = true;
       };
-      diff = { algorithm = "histogram"; };
+      diff = {
+        algorithm = "histogram";
+        colorMoved = "plain";
+        mnemonicPrefix = true;
+        renames = true;
+      };
       feature = { manyFiles = true; };
       fetch = {
         all = true;
