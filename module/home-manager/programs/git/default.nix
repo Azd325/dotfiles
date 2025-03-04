@@ -44,6 +44,10 @@
         followTags = true;
       };
       rebase = { autoStash = true; };
+      rerere = {
+        enabled = true;
+        autoupdate = true;
+      };
       tag = { sort = "version:refname"; };
     };
     ignores = [ ".envrc" ];
