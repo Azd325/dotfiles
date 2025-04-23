@@ -6,7 +6,7 @@
     };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initExtra = ''
+    initContent = ''
       # FNM
       eval "$(fnm env --use-on-cd)"
 
