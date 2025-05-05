@@ -68,7 +68,7 @@
       "pika"
       "podman-desktop"
       "postgres-unofficial"
-      "pycharm-ce"
+      "pycharm"
       "raycast"
       "session-manager-plugin"
       "stats"
