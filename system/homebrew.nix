@@ -55,6 +55,7 @@
       "gpg-suite"
       "handbrake"
       "hot"
+      "horos"
       "iina"
       "iterm2"
       "keka"
