@@ -75,6 +75,7 @@
       "stats"
       "telegram"
       "temurin@11"
+      "thunderbird"
       "vlc"
       "utm"
       "zed"
