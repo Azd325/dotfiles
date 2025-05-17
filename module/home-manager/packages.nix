@@ -46,7 +46,6 @@ let
     shellcheck
     shfmt
     wget
-    wireguard-tools
   ];
 
 in {
