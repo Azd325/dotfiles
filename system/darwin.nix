@@ -25,6 +25,8 @@ inputs.darwin.lib.darwinSystem {
         # $ darwin-rebuild changelog
         stateVersion = 4;
 
+        primaryUser = "${username}";
+
         defaults = {
           finder = {
             ShowPathbar = true;
