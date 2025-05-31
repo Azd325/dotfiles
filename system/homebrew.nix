@@ -74,6 +74,7 @@
       "raycast"
       "session-manager-plugin"
       "stats"
+      "tailscale"
       "telegram"
       "temurin@11"
       "thunderbird"
