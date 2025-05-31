@@ -66,7 +66,6 @@
       "microsoft-edge"
       "microsoft-office"
       "microsoft-teams"
-      "moneymoney"
       "obsidian"
       "pika"
       "podman-desktop"
