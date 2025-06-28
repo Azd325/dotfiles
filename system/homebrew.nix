@@ -58,6 +58,7 @@
       "horos"
       "iina"
       "iterm2"
+      "jdownloader"
       "keka"
       "languagetool-desktop"
       "makemkv"
