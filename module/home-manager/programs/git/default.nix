@@ -65,4 +65,16 @@
     settings.git_protocol = "ssh";
     extensions = with pkgs; [ gh-eco gh-dash gh-actions-cache gh-cal ];
   };
+
+  # Jujutsu
+  # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.jujutsu.enable
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Tim Kleinschmidt";
+        email = "tim.kleinschmidt@gmail.com";
+      };
+    };
+  };
 }
