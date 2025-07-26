@@ -60,6 +60,7 @@
       "iterm2"
       "jdownloader"
       "keka"
+      "kiro"
       "languagetool-desktop"
       "makemkv"
       "microsoft-auto-update"
