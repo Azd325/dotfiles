@@ -21,11 +21,7 @@ let
 
   devOpsPackages = with pkgs; [
     awscli2
-    kubelogin
-    kubelogin-oidc
-    kubernetes-helm
-    omnictl
-    talosctl
+    lazydocker
   ];
 
   homePackages = with pkgs; [
