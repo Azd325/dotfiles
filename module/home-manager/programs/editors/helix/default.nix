@@ -2,8 +2,7 @@
   home.packages = [
     pkgs.stylua
     pkgs.lua-language-server
-    pkgs.python311Packages.python-lsp-server
-    pkgs.python311Packages.black
+    pkgs.python313Packages.python-lsp-server
     pkgs.nil
     pkgs.nixfmt
     pkgs.clojure-lsp
@@ -19,14 +18,6 @@
           formatter = {
             command = "${pkgs.stylua.out}/bin/stylua";
             args = [ "-" ];
-          };
-        }
-        {
-          name = "python";
-          auto-format = true;
-          formatter = {
-            command = "${pkgs.python311Packages.black.out}/bin/black";
-            args = [ "--quiet" "-" ];
           };
         }
         {
