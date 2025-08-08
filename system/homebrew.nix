@@ -31,6 +31,7 @@
       "grep"
       "magic-wormhole"
       "pango"
+      "podman"
       "pulumi"
       "pyenv"
       "rbenv"
