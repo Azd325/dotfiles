@@ -77,6 +77,7 @@
       "telegram"
       "temurin@11"
       "thunderbird"
+      "visual-studio-code"
       "vlc"
       "utm"
       "zed"
