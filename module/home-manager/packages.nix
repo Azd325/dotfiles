@@ -8,8 +8,6 @@ let
     statix
   ];
 
-  gitTools = with pkgs.gitAndTools; [ git-absorb ];
-
   fonts = with pkgs; [
     fira-code
     fira-code-symbols
@@ -20,8 +18,12 @@ let
   devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck uv ];
 
   devOpsPackages = with pkgs; [
+    git-absorb
     awscli2
     lazydocker
+    lazygit
+    lazyjj
+    lazysql
   ];
 
   homePackages = with pkgs; [
@@ -45,6 +47,6 @@ let
   ];
 
 in {
-  home.packages = nixTools ++ gitTools ++ fonts ++ devPackages ++ devOpsPackages ++ homePackages;
+  home.packages = nixTools ++ fonts ++ devPackages ++ devOpsPackages ++ homePackages;
   programs.home-manager.enable = true;
 }
