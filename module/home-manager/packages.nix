@@ -6,6 +6,7 @@ let
     nixpkgs-fmt
     nixpkgs-review
     statix
+    nixd
   ];
 
   fonts = with pkgs; [
