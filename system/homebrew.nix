@@ -73,6 +73,7 @@
       "pycharm"
       "raycast"
       "session-manager-plugin"
+      "sparrow"
       "stats"
       "tailscale-app"
       "telegram"
