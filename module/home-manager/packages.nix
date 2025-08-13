@@ -28,6 +28,7 @@ let
   ];
 
   homePackages = with pkgs; [
+    clojure
     coreutils
     curl
     duf
