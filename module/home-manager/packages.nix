@@ -31,6 +31,7 @@ let
     clojure
     coreutils
     curl
+    dive
     duf
     editorconfig-core-c
     fd # fancy version of `find`
@@ -39,6 +40,7 @@ let
     gnumake
     gnupg
     hyperfine # benchmarking tool
+    imagemagick
     jq
     mosh # wrapper for `ssh` that better and not dropping connections
     ripgrep # better version of `grep`
