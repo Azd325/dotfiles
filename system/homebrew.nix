@@ -69,7 +69,6 @@
       "microsoft-teams"
       "obsidian"
       "podman-desktop"
-      "postgres-unofficial"
       "pycharm"
       "raycast"
       "session-manager-plugin"
