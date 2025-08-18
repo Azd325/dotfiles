@@ -32,6 +32,7 @@
       "magic-wormhole"
       "pango"
       "podman"
+      "postgresql"
       "pulumi"
       "pyenv"
       "rbenv"
