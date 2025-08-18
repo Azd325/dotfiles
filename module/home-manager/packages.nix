@@ -51,6 +51,7 @@ let
   ];
 
 in {
-  home.packages = nixTools ++ fonts ++ devPackages ++ devOpsPackages ++ homePackages;
+  home.packages = nixTools ++ fonts ++ devPackages ++ devOpsPackages
+    ++ homePackages;
   programs.home-manager.enable = true;
 }
