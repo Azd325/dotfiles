@@ -23,6 +23,7 @@
     };
 
     brews = [
+      "aichat"
       "coreutils"
       "emacs-plus"
       "fnm"
@@ -44,6 +45,7 @@
       "pearcleaner"
       "arc"
       "calibre"
+      "chatgpt"
       "coconutbattery"
       "daisydisk"
       "discord"
