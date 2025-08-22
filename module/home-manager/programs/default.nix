@@ -3,9 +3,7 @@
 
   # fancy version of ls
   # https://nix-community.github.io/home-manager/options.html#opt-programs.eza.enable
-  programs.eza = {
-    enable = true;
-  };
+  programs.eza = { enable = true; };
 
   # Direnv, load and unload environment variables depending on the current directory.
   # https://direnv.net
