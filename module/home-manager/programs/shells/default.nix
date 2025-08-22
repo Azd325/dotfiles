@@ -1,17 +1,11 @@
 { pkgs, ... }: {
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      k = "kubectl";
-    };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initContent = ''
       # FNM
       eval "$(fnm env --use-on-cd)"
-
-      # kubectl
-      source <(kubectl completion zsh)
     '';
   };
   programs.starship = { enable = true; };
