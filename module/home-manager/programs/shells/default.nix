@@ -10,13 +10,6 @@
       # FNM
       eval "$(fnm env --use-on-cd)"
 
-      # Pyenv
-      export PYENV_ROOT=$HOME/.pyenv
-      if [[ -e $PYENV_ROOT ]]; then
-        export PATH=$PYENV_ROOT/bin:$PATH
-        eval "$(pyenv init --path)"
-      fi
-
       # kubectl
       source <(kubectl completion zsh)
     '';

@@ -35,7 +35,6 @@
       "podman"
       "postgresql"
       "pulumi"
-      "pyenv"
       "rbenv"
     ];
 
