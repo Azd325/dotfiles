@@ -4,7 +4,7 @@
     pkgs.lua-language-server
     pkgs.python313Packages.python-lsp-server
     pkgs.nil
-    pkgs.nixfmt
+    pkgs.nixfmt-classic
     pkgs.clojure-lsp
   ];
 
@@ -23,7 +23,7 @@
         {
           name = "nix";
           auto-format = true;
-          formatter = { command = "${pkgs.nixfmt.out}/bin/nixfmt"; };
+          formatter = { command = "${pkgs.nixfmt-classic.out}/bin/nixfmt"; };
         }
         {
           name = "clojure";

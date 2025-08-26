@@ -2,7 +2,7 @@
 let
   nixTools = with pkgs; [
     cachix
-    nixfmt
+    nixfmt-classic
     nixpkgs-fmt
     nixpkgs-review
     statix
