@@ -36,5 +36,13 @@
     terminal = "screen-256color";
   };
 
-  programs.atuin = { enable = true; };
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      style = "compact";
+      inline_height = 15;
+      workspaces = true;
+    };
+  };
 }
