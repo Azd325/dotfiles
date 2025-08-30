@@ -1,14 +1,5 @@
 { pkgs, ... }:
 let
-  nixTools = with pkgs; [
-    cachix
-    nixfmt-classic
-    nixpkgs-fmt
-    nixpkgs-review
-    statix
-    nixd
-  ];
-
   fonts = with pkgs; [
     fira-code
     fira-code-symbols
@@ -16,18 +7,23 @@ let
     source-code-pro
   ];
 
-  devPackages = with pkgs; [ clj-kondo lua54Packages.luacheck uv ];
-
-  devOpsPackages = with pkgs; [
+  homePackages = with pkgs; [
+    cachix
+    nixfmt-classic
+    nixpkgs-fmt
+    nixpkgs-review
+    statix
+    nixd
+    clj-kondo
+    lua54Packages.luacheck
+    uv
+    glow # Markdown renderer for CLI
     git-absorb
     awscli2
     lazydocker
     lazygit
     lazyjj
     lazysql
-  ];
-
-  homePackages = with pkgs; [
     clojure
     coreutils
     curl
@@ -51,7 +47,6 @@ let
   ];
 
 in {
-  home.packages = nixTools ++ fonts ++ devPackages ++ devOpsPackages
-    ++ homePackages;
+  home.packages = fonts ++ homePackages;
   programs.home-manager.enable = true;
 }
