@@ -24,6 +24,7 @@
 
     brews = [
       "aichat"
+      "codex"
       "coreutils"
       "emacs-plus"
       "fnm"
