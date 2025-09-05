@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-### You need to copy your ssh-keys to the new maschine and correct the file mode.
+### Copy your SSH keys to the new machine and correct file modes
 
 ``` shell
 chmod 600 ~/.ssh/id_rsa
@@ -11,7 +11,7 @@ chmod 644 ~/.ssh/known_hosts
 chmod 755 ~/.ssh
 ```
 
-### Cloning the dotfiles
+### Clone the dotfiles
 
 ``` shell
 cd
@@ -20,7 +20,7 @@ cd .config
 git clone git@github.com:Azd325/dotfiles.git nixpkgs
 ```
 
-### Installing determinate nix
+### Install Determinate Nix
 
 ``` shell
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
@@ -32,14 +32,22 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ``` shell
 cd ~/.config/nixpkgs
 nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ".#aarch64"
-darwin-rebuild switch --flake ".#aarch64"
+sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
 ```
 
 ## Update
 
 ``` shell
 nix flake update
-darwin-rebuild switch --flake ".#aarch64"
+sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
+
+## Validate without applying
+
+Preview changes without switching the system:
+
+``` shell
+darwin-rebuild build --flake ".#aarch64"
+```
 ```
 
 ## Emacs
