@@ -41,6 +41,7 @@ let
     mosh # wrapper for `ssh` that better and not dropping connections
     ripgrep # better version of `grep`
     rsync
+    rustup
     shellcheck
     shfmt
     wget
