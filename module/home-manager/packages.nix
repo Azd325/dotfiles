@@ -19,6 +19,7 @@ let
     uv
     glow # Markdown renderer for CLI
     git-absorb
+    git-filter-repo
     awscli2
     lazydocker
     lazygit
