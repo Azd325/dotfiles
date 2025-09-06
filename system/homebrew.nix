@@ -29,6 +29,7 @@
       "emacs-plus"
       "fnm"
       "gdal"
+      "gemini-cli"
       "gitu"
       "grep"
       "magic-wormhole"
