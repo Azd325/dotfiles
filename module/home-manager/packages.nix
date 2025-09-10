@@ -46,6 +46,7 @@ let
     shellcheck
     shfmt
     wget
+    yt-dlp
   ];
 
 in {
