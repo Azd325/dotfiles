@@ -58,6 +58,7 @@
       "gas-mask"
       "ghostty"
       "gpg-suite"
+      "grandperspective"
       "handbrake-app"
       "hot"
       "horos"
