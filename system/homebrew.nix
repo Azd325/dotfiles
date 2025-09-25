@@ -68,6 +68,7 @@
       "keka"
       "kiro"
       "languagetool-desktop"
+      "logseq"
       "makemkv"
       "microsoft-auto-update"
       "microsoft-office"
