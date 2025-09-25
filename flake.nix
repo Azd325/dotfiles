@@ -9,6 +9,8 @@
 
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
   outputs = inputs : let

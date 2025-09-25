@@ -1,5 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
+
   fonts = with pkgs; [
     fira-code
     fira-code-symbols
@@ -49,7 +50,11 @@ let
     yt-dlp
   ];
 
+  aiPackages = with inputs.nix-ai-tools.packages.${pkgs.system}; [
+    crush
+  ];
+
 in {
-  home.packages = fonts ++ homePackages;
+  home.packages = fonts ++ homePackages ++ aiPackages;
   programs.home-manager.enable = true;
 }

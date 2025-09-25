@@ -87,6 +87,7 @@ inputs.darwin.lib.darwinSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
+      home-manager.extraSpecialArgs = { inherit inputs; };
       home-manager.users."${username}" = home-manager-config;
     }
   ];
