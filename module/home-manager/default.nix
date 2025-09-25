@@ -12,6 +12,8 @@
     sessionPath = [
       # own scripts
       "$HOME/.local/bin"
+      # cargo instfalled binaries
+      "$HOME/.cargo/bin"
       # Doom Emacs binary
       "$HOME/.config/emacs/bin"
       # postgres helper e.g createdb, dropdb, psql
