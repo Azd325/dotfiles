@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   programs.git = {
     package = pkgs.gitAndTools.gitFull;
@@ -12,9 +13,15 @@
       signByDefault = true;
     };
     extraConfig = {
-      branch = { sort = "-committerdate"; };
-      column = { ui = "auto"; };
-      commit = { verbose = true; };
+      branch = {
+        sort = "-committerdate";
+      };
+      column = {
+        ui = "auto";
+      };
+      commit = {
+        verbose = true;
+      };
       core = {
         commitgraph = true;
         fsmonitor = true;
@@ -26,18 +33,30 @@
         mnemonicPrefix = true;
         renames = true;
       };
-      feature = { manyFiles = true; };
+      feature = {
+        manyFiles = true;
+      };
       fetch = {
         all = true;
         prune = true;
         pruneTags = true;
         writeCommitGraph = true;
       };
-      github = { user = "Azd325"; };
-      help = { autocorrect = "prompt"; };
-      init = { defaultBranch = "main"; };
-      merge = { conflictStyle = "zdiff3"; };
-      pull = { rebase = true; };
+      github = {
+        user = "Azd325";
+      };
+      help = {
+        autocorrect = "prompt";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      merge = {
+        conflictStyle = "zdiff3";
+      };
+      pull = {
+        rebase = true;
+      };
       push = {
         default = "simple";
         autoSetupRemote = true;
@@ -52,7 +71,9 @@
         enabled = true;
         autoupdate = true;
       };
-      tag = { sort = "version:refname"; };
+      tag = {
+        sort = "version:refname";
+      };
     };
     ignores = [ ".envrc" ];
   };
@@ -63,7 +84,12 @@
   programs.gh = {
     enable = true;
     settings.git_protocol = "ssh";
-    extensions = with pkgs; [ gh-eco gh-dash gh-actions-cache gh-cal ];
+    extensions = with pkgs; [
+      gh-eco
+      gh-dash
+      gh-actions-cache
+      gh-cal
+    ];
   };
 
   # Jujutsu

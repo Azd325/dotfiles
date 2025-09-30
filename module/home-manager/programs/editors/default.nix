@@ -1,9 +1,18 @@
-{ ... }: {
-  imports = [ ./helix ./nvim ./vscode ];
+{ ... }:
+{
+  imports = [
+    ./helix
+    ./nvim
+    ./vscode
+  ];
   # programs.emacs = { enable = true; };
 
   programs."zed-editor" = {
     enable = true;
-    extensions = ["nix" "toml" "make"];
+    extensions = [
+      "nix"
+      "toml"
+      "make"
+    ];
   };
 }

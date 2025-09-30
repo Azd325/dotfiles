@@ -1,11 +1,15 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   nix = {
     enable = false;
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
       builders-use-substitutes = true;
-      experimental-features = [ "flakes" "nix-command" ];
+      experimental-features = [
+        "flakes"
+        "nix-command"
+      ];
       # Recommended when using `direnv` etc.
       keep-derivations = true;
       keep-outputs = true;

@@ -15,13 +15,23 @@
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
-  outputs = inputs : let
-    darwin-system = import ./system/darwin.nix {inherit inputs username;};
-    username = "timkleinschmidt";
-  in {
-    darwinConfigurations = {
-      aarch64 = darwin-system "aarch64-darwin";
-      x86_64 = darwin-system "x86_64-darwin";
+  outputs =
+    inputs:
+    let
+      darwin-system = import ./system/darwin.nix { inherit inputs username; };
+      username = "timkleinschmidt";
+    in
+    {
+      darwinConfigurations = {
+        aarch64 = darwin-system "aarch64-darwin";
+        x86_64 = darwin-system "x86_64-darwin";
+      };
+
+      formatter = inputs.nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ] (system: inputs.nixpkgs.legacyPackages.${system}.nixfmt-tree);
     };
-  };
 }

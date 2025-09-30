@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -9,8 +10,8 @@
       telescope-nvim
       rose-pine
       trouble-nvim
-      (nvim-treesitter.withPlugins (plugins:
-        with plugins; [
+      (nvim-treesitter.withPlugins (
+        plugins: with plugins; [
           tree-sitter-lua
           tree-sitter-toml
           tree-sitter-python
@@ -21,7 +22,8 @@
           tree-sitter-html
           tree-sitter-json
           tree-sitter-vim
-        ]))
+        ]
+      ))
       nvim-treesitter-context
       harpoon
       lsp-zero-nvim

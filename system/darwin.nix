@@ -1,7 +1,5 @@
-{ inputs
-, username
-,
-}: system:
+{ inputs, username }:
+system:
 let
   system-config = import ../module/configuration.nix;
   home-manager-config = import ../module/home-manager;

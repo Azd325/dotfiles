@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -8,7 +9,9 @@
       eval "$(fnm env --use-on-cd)"
     '';
   };
-  programs.starship = { enable = true; };
+  programs.starship = {
+    enable = true;
+  };
 
   programs.tmux = {
     enable = true;
@@ -18,8 +21,7 @@
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = cpu;
-        extraConfig =
-          "set -g status-right '#{cpu_bg_color} CPU: #{cpu_icon} #{cpu_percentage} | %a %h-%d %H:%M '";
+        extraConfig = "set -g status-right '#{cpu_bg_color} CPU: #{cpu_icon} #{cpu_percentage} | %a %h-%d %H:%M '";
       }
       {
         plugin = resurrect;

@@ -12,8 +12,7 @@ let
 
   homePackages = with pkgs; [
     cachix
-    nixfmt-classic
-    nixpkgs-fmt
+    nixfmt-rfc-style
     nixpkgs-review
     statix
     nixd
@@ -62,7 +61,8 @@ let
     unstable.aichat
   ];
 
-in {
+in
+{
   home.packages = fonts ++ homePackages ++ aiPackages;
   programs.home-manager.enable = true;
 }

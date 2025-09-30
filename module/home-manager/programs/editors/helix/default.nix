@@ -1,10 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = [
     pkgs.stylua
     pkgs.lua-language-server
     pkgs.python313Packages.python-lsp-server
     pkgs.nil
-    pkgs.nixfmt-classic
+    pkgs.nixfmt-rfc-style
     pkgs.clojure-lsp
   ];
 
@@ -23,7 +24,9 @@
         {
           name = "nix";
           auto-format = true;
-          formatter = { command = "${pkgs.nixfmt-classic.out}/bin/nixfmt"; };
+          formatter = {
+            command = "${pkgs."nixfmt-rfc-style".out}/bin/nixfmt";
+          };
         }
         {
           name = "clojure";
@@ -31,19 +34,27 @@
           formatter = {
             # binary not managed by nix
             command = "cljfmt";
-            args = [ "fix" "-" ];
+            args = [
+              "fix"
+              "-"
+            ];
           };
         }
       ];
     };
     settings = {
-      editor = { line-number = "relative"; };
+      editor = {
+        line-number = "relative";
+      };
       theme = "rose_pine";
       keys.normal = {
         space.space = "file_picker";
         space.w = ":w";
         space.q = ":q";
-        esc = [ "collapse_selection" "keep_primary_selection" ];
+        esc = [
+          "collapse_selection"
+          "keep_primary_selection"
+        ];
       };
     };
   };

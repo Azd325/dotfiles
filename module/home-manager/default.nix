@@ -1,5 +1,10 @@
-{ config, ... }: {
-  imports = [ ./files ./packages.nix ./programs ];
+{ config, ... }:
+{
+  imports = [
+    ./files
+    ./packages.nix
+    ./programs
+  ];
 
   home.stateVersion = "24.11";
 
