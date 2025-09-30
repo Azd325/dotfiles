@@ -26,6 +26,8 @@
     sessionVariables = {
       LC_ALL = "en_US.UTF-8";
       LANG = "en_US.UTF-8";
+      PAGER = "less -FiRSwX";
+
       GDAL_LIBRARY_PATH = "/opt/homebrew/opt/gdal/lib/libgdal.dylib";
       GEOS_LIBRARY_PATH = "/opt/homebrew/opt/geos/lib/libgeos_c.dylib";
       # Android SDK
