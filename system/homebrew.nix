@@ -23,13 +23,10 @@
     };
 
     brews = [
-      "aichat"
-      "codex"
       "coreutils"
       "emacs-plus"
       "fnm"
       "gdal"
-      "gemini-cli"
       "gitu"
       "grep"
       "magic-wormhole"
@@ -87,7 +84,6 @@
       "visual-studio-code"
       "vlc"
       "utm"
-      "zed"
     ];
   };
 

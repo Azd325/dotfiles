@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }:
 let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  ai = inputs."nix-ai-tools".packages.${pkgs.system};
 
   fonts = with pkgs; [
     fira-code
@@ -50,8 +52,14 @@ let
     yt-dlp
   ];
 
-  aiPackages = with inputs.nix-ai-tools.packages.${pkgs.system}; [
-    crush
+  aiPackages = [
+    ai.copilot-cli
+    ai.codex
+    ai.crush
+    ai.gemini-cli
+    ai.goose-cli
+    ai.opencode
+    unstable.aichat
   ];
 
 in {

@@ -10,6 +10,8 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
   };
 
