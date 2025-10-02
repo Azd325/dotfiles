@@ -47,6 +47,7 @@ let
     rustup
     shellcheck
     shfmt
+    tree
     wget
     yt-dlp
   ];
