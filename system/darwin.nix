@@ -3,6 +3,7 @@ system:
 let
   system-config = import ../module/configuration.nix;
   home-manager-config = import ../module/home-manager;
+  userHome = "/Users/${username}";
 in
 inputs.darwin.lib.darwinSystem {
   inherit system;
@@ -10,7 +11,7 @@ inputs.darwin.lib.darwinSystem {
     {
       imports = [ ./homebrew.nix ];
 
-      users.users.${username}.home = "/Users/${username}";
+      users.users.${username}.home = userHome;
 
       networking.computerName = "Tim’s 💻";
       networking.hostName = "BER";
@@ -85,7 +86,7 @@ inputs.darwin.lib.darwinSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { inherit inputs; };
+      home-manager.extraSpecialArgs = { inherit inputs username userHome; };
       home-manager.users."${username}" = home-manager-config;
     }
   ];

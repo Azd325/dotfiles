@@ -1,4 +1,9 @@
-{ config, ... }:
+{
+  config,
+  username,
+  userHome,
+  ...
+}:
 {
   imports = [
     ./files
@@ -8,8 +13,8 @@
 
   home.stateVersion = "24.11";
 
-  home.username = "timkleinschmidt";
-  home.homeDirectory = "/Users/timkleinschmidt";
+  home.username = username;
+  home.homeDirectory = userHome;
   manual.manpages.enable = false;
   programs.man.enable = false;
 
