@@ -17,10 +17,14 @@ inputs.darwin.lib.darwinSystem {
 
     inputs.home-manager.darwinModules.home-manager
     {
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { inherit inputs username userHome; };
-      home-manager.users."${username}" = home-manager-config;
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = { inherit inputs username userHome; };
+        users = {
+          "${username}" = home-manager-config;
+        };
+      };
     }
   ];
 }

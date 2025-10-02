@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
-
-  programs.git = {
-    package = pkgs.gitAndTools.gitFull;
-    enable = true;
-    delta.enable = true;
+  programs = {
+    git = {
+      package = pkgs.gitAndTools.gitFull;
+      enable = true;
+      delta.enable = true;
     lfs.enable = true;
     userName = "Tim Kleinschmidt";
     userEmail = "tim.kleinschmidt@gmail.com";
@@ -75,31 +75,32 @@
         sort = "version:refname";
       };
     };
-    ignores = [ ".envrc" ];
-  };
+      ignores = [ ".envrc" ];
+    };
 
-  # GitHub CLI
-  # https://rycee.gitlab.io/home-manager/options.html#opt-programs.gh.enable
-  # Aliases config in ./gh-aliases.nix
-  programs.gh = {
-    enable = true;
-    settings.git_protocol = "ssh";
-    extensions = with pkgs; [
-      gh-eco
-      gh-dash
-      gh-actions-cache
-      gh-cal
-    ];
-  };
+    # GitHub CLI
+    # https://rycee.gitlab.io/home-manager/options.html#opt-programs.gh.enable
+    # Aliases config in ./gh-aliases.nix
+    gh = {
+      enable = true;
+      settings.git_protocol = "ssh";
+      extensions = with pkgs; [
+        gh-eco
+        gh-dash
+        gh-actions-cache
+        gh-cal
+      ];
+    };
 
-  # Jujutsu
-  # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.jujutsu.enable
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Tim Kleinschmidt";
-        email = "tim.kleinschmidt@gmail.com";
+    # Jujutsu
+    # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.jujutsu.enable
+    jujutsu = {
+      enable = true;
+      settings = {
+        user = {
+          name = "Tim Kleinschmidt";
+          email = "tim.kleinschmidt@gmail.com";
+        };
       };
     };
   };

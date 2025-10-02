@@ -11,14 +11,10 @@
     ./programs
   ];
 
-  home.stateVersion = "24.11";
-
-  home.username = username;
-  home.homeDirectory = userHome;
-  manual.manpages.enable = false;
-  programs.man.enable = false;
-
   home = {
+    stateVersion = "24.11";
+    inherit username;
+    homeDirectory = userHome;
     sessionPath = [
       # own scripts
       "$HOME/.local/bin"
@@ -45,4 +41,6 @@
       ANDROID_SDK = "${config.home.sessionVariables.ANDROID_SDK_ROOT}";
     };
   };
+  manual.manpages.enable = false;
+  programs.man.enable = false;
 }

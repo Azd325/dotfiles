@@ -1,12 +1,13 @@
-{ ... }:
+_:
 {
 
   homebrew = {
     enable = true;
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
-
-    onActivation.cleanup = "zap";
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "zap";
+    };
     global.brewfile = true;
 
     taps = [
