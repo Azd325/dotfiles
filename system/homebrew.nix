@@ -24,6 +24,7 @@
     };
 
     brews = [
+      "backlog-md"
       "coreutils"
       "emacs-plus"
       "fnm"
