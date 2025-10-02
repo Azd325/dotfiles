@@ -11,6 +11,7 @@ let
   ];
 
   homePackages = with pkgs; [
+    age
     cachix
     nixfmt-rfc-style
     nixpkgs-review
@@ -47,8 +48,10 @@ let
     rustup
     shellcheck
     shfmt
+    sops
     tree
     wget
+    yq
     yt-dlp
   ];
 

@@ -37,25 +37,31 @@ sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
 
 ## Update
 
-````shell
+```shell
 nix flake update
 sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
+```
 
 ## Validate without applying
 
 Preview changes without switching the system:
 
-``` shell
+```shell
 darwin-rebuild build --flake ".#aarch64"
-````
+```
 
-````
+## Secrets
+
+This repository uses [sops-nix](https://github.com/Mic92/sops-nix) for encrypted
+files. Generate an age key (see `.sops.yaml`) and store it at
+`~/.config/sops/age/keys.txt`, then add new secrets under `secrets/shared/` or
+`secrets/hosts/<name>/` with the `sops` CLI.
 
 ## Emacs
 
 ### Install doom-emacs with my configuration
 
-``` shell
+```shell
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
-````
+```

@@ -10,6 +10,8 @@ in
 inputs.darwin.lib.darwinSystem {
   inherit system;
   modules = [
+    inputs.sops-nix.darwinModules.sops
+    ./sops.nix
     ./homebrew.nix
     common
     hostBer

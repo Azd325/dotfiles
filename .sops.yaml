@@ -1,0 +1,12 @@
+keys:
+  - &primary age1wja2r663c9t73ylvxetddvrzw4slvgtwjlscn4v8qsk52fkkccjqwpt5rd
+
+creation_rules:
+  - path_regex: secrets/shared/[^/]+\.(ya?ml|json|env|ini|toml)$
+    key_groups:
+      - age:
+          - *primary
+  - path_regex: secrets/hosts/[^/]+/[^/]+\.(ya?ml|json|env|ini|toml)$
+    key_groups:
+      - age:
+          - *primary

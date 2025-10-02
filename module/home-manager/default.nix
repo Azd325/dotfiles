@@ -1,11 +1,13 @@
 {
   config,
+  inputs,
   username,
   userHome,
   ...
 }:
 {
   imports = [
+    inputs.sops-nix.homeManagerModules.sops
     ./files
     ./packages.nix
     ./programs
@@ -39,8 +41,14 @@
       # Android SDK
       ANDROID_SDK_ROOT = "$HOME/Library/Android/sdk";
       ANDROID_SDK = "${config.home.sessionVariables.ANDROID_SDK_ROOT}";
+      SOPS_AGE_KEY_FILE = "${userHome}/.config/sops/age/keys.txt";
     };
   };
   manual.manpages.enable = false;
   programs.man.enable = false;
+
+  sops.age = {
+    keyFile = "${userHome}/.config/sops/age/keys.txt";
+    sshKeyPaths = [ ];
+  };
 }
