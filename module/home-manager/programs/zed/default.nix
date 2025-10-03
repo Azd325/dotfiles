@@ -1,12 +1,4 @@
-{ ... }:
-{
-  imports = [
-    ./helix
-    ./nvim
-    ./vscode
-  ];
-  # programs.emacs = { enable = true; };
-
+_: {
   programs."zed-editor" = {
     enable = true;
     extensions = [

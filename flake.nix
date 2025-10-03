@@ -37,23 +37,28 @@
         "aarch64-darwin"
       ] (system: inputs.nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
-      checks = inputs.nixpkgs.lib.genAttrs [
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ] (system:
-        let
-          pkgs = inputs.nixpkgs.legacyPackages.${system};
-        in
-        {
-          statix = pkgs.runCommand "statix-check" { } ''
-            ${pkgs.statix}/bin/statix check ${./.}
-            touch $out
-          '';
+      checks =
+        inputs.nixpkgs.lib.genAttrs
+          [
+            "aarch64-darwin"
+            "x86_64-darwin"
+          ]
+          (
+            system:
+            let
+              pkgs = inputs.nixpkgs.legacyPackages.${system};
+            in
+            {
+              statix = pkgs.runCommand "statix-check" { } ''
+                ${pkgs.statix}/bin/statix check ${./.}
+                touch $out
+              '';
 
-          deadnix = pkgs.runCommand "deadnix-check" { } ''
-            ${pkgs.deadnix}/bin/deadnix --fail ${./.}
-            touch $out
-          '';
-        });
+              deadnix = pkgs.runCommand "deadnix-check" { } ''
+                ${pkgs.deadnix}/bin/deadnix --fail ${./.}
+                touch $out
+              '';
+            }
+          );
     };
 }

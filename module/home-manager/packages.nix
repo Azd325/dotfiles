@@ -25,7 +25,6 @@ let
     git-filter-repo
     awscli2
     lazydocker
-    lazygit
     lazyjj
     lazysql
     clojure
@@ -34,20 +33,15 @@ let
     dive
     duf
     editorconfig-core-c
-    fd # fancy version of `find`
     gh
     gnugrep
     gnumake
     gnupg
     hyperfine # benchmarking tool
     imagemagick
-    jq
     mosh # wrapper for `ssh` that better and not dropping connections
-    ripgrep # better version of `grep`
     rsync
     rustup
-    shellcheck
-    shfmt
     sops
     tree
     wget

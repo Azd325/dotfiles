@@ -1,8 +1,16 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 let
   primaryUser = config.system.primaryUser or null;
-  trustedUsers = [ "@wheel" "@admin" ]
-    ++ lib.optional (primaryUser != null) primaryUser;
+  trustedUsers = [
+    "@wheel"
+    "@admin"
+  ]
+  ++ lib.optional (primaryUser != null) primaryUser;
 in
 {
   nix = {
@@ -19,7 +27,10 @@ in
       # Recommended when using `direnv` etc.
       keep-derivations = true;
       keep-outputs = true;
-      substituters = [ "https://nix-community.cachix.org" "https://cache.nixos.org" ];
+      substituters = [
+        "https://nix-community.cachix.org"
+        "https://cache.nixos.org"
+      ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="

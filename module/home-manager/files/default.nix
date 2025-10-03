@@ -1,5 +1,4 @@
-_:
-{
+_: {
   home.file = {
     ".config/doom".source = ./doom-emacs;
     ".shadow-cljs".source = ./shadow-cljs;
