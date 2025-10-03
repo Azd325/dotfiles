@@ -57,6 +57,7 @@ let
     ai.goose-cli
     ai.opencode
     unstable.aichat
+    unstable."fabric-ai"
   ];
 
 in
