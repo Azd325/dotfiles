@@ -11,6 +11,23 @@ inputs.darwin.lib.darwinSystem {
   inherit system;
   modules = [
     inputs.sops-nix.darwinModules.sops
+    inputs.nix-homebrew.darwinModules.nix-homebrew
+    {
+      nix-homebrew = {
+        enable = true;
+        user = username;
+        group = "admin";
+        autoMigrate = false;
+        enableRosetta = true;
+        mutableTaps = false;
+        taps = {
+          "homebrew/homebrew-core" = inputs.homebrew-core;
+          "homebrew/homebrew-cask" = inputs.homebrew-cask;
+          "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
+          "pulumi/homebrew-tap" = inputs.homebrew-pulumi;
+        };
+      };
+    }
     ./sops.nix
     ./homebrew.nix
     common

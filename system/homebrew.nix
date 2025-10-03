@@ -1,4 +1,5 @@
-_: {
+{ config, ... }:
+{
 
   homebrew = {
     enable = true;
@@ -8,12 +9,7 @@ _: {
       cleanup = "zap";
     };
     global.brewfile = true;
-
-    taps = [
-      "homebrew/cask-versions"
-      "d12frosted/emacs-plus"
-      "pulumi/tap"
-    ];
+    taps = builtins.attrNames config.nix-homebrew.taps;
 
     masApps = {
       Enpass = 732710998;
