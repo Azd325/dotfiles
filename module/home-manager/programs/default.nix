@@ -16,6 +16,7 @@
     ./ripgrep
     ./starship
     ./tmux
+    ./zen-browser
     ./yazi
     ./zoxide
     ./zsh

@@ -8,6 +8,7 @@
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
+    inputs.zen-browser.homeModules.twilight
     ./files
     ./packages.nix
     ./programs

@@ -37,6 +37,7 @@ inputs.darwin.lib.darwinSystem {
     inputs.home-manager.darwinModules.home-manager
     {
       home-manager = {
+        backupFileExtension = "backup";
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs username userHome; };
