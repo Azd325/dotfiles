@@ -40,9 +40,11 @@ let
     hyperfine # benchmarking tool
     imagemagick
     mosh # wrapper for `ssh` that better and not dropping connections
+    pandoc
     rsync
     rustup
     sops
+    texlive.combined.scheme-full
     tree
     wget
     yq
