@@ -28,15 +28,15 @@ curl -fsSL https://install.determinate.systems/nix | sh -s -- install --prefer-u
 
 ```shell
 cd ~/.config/nixpkgs
-sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- build --flake ".#aarch64"
-sudo darwin-rebuild switch --flake ".#aarch64"
+sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- build --flake .
+sudo darwin-rebuild switch --flake .
 ```
 
 ## Update
 
 ```shell
 nix flake update
-sudo darwin-rebuild switch --flake ".#aarch64"
+apply-nix-darwin-configuration
 ```
 
 ## Validate without applying

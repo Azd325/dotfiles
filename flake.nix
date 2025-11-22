@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
-    darwin.url = "github:lnl7/nix-darwin/nix-darwin-25.05";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin.url = "github:lnl7/nix-darwin/nix-darwin-25.05";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -46,23 +46,56 @@
   };
 
   outputs =
-    inputs:
+    { self, ... }@inputs:
     let
       darwin-system = import ./system/darwin.nix { inherit inputs username; };
       username = "timkleinschmidt";
+      system = "aarch64-darwin";
     in
     {
       darwinConfigurations = {
-        aarch64 = darwin-system "aarch64-darwin";
-        x86_64 = darwin-system "x86_64-darwin";
+        BER = darwin-system "aarch64-darwin";
       };
 
-      formatter = inputs.nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ] (system: inputs.nixpkgs.legacyPackages.${system}.nixfmt-tree);
+      # Nix formatter
+
+      # This applies the formatter that follows RFC 166, which defines a standard format:
+      # https://github.com/NixOS/rfcs/pull/166
+
+      # To format all Nix files:
+      # git ls-files -z '*.nix' | xargs -0 -r nix fmt
+      # To check formatting:
+      # git ls-files -z '*.nix' | xargs -0 -r nix develop --command nixfmt --check
+      formatter.${system} = inputs.nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
+
+      devShells.${system}.default =
+        let
+          pkgs = import inputs.nixpkgs { inherit system; };
+        in
+        pkgs.mkShellNoCC {
+          packages = with pkgs; [
+            # Shell script for applying the nix-darwin configuration.
+            # Run this to apply the configuration in this flake to your macOS system.
+            (writeShellApplication {
+              name = "apply-nix-darwin-configuration";
+              runtimeInputs = [
+                # Make the darwin-rebuild package available in the script
+                inputs.nix-darwin.packages.${system}.darwin-rebuild
+              ];
+              text = ''
+                echo "> Applying nix-darwin configuration..."
+
+                echo "> Running darwin-rebuild switch as root..."
+                sudo darwin-rebuild switch --verbose --flake .
+                echo "> darwin-rebuild switch was successful ✅"
+
+                echo "> macOS config was successfully applied 🚀"
+              '';
+            })
+
+            self.formatter.${system}
+          ];
+        };
 
       checks =
         inputs.nixpkgs.lib.genAttrs

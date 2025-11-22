@@ -7,7 +7,7 @@ let
   common = import ./common.nix { inherit username userHome; };
   hostBer = import ./hosts/ber.nix { inherit username; };
 in
-inputs.darwin.lib.darwinSystem {
+inputs.nix-darwin.lib.darwinSystem {
   inherit system;
   modules = [
     inputs.sops-nix.darwinModules.sops
