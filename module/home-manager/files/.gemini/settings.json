@@ -1,0 +1,8 @@
+{
+  "contextFileName": "AGENTS.md",
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  }
+}

@@ -5,6 +5,7 @@ _: {
     ".yarnrc.yml".source = ./.yarnrc.yml;
     ".zprofile".source = ./.zprofile;
     ".config/opencode/opencode.json".source = ./opencode.json;
+    ".gemini/settings.json".source = ./.gemini/settings.json;
     ".gemrc".text = "gem: --no-document";
   };
 }
