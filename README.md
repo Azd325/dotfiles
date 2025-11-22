@@ -14,32 +14,29 @@ chmod 755 ~/.ssh
 ### Clone the dotfiles
 
 ```shell
-cd
-mkdir -p .config
-cd .config
-git clone git@github.com:Azd325/dotfiles.git nixpkgs
+mkdir -p ~/.config
+git clone git@github.com:Azd325/dotfiles.git ~/.config/nixpkgs
 ```
 
 ### Install Determinate Nix
 
 ```shell
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-  sh -s -- install
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install --prefer-upstream-nix
 ```
 
 ## First install
 
 ```shell
 cd ~/.config/nixpkgs
-nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ".#aarch64"
-sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
+sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- build --flake ".#aarch64"
+sudo darwin-rebuild switch --flake ".#aarch64"
 ```
 
 ## Update
 
 ```shell
 nix flake update
-sudo darwin-rebuild switch --show-trace --flake ".#aarch64"
+sudo darwin-rebuild switch --flake ".#aarch64"
 ```
 
 ## Validate without applying

@@ -6,20 +6,14 @@
 }:
 let
   primaryUser = config.system.primaryUser or null;
-  trustedUsers = [
-    "@wheel"
-    "@admin"
-  ]
-  ++ lib.optional (primaryUser != null) primaryUser;
 in
 {
   nix = {
-    enable = false;
+    enable = true;
     channel.enable = false;
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
-      builders-use-substitutes = true;
       experimental-features = [
         "flakes"
         "nix-command"
@@ -37,10 +31,11 @@ in
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
       ];
-      trusted-users = trustedUsers;
       warn-dirty = false;
     };
   };
+
+  ids.gids.nixbld = 350;
 
   nixpkgs.config.allowUnfree = true;
 
