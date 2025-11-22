@@ -16,6 +16,7 @@ let
     nixfmt-rfc-style
     nixpkgs-review
     statix
+    nil
     nixd
     clj-kondo
     lua54Packages.luacheck
