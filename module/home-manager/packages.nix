@@ -19,10 +19,14 @@ let
     nixd
     clj-kondo
     lua54Packages.luacheck
-    uv
+    unstable.uv
+    gallery-dl
     glow # Markdown renderer for CLI
     git-absorb
     git-filter-repo
+    ffmpeg
+    go
+    gopls
     awscli2
     lazydocker
     lazyjj
@@ -44,7 +48,6 @@ let
     rsync
     rustup
     sops
-    texlive.combined.scheme-full
     tree
     wget
     yq
@@ -56,8 +59,9 @@ let
     ai.codex
     ai.crush
     ai.gemini-cli
-    ai.goose-cli
+    # ai.goose-cli
     ai.opencode
+    ai.spec-kit
     unstable.aichat
     unstable."fabric-ai"
   ];
