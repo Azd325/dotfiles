@@ -13,6 +13,7 @@ let
   homePackages = with pkgs; [
     age
     cachix
+    devenv
     nixfmt-rfc-style
     nixpkgs-review
     statix
