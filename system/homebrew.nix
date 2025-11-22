@@ -82,6 +82,7 @@
       "visual-studio-code"
       "vlc"
       "utm"
+      "zed"
     ];
   };
 
