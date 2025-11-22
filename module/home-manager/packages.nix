@@ -27,8 +27,6 @@ let
     git-absorb
     git-filter-repo
     ffmpeg
-    go
-    gopls
     awscli2
     lazydocker
     lazyjj
