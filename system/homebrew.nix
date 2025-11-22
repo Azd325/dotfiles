@@ -11,14 +11,6 @@
     global.brewfile = true;
     taps = builtins.attrNames config.nix-homebrew.taps;
 
-    masApps = {
-      Enpass = 732710998;
-      Infuse = 1136220934;
-      TestFlight = 899247664;
-      WireGuard = 1451685025;
-      Xcode = 497799835;
-    };
-
     brews = [
       "backlog-md"
       "coreutils"
