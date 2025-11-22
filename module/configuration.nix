@@ -1,12 +1,7 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
-let
-  primaryUser = config.system.primaryUser or null;
-in
 {
   nix = {
     enable = true;
