@@ -52,6 +52,7 @@
       "gas-mask"
       "ghostty"
       "gpg-suite"
+      "google-chrome"
       "grandperspective"
       "handbrake-app"
       "hot"
