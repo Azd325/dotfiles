@@ -27,7 +27,6 @@
       "gdal"
       "gitu"
       "grep"
-      "magic-wormhole"
       "pango"
       "podman"
       "postgresql"

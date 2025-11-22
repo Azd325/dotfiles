@@ -44,6 +44,7 @@ let
     hyperfine # benchmarking tool
     imagemagick
     mosh # wrapper for `ssh` that better and not dropping connections
+    magic-wormhole
     pandoc
     rsync
     rustup
