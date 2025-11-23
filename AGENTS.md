@@ -1,39 +1,22 @@
-# agents.md
+# AGENTS.md
 
-## Project Purpose
+## Build, Lint, and Test Commands
+- **Lint Nix:** `nix run nixpkgs#statix -- check .`
+- **Dead Code (Nix):** `nix run nixpkgs#deadnix -- --fail .`
+- **Format Nix:** `nix fmt` (RFC 166 style)
+- **Check Nix Formatting:** `nix develop --command nixfmt --check`
+- **Lint Lua:** Super-Linter runs with `VALIDATE_LUA: true`
+- **EditorConfig rules:** Enforced via CI
 
-This repository provides a declarative, reproducible configuration for macOS systems using Nix, Nix-Darwin, and Home Manager. It manages system and user-level settings, packages, and secrets, enabling easy setup and maintenance of development environments.
+## Code Style Guidelines
+- **EditorConfig:** UTF-8, LF, final newline, trim trailing whitespace
+- **YAML:** 2 spaces, space indent
+- **Lua:** 2 spaces, space indent; globals: `vim`, `ColorMyPencils`; standard: `max` (luacheck)
+- **Nix:** Use RFC 166 formatting; run `nixfmt-rfc-style` for consistency
+- **Naming:** Use descriptive, conventional names per language
+- **Error Handling:** Use language idioms (Lua: pcall, Nix: error propagation)
+- **Imports:** Prefer explicit imports; avoid wildcards
+- **Types:** Use explicit types/structure where possible
+- **CI:** Linting and formatting enforced on PRs to main
 
-## Key Technologies
-
-- **Nix**: Declarative package manager and build system.
-- **Nix-Darwin**: macOS system configuration via Nix.
-- **Home Manager**: User-level configuration via Nix.
-- **sops-nix**: Encrypted secrets management.
-- **Homebrew**: macOS package manager, integrated via Nix.
-- **Doom Emacs**: Custom Emacs configuration included.
-
-## Main Structure
-
-- `module/`: Home Manager modules and configs for various programs (Emacs, shell, CLI tools).
-- `system/`: System-level Nix configurations (macOS, Homebrew, secrets).
-- `secrets/`: Encrypted secrets, managed with sops-nix and age keys.
-- `README.md`: Setup instructions and usage guide.
-- `flake.nix`: Flake entrypoint, defines inputs and outputs for Nix, Nix-Darwin, Home Manager, and related tools.
-
-## Usage Overview
-
-1. **Clone** this repo into `~/.config/nixpkgs`.
-2. **Install** Determinate Nix.
-3. **Build and switch** system config with `darwin-rebuild` and flake references.
-4. **Update** with `nix flake update` and rebuild.
-5. **Manage secrets** using sops-nix and age keys.
-6. **Configure Emacs** with provided Doom Emacs setup.
-
-## License
-
-This project is released into the public domain (Unlicense).
-
----
-
-For more details, see the README.md and flake.nix in the repository.
+Agents must follow these guidelines for all code contributions and reviews.
