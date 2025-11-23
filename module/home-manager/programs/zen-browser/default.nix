@@ -4,7 +4,7 @@ let
 in
 {
   programs.zen-browser = {
-    enable = true;
+    enable = false;
     package = zenPackage;
     policies =
       let

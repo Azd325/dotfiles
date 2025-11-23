@@ -3,6 +3,16 @@
   networking = {
     computerName = "Tim’s 💻";
     hostName = "BER";
+    dns = [
+      "1.1.1.1"
+      "2606:4700:4700::1111"
+      "1.0.0.1"
+      "2606:4700:4700::1001"
+    ];
+    # networksetup -listallnetworkservices
+    knownNetworkServices = [
+      "Wi-Fi"
+    ];
   };
 
   # Enable TouchID authentication for sudo.
