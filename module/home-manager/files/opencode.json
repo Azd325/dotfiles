@@ -6,5 +6,11 @@
       "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
       "enabled": true,
     }
+  },
+  "tui": {
+    "scroll_speed": 3,
+    "scroll_acceleration": {
+      "enabled": true
+    }
   }
 }
