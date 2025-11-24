@@ -60,7 +60,7 @@ let
     ai.codex
     ai.crush
     ai.gemini-cli
-    # ai.goose-cli
+    ai.goose-cli
     ai.opencode
     ai.spec-kit
     unstable.aichat
