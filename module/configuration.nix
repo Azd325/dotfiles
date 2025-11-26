@@ -7,6 +7,7 @@
   nix = {
     enable = true;
     channel.enable = false;
+    extraOptions = "!include ${config.sops.secrets.github-token.path}";
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
