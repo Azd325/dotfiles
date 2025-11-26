@@ -12,6 +12,7 @@
     ./htop
     ./jq
     ./jujutsu
+    ./nvim
     ./lazygit
     ./ripgrep
     ./starship
