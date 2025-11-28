@@ -56,15 +56,15 @@ let
   ];
 
   aiPackages = [
-    ai.copilot-cli
     ai.codex
+    ai.copilot-cli
     ai.crush
     ai.gemini-cli
     ai.goose-cli
     ai.opencode
     ai.spec-kit
-    unstable.aichat
     unstable."fabric-ai"
+    unstable.aichat
   ];
 
 in
