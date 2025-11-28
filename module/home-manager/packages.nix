@@ -62,6 +62,7 @@ let
     ai.gemini-cli
     ai.goose-cli
     ai.opencode
+    ai.openspec
     ai.spec-kit
     unstable."fabric-ai"
     unstable.aichat
