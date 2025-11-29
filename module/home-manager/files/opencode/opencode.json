@@ -4,7 +4,15 @@
     "chrome-devtools": {
       "type": "local",
       "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+      "enabled": true
+    },
+    "devenv": {
+      "type": "local",
+      "command": ["devenv", "mcp"],
       "enabled": true,
+      "environment": {
+        "DEVENV_ROOT": "config.devenv.root"
+      }
     }
   },
   "tui": {
