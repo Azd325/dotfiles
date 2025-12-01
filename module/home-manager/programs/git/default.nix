@@ -1,17 +1,18 @@
 { pkgs, ... }:
 {
   programs.git = {
-    package = pkgs.gitAndTools.gitFull;
+    package = pkgs.gitFull;
     enable = true;
-    delta.enable = true;
     lfs.enable = true;
-    userName = "Tim Kleinschmidt";
-    userEmail = "tim.kleinschmidt@gmail.com";
     signing = {
       key = "3F74D3A286A02EED";
       signByDefault = true;
     };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Tim Kleinschmidt";
+        email = "tim.kleinschmidt@gmail.com";
+      };
       branch = {
         sort = "-committerdate";
       };
@@ -76,4 +77,6 @@
     };
     ignores = [ ".envrc" ];
   };
+
+  programs.delta.enable = true;
 }
