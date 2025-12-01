@@ -1,15 +1,14 @@
-{ inputs, username }:
-system:
+{
+  inputs,
+  username,
+  system,
+}:
 let
-  system-config = import ../module/configuration.nix;
-  home-manager-config = import ../module/home-manager;
   userHome = "/Users/${username}";
-  common = import ./common.nix { inherit username userHome; };
-  hostBer = import ./hosts/ber.nix { inherit username; };
 in
 inputs.nix-darwin.lib.darwinSystem {
-  inherit system;
   modules = [
+    { nixpkgs.hostPlatform = system; }
     inputs.sops-nix.darwinModules.sops
     inputs.nix-homebrew.darwinModules.nix-homebrew
     {
@@ -30,9 +29,9 @@ inputs.nix-darwin.lib.darwinSystem {
     }
     ./sops.nix
     ./homebrew.nix
-    common
-    hostBer
-    system-config
+    (import ./common.nix { inherit username userHome; })
+    (import ./hosts/ber.nix { inherit username; })
+    ../module/configuration.nix
 
     inputs.home-manager.darwinModules.home-manager
     {
@@ -41,9 +40,7 @@ inputs.nix-darwin.lib.darwinSystem {
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs username userHome; };
-        users = {
-          "${username}" = home-manager-config;
-        };
+        users.${username} = ../module/home-manager;
       };
     }
   ];

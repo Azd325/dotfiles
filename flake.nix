@@ -51,13 +51,13 @@
   outputs =
     { self, ... }@inputs:
     let
-      darwin-system = import ./system/darwin.nix { inherit inputs username; };
       username = "timkleinschmidt";
       system = "aarch64-darwin";
+      darwin-system = import ./system/darwin.nix { inherit inputs username system; };
     in
     {
       darwinConfigurations = {
-        BER = darwin-system "aarch64-darwin";
+        BER = darwin-system;
       };
 
       # Nix formatter
@@ -73,7 +73,7 @@
 
       devShells.${system}.default =
         let
-          pkgs = import inputs.nixpkgs { inherit system; };
+          pkgs = inputs.nixpkgs.legacyPackages.${system};
         in
         pkgs.mkShellNoCC {
           packages = with pkgs; [

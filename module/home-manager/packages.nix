@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }:
 let
-  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
-  ai = inputs."nix-ai-tools".packages.${pkgs.system};
-  tools = inputs.tools.packages.${pkgs.system};
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  ai = inputs."nix-ai-tools".packages.${pkgs.stdenv.hostPlatform.system};
+  tools = inputs.tools.packages.${pkgs.stdenv.hostPlatform.system};
 
   fonts = with pkgs; [
     fira-code

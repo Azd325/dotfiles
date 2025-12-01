@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  zenPackage = inputs.zen-browser.packages.${pkgs.system}.twilight;
+  zenPackage = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight;
 in
 {
   programs.zen-browser = {
