@@ -2,6 +2,7 @@
 let
   unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
   ai = inputs."nix-ai-tools".packages.${pkgs.system};
+  tools = inputs.tools.packages.${pkgs.system};
 
   fonts = with pkgs; [
     fira-code
@@ -53,6 +54,13 @@ let
     wget
     yq
     yt-dlp
+
+    tools.browser-start
+    tools.browser-stop
+    tools.browser-nav
+    tools.browser-screenshot
+    tools.browser-eval
+    tools.browser-cookies
   ];
 
   aiPackages = [
