@@ -27,6 +27,7 @@ let
     glow # Markdown renderer for CLI
     git-absorb
     git-filter-repo
+    git-trim
     ffmpeg
     awscli2
     lazydocker
