@@ -215,6 +215,11 @@
       "environment": {
         "DEVENV_ROOT": "config.devenv.root"
       }
+    },
+    "backlog": {
+      "type": "local",
+      "command": ["backlog", "mcp", "start"],
+      "enabled": false
     }
   },
   "tui": {
