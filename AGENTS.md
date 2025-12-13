@@ -1,22 +1,20 @@
 # AGENTS.md
 
-## Build, Lint, and Test Commands
-- **Lint Nix:** `nix run nixpkgs#statix -- check .`
-- **Dead Code (Nix):** `nix run nixpkgs#deadnix -- --fail .`
+## Build and Apply Commands
+- **Apply config:** `nix develop --command apply-nix-darwin-configuration`
 - **Format Nix:** `nix fmt` (RFC 166 style)
-- **Check Nix Formatting:** `nix develop --command nixfmt --check`
-- **Lint Lua:** Super-Linter runs with `VALIDATE_LUA: true`
-- **EditorConfig rules:** Enforced via CI
+- **Check formatting:** `nix develop --command nixfmt --check`
+- **Lint Nix:** `nix run nixpkgs#statix -- check .`
+- **Dead code:** `nix run nixpkgs#deadnix -- --fail .`
+- **Run all checks:** `nix flake check`
 
 ## Code Style Guidelines
 - **EditorConfig:** UTF-8, LF, final newline, trim trailing whitespace
-- **YAML:** 2 spaces, space indent
-- **Lua:** 2 spaces, space indent; globals: `vim`, `ColorMyPencils`; standard: `max` (luacheck)
-- **Nix:** Use RFC 166 formatting; run `nixfmt-rfc-style` for consistency
-- **Naming:** Use descriptive, conventional names per language
+- **Nix:** RFC 166 formatting via `nixfmt-rfc-style`; explicit imports; avoid wildcards
+- **Lua:** 2-space indent; globals: `vim`, `ColorMyPencils`; luacheck standard: `max`
+- **YAML:** 2-space indent
+- **Naming:** Descriptive names; keep package lists sorted alphabetically
 - **Error Handling:** Use language idioms (Lua: pcall, Nix: error propagation)
-- **Imports:** Prefer explicit imports; avoid wildcards
-- **Types:** Use explicit types/structure where possible
-- **CI:** Linting and formatting enforced on PRs to main
+- **CI:** Linting (statix, deadnix, luacheck, editorconfig, gitleaks) enforced on PRs
 
 Agents must follow these guidelines for all code contributions and reviews.
