@@ -1,9 +1,11 @@
 { pkgs, inputs, ... }:
 let
+  # Package sources
   unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
   ai = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   tools = inputs.tools.packages.${pkgs.stdenv.hostPlatform.system};
 
+  # Font packages (from stable nixpkgs)
   fonts = [
     pkgs.fira-code
     pkgs.fira-code-symbols
@@ -11,7 +13,8 @@ let
     pkgs.source-code-pro
   ];
 
-  homePackages = [
+  # Stable packages (from nixpkgs)
+  stablePackages = [
     pkgs.age
     pkgs.awscli2
     pkgs.cachix
@@ -51,11 +54,18 @@ let
     pkgs.sops
     pkgs.statix
     pkgs.tree
-    unstable.uv
     pkgs.wget
     pkgs.yq
     pkgs.yt-dlp
+  ];
 
+  # Unstable packages (from nixpkgs-unstable)
+  unstablePackages = [
+    unstable.uv
+  ];
+
+  # Custom tool packages (from tools input)
+  toolPackages = [
     tools.browser-cookies
     tools.browser-eval
     tools.browser-nav
@@ -64,6 +74,7 @@ let
     tools.browser-stop
   ];
 
+  # AI/ML packages (from llm-agents input)
   aiPackages = [
     ai.codex
     ai.copilot-cli
@@ -74,12 +85,23 @@ let
     ai.opencode
     ai.openspec
     ai.spec-kit
+  ];
+
+  # Mixed source AI packages (require both ai and unstable)
+  mixedSourceAIPackages = [
     unstable.aichat
     unstable."fabric-ai"
   ];
 
 in
 {
-  home.packages = fonts ++ homePackages ++ aiPackages;
+  home.packages = 
+    fonts ++
+    stablePackages ++
+    unstablePackages ++
+    toolPackages ++
+    aiPackages ++
+    mixedSourceAIPackages;
+  
   programs.home-manager.enable = true;
 }
