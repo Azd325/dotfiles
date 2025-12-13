@@ -76,6 +76,7 @@ let
 
   # AI/ML packages (from llm-agents input)
   aiPackages = [
+    ai.beads
     ai.codex
     ai.copilot-cli
     ai.crush
