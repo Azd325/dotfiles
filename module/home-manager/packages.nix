@@ -95,13 +95,8 @@ let
 
 in
 {
-  home.packages = 
-    fonts ++
-    stablePackages ++
-    unstablePackages ++
-    toolPackages ++
-    aiPackages ++
-    mixedSourceAIPackages;
-  
+  home.packages =
+    fonts ++ stablePackages ++ unstablePackages ++ toolPackages ++ aiPackages ++ mixedSourceAIPackages;
+
   programs.home-manager.enable = true;
 }
