@@ -4,57 +4,57 @@ let
   ai = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   tools = inputs.tools.packages.${pkgs.stdenv.hostPlatform.system};
 
-  fonts = with pkgs; [
-    fira-code
-    fira-code-symbols
-    jetbrains-mono
-    source-code-pro
+  fonts = [
+    pkgs.fira-code
+    pkgs.fira-code-symbols
+    pkgs.jetbrains-mono
+    pkgs.source-code-pro
   ];
 
-  homePackages = with pkgs; [
-    age
-    awscli2
-    cachix
-    clj-kondo
-    clojure
-    coreutils
-    curl
-    devenv
-    dive
-    duf
-    editorconfig-core-c
-    ffmpeg
-    gallery-dl
-    gh
-    git-absorb
-    git-filter-repo
-    git-trim
-    glow # Markdown renderer for CLI
-    gnugrep
-    gnumake
-    gnupg
-    hyperfine # benchmarking tool
-    imagemagick
-    lazydocker
-    lazyjj
-    lazysql
-    lua54Packages.luacheck
-    magic-wormhole
-    mosh # wrapper for `ssh` that better and not dropping connections
-    nil
-    nixd
-    nixfmt-rfc-style
-    nixpkgs-review
-    pandoc
-    rsync
-    rustup
-    sops
-    statix
-    tree
+  homePackages = [
+    pkgs.age
+    pkgs.awscli2
+    pkgs.cachix
+    pkgs.clj-kondo
+    pkgs.clojure
+    pkgs.coreutils
+    pkgs.curl
+    pkgs.devenv
+    pkgs.dive
+    pkgs.duf
+    pkgs.editorconfig-core-c
+    pkgs.ffmpeg
+    pkgs.gallery-dl
+    pkgs.gh
+    pkgs.git-absorb
+    pkgs.git-filter-repo
+    pkgs.git-trim
+    pkgs.glow # Markdown renderer for CLI
+    pkgs.gnugrep
+    pkgs.gnumake
+    pkgs.gnupg
+    pkgs.hyperfine # benchmarking tool
+    pkgs.imagemagick
+    pkgs.lazydocker
+    pkgs.lazyjj
+    pkgs.lazysql
+    pkgs.lua54Packages.luacheck
+    pkgs.magic-wormhole
+    pkgs.mosh # wrapper for `ssh` that better and not dropping connections
+    pkgs.nil
+    pkgs.nixd
+    pkgs.nixfmt-rfc-style
+    pkgs.nixpkgs-review
+    pkgs.pandoc
+    pkgs.rsync
+    pkgs.rustup
+    pkgs.sops
+    pkgs.statix
+    pkgs.tree
     unstable.uv
-    wget
-    yq
-    yt-dlp
+    pkgs.wget
+    pkgs.yq
+    pkgs.yt-dlp
 
     tools.browser-cookies
     tools.browser-eval

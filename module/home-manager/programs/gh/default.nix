@@ -3,11 +3,11 @@
   programs.gh = {
     enable = true;
     settings.git_protocol = "ssh";
-    extensions = with pkgs; [
-      gh-eco
-      gh-dash
-      gh-actions-cache
-      gh-cal
+    extensions = [
+      pkgs.gh-eco
+      pkgs.gh-dash
+      pkgs.gh-actions-cache
+      pkgs.gh-cal
     ];
   };
 }

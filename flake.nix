@@ -76,25 +76,18 @@
           pkgs = inputs.nixpkgs.legacyPackages.${system};
         in
         pkgs.mkShellNoCC {
-          packages = with pkgs; [
+          packages = [
             # Shell script for applying the nix-darwin configuration.
             # Run this to apply the configuration in this flake to your macOS system.
-            (writeShellApplication {
-              name = "apply-nix-darwin-configuration";
-              runtimeInputs = [
-                # Make the darwin-rebuild package available in the script
-                inputs.nix-darwin.packages.${system}.darwin-rebuild
-              ];
-              text = ''
-                echo "> Applying nix-darwin configuration..."
+            (pkgs.writeScriptBin "apply-nix-darwin-configuration" ''
+              echo "> Applying nix-darwin configuration..."
 
-                echo "> Running darwin-rebuild switch as root..."
-                sudo darwin-rebuild switch --verbose --flake .
-                echo "> darwin-rebuild switch was successful ✅"
+              echo "> Running darwin-rebuild switch as root..."
+              sudo darwin-rebuild switch --verbose --flake .
+              echo "> darwin-rebuild switch was successful ✅"
 
-                echo "> macOS config was successfully applied 🚀"
-              '';
-            })
+              echo "> macOS config was successfully applied 🚀"
+            '')
 
             self.formatter.${system}
           ];
