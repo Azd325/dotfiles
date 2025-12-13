@@ -13,55 +13,55 @@ let
 
   homePackages = with pkgs; [
     age
-    cachix
-    devenv
-    nixfmt-rfc-style
-    nixpkgs-review
-    statix
-    nil
-    nixd
-    clj-kondo
-    lua54Packages.luacheck
-    unstable.uv
-    gallery-dl
-    glow # Markdown renderer for CLI
-    git-absorb
-    git-filter-repo
-    git-trim
-    ffmpeg
     awscli2
-    lazydocker
-    lazyjj
-    lazysql
+    cachix
+    clj-kondo
     clojure
     coreutils
     curl
+    devenv
     dive
     duf
     editorconfig-core-c
+    ffmpeg
+    gallery-dl
     gh
+    git-absorb
+    git-filter-repo
+    git-trim
+    glow # Markdown renderer for CLI
     gnugrep
     gnumake
     gnupg
     hyperfine # benchmarking tool
     imagemagick
-    mosh # wrapper for `ssh` that better and not dropping connections
+    lazydocker
+    lazyjj
+    lazysql
+    lua54Packages.luacheck
     magic-wormhole
+    mosh # wrapper for `ssh` that better and not dropping connections
+    nil
+    nixd
+    nixfmt-rfc-style
+    nixpkgs-review
     pandoc
     rsync
     rustup
     sops
+    statix
     tree
+    unstable.uv
     wget
     yq
     yt-dlp
 
-    tools.browser-start
-    tools.browser-stop
+    tools.browser-cookies
+    tools.browser-eval
     tools.browser-nav
     tools.browser-screenshot
-    tools.browser-eval
-    tools.browser-cookies
+    tools.browser-start
+    tools.browser-stop
   ];
 
   aiPackages = [
@@ -73,8 +73,8 @@ let
     ai.opencode
     ai.openspec
     ai.spec-kit
-    unstable."fabric-ai"
     unstable.aichat
+    unstable."fabric-ai"
   ];
 
 in
