@@ -13,12 +13,10 @@
 
     brews = [
       "backlog-md"
-      "coreutils"
       "emacs-plus"
       "fnm"
       "gdal"
       "gitu"
-      "grep"
       "pango"
       "podman"
       "postgresql"
