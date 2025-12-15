@@ -22,6 +22,4 @@
     ./zoxide
     ./zsh
   ];
-
-  fonts.fontconfig.enable = true;
 }

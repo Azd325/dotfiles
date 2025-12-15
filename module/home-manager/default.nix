@@ -10,6 +10,7 @@
     inputs.sops-nix.homeManagerModules.sops
     inputs.zen-browser.homeModules.twilight
     ./files
+    ./fonts.nix
     ./packages.nix
     ./programs
   ];

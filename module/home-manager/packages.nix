@@ -5,14 +5,6 @@ let
   ai = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   tools = inputs.tools.packages.${pkgs.stdenv.hostPlatform.system};
 
-  # Font packages (from stable nixpkgs)
-  fonts = [
-    pkgs.fira-code
-    pkgs.fira-code-symbols
-    pkgs.jetbrains-mono
-    pkgs.source-code-pro
-  ];
-
   # Stable packages (from nixpkgs)
   stablePackages = [
     pkgs.age
@@ -97,7 +89,7 @@ let
 in
 {
   home.packages =
-    fonts ++ stablePackages ++ unstablePackages ++ toolPackages ++ aiPackages ++ mixedSourceAIPackages;
+    stablePackages ++ unstablePackages ++ toolPackages ++ aiPackages ++ mixedSourceAIPackages;
 
   programs.home-manager.enable = true;
 }
