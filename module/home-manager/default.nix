@@ -22,7 +22,7 @@
     sessionPath = [
       # own scripts
       "$HOME/.local/bin"
-      # cargo instfalled binaries
+      # cargo installed binaries
       "$HOME/.cargo/bin"
       # Doom Emacs binary
       "$HOME/.config/emacs/bin"
