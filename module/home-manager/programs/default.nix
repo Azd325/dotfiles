@@ -9,16 +9,19 @@
     ./fzf
     ./gh
     ./git
+    ./helix
     ./htop
     ./jq
     ./jujutsu
-    ./nvim
     ./lazygit
+    ./nvim
     ./ripgrep
     ./starship
     ./tmux
-    ./zen-browser
+    ./vscode
     ./yazi
+    ./zed
+    ./zen-browser
     ./zoxide
     ./zsh
   ];
