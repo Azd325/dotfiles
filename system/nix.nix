@@ -1,13 +1,21 @@
 {
+  lib,
   pkgs,
   config,
   ...
 }:
 {
+  # Nix daemon configuration
   nix = {
     enable = true;
     channel.enable = false;
-    extraOptions = "!include ${config.sops.secrets.github-token.path}";
+    # Conditionally include sops secret if available (robustness for bootstrapping)
+    # Defensive guard: check parent attributes exist before accessing secrets
+    extraOptions =
+      let
+        hasGithubToken = config ? sops && config.sops ? secrets && config.sops.secrets ? github-token;
+      in
+      lib.optionalString hasGithubToken "!include ${config.sops.secrets.github-token.path}";
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
@@ -23,6 +31,8 @@
         "https://cache.nixos.org"
         "https://numtide.cachix.org"
       ];
+      # Use config.system.primaryUser as single source of truth
+      # This is set via lib.mkDefault in common.nix and can be overridden per host
       trusted-users = [
         config.system.primaryUser
         "root"

@@ -7,6 +7,14 @@ let
   userHome = "/Users/${username}";
 in
 inputs.nix-darwin.lib.darwinSystem {
+  # specialArgs: Custom arguments available to ALL system modules
+  # Used to seed config options (like system.primaryUser) via lib.mkDefault
+  # System modules should prefer reading config.system.primaryUser over using
+  # username directly for better modularity and overridability
+  specialArgs = {
+    inherit username userHome;
+  };
+
   modules = [
     { nixpkgs.hostPlatform = system; }
     inputs.sops-nix.darwinModules.sops
@@ -27,11 +35,8 @@ inputs.nix-darwin.lib.darwinSystem {
         };
       };
     }
-    ./sops.nix
-    ./homebrew.nix
-    (import ./common.nix { inherit username userHome; })
-    (import ./hosts/ber.nix { inherit username; })
-    ../module/configuration.nix
+    # Host-specific configuration (gets username/userHome via specialArgs)
+    ./hosts/ber.nix
 
     inputs.home-manager.darwinModules.home-manager
     {
@@ -39,8 +44,13 @@ inputs.nix-darwin.lib.darwinSystem {
         backupFileExtension = "backup";
         useGlobalPkgs = true;
         useUserPackages = true;
-        extraSpecialArgs = { inherit inputs username userHome; };
-        users.${username} = ../module/home-manager;
+        # extraSpecialArgs: Arguments specific to home-manager modules
+        # Duplicating username/userHome here for ergonomics in HM modules
+        # HM modules could alternatively read config.system.primaryUser
+        extraSpecialArgs = {
+          inherit inputs username userHome;
+        };
+        users.${username} = ../modules/home-manager;
       };
     }
   ];
