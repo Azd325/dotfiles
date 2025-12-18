@@ -13,8 +13,9 @@
   # fixed-point, so import order doesn't affect evaluation correctness.
 
   imports = [
-    ./sops.nix # Defines sops.secrets (referenced conditionally by nix.nix)
-    ./nix.nix # Nix daemon settings (uses config.system.primaryUser)
+    ./sops.nix # Defines sops age configuration
+    ./nix-config.nix # Nix daemon configuration (access-tokens, etc.) managed via sops
+    ./nix.nix # Nix daemon settings (uses nix-config)
     ./security.nix
     ./system-defaults.nix
     ./fonts.nix # System-wide font configuration

@@ -13,9 +13,9 @@
     # Defensive guard: check parent attributes exist before accessing secrets
     extraOptions =
       let
-        hasGithubToken = config ? sops && config.sops ? secrets && config.sops.secrets ? github-token;
+        hasNixConfig = config ? sops && config.sops ? secrets && config.sops.secrets ? nix-config;
       in
-      lib.optionalString hasGithubToken "!include ${config.sops.secrets.github-token.path}";
+      lib.optionalString hasNixConfig "!include ${config.sops.secrets.nix-config.path}";
     settings = {
       # https://github.com/NixOS/nix/issues/7273
       auto-optimise-store = false;
