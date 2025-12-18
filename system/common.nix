@@ -18,6 +18,7 @@
     ./security.nix
     ./system-defaults.nix
     ./homebrew.nix
+    ./limits.nix # System-wide file descriptor limits for Nix operations
   ];
 
   # Set default primaryUser using specialArgs.username
