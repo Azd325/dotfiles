@@ -27,7 +27,6 @@ let
     pkgs.glow # Markdown renderer for CLI
     pkgs.gnugrep
     pkgs.gnumake
-    pkgs.gnupg
     pkgs.hyperfine # benchmarking tool
     pkgs.imagemagick
     pkgs.lazydocker

@@ -10,6 +10,7 @@
     ./fzf
     ./gh
     ./git
+    ./gpg
     ./helix
     ./jq
     ./jujutsu
