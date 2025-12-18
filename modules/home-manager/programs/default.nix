@@ -18,6 +18,7 @@
     ./lazygit
     ./nvim
     ./ripgrep
+    ./ssh
     ./starship
     ./tmux
     ./vscode
