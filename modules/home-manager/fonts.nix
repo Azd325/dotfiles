@@ -1,11 +1,4 @@
-{ pkgs, ... }:
-{
-  home.packages = [
-    pkgs.fira-code
-    pkgs.fira-code-symbols
-    pkgs.jetbrains-mono
-    pkgs.source-code-pro
-  ];
-
+_: {
+  # Fonts installed via system/fonts.nix
   fonts.fontconfig.enable = true;
 }

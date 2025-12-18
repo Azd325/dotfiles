@@ -13,6 +13,7 @@
     ./helix
     ./jq
     ./jujutsu
+    ./kitty
     ./lazygit
     ./nvim
     ./ripgrep

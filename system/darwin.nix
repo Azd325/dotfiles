@@ -18,6 +18,8 @@ inputs.nix-darwin.lib.darwinSystem {
   modules = [
     { nixpkgs.hostPlatform = system; }
     inputs.sops-nix.darwinModules.sops
+    inputs.stylix.darwinModules.stylix
+    ./stylix.nix
     inputs.nix-homebrew.darwinModules.nix-homebrew
     {
       nix-homebrew = {

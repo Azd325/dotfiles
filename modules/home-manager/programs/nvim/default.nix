@@ -8,7 +8,6 @@
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
       telescope-nvim
-      rose-pine
       trouble-nvim
       (nvim-treesitter.withPlugins (
         plugins: with plugins; [

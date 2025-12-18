@@ -17,6 +17,7 @@
     ./nix.nix # Nix daemon settings (uses config.system.primaryUser)
     ./security.nix
     ./system-defaults.nix
+    ./fonts.nix # System-wide font configuration
     ./homebrew.nix
     ./limits.nix # System-wide file descriptor limits for Nix operations
   ];

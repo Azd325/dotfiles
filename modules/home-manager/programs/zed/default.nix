@@ -6,5 +6,6 @@ _: {
       "toml"
       "make"
     ];
+    userSettings = { };
   };
 }

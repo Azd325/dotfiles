@@ -1,6 +1,3 @@
 _: {
-  programs.bat = {
-    enable = true;
-    config.style = "plain";
-  };
+  programs.bat.enable = true;
 }

@@ -46,7 +46,6 @@
       editor = {
         line-number = "relative";
       };
-      theme = "rose_pine";
       keys.normal = {
         space = {
           space = "file_picker";
