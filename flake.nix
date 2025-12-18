@@ -119,6 +119,11 @@
                 ${pkgs.deadnix}/bin/deadnix --fail ${./.}
                 touch $out
               '';
+
+              shellcheck = pkgs.runCommand "shellcheck-check" { } ''
+                ${pkgs.shellcheck}/bin/shellcheck $(${pkgs.findutils}/bin/find ${./.} -type f -name "*.sh")
+                touch $out
+              '';
             }
           );
     };

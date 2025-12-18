@@ -30,3 +30,6 @@ jobs:
 
       - name: Run deadnix
         run: nix run nixpkgs#deadnix -- --fail .
+
+      - name: Run shellcheck
+        run: nix run nixpkgs#shellcheck -- $(find . -type f -name "*.sh")
