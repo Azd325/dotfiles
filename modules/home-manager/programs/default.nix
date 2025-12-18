@@ -3,6 +3,7 @@
   imports = [
     ./atuin
     ./bat
+    ./btop
     ./direnv
     ./eza
     ./fd
@@ -10,7 +11,6 @@
     ./gh
     ./git
     ./helix
-    ./htop
     ./jq
     ./jujutsu
     ./lazygit
