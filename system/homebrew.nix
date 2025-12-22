@@ -37,7 +37,6 @@
       "docker-desktop"
       "figma"
       "firefox"
-      "font-geist-mono"
       "font-sf-mono"
       "gas-mask"
       "ghostty"
