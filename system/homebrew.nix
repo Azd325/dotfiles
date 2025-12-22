@@ -21,7 +21,6 @@
       "podman"
       "postgresql"
       "pulumi"
-      "rbenv"
     ];
 
     casks = [
@@ -45,9 +44,6 @@
       "handbrake-app"
       "hot"
       "horos"
-      "iina"
-      "iterm2"
-      "jdownloader"
       "keka"
       "kiro"
       "languagetool-desktop"
@@ -65,7 +61,6 @@
       "stats"
       "tailscale-app"
       "telegram"
-      "temurin@11"
       "thunderbird"
       "visual-studio-code"
       "vlc"
