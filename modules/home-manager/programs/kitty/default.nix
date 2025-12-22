@@ -33,7 +33,7 @@ _:
       shell_integration = "no-rc"; # Disabled automatic RC to avoid conflicts
 
       # macOS specific
-      macos_option_as_alt = "yes";
+      macos_option_as_alt = "no"; # Allow macOS to handle special characters like @ on German layout
       macos_quit_when_last_window_closed = true;
       hide_window_decorations = "titlebar-only";
     };
