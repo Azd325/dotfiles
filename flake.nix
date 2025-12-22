@@ -48,7 +48,7 @@
     };
 
     stylix = {
-      url = "github:nix-community/stylix/release-25.11";
+      url = "github:Azd325/stylix/opencode-base06";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
