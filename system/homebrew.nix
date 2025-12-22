@@ -37,7 +37,6 @@
       "docker-desktop"
       "figma"
       "firefox"
-      "font-sf-mono"
       "gas-mask"
       "ghostty"
       "gpg-suite"
