@@ -8,5 +8,8 @@ _: {
     ".config/opencode/agent".source = ./opencode/agent;
     ".gemini/settings.json".source = ./.gemini/settings.json;
     ".gemrc".text = "gem: --no-document";
+    ".config/nix/nix.conf".text = ''
+      !include /run/secrets/nix-config
+    '';
   };
 }

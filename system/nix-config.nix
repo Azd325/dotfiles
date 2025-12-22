@@ -34,7 +34,8 @@ lib.mkIf (userHome != null) {
     format = "yaml";
     key = "nix-config";
     sopsFile = nixConfigFile;
-    mode = "0600";
+    mode = "0400";
+    owner = config.system.primaryUser;
   };
 
   # Validate age key and Nix configuration before activation
