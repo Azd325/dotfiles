@@ -20,7 +20,7 @@
     tools.url = "github:Azd325/tools";
     tools.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    nix-homebrew.url = "github:Azd325/nix-homebrew/bump-homebrew-5.0.7";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
