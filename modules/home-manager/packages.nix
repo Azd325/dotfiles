@@ -74,7 +74,6 @@ let
     ai.gemini-cli
     ai.goose-cli
     ai.mistral-vibe
-    ai.opencode
     ai.openspec
     ai.spec-kit
   ];

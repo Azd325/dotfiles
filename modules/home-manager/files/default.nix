@@ -4,8 +4,6 @@ _: {
     ".shadow-cljs".source = ./shadow-cljs;
     ".yarnrc.yml".source = ./.yarnrc.yml;
     ".zprofile".source = ./.zprofile;
-    ".config/opencode/opencode.json".source = ./opencode/opencode.json;
-    ".config/opencode/agent".source = ./opencode/agent;
     ".gemini/settings.json".source = ./.gemini/settings.json;
     ".gemrc".text = "gem: --no-document";
     ".config/nix/nix.conf".text = ''

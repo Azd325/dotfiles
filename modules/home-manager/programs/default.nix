@@ -17,6 +17,7 @@
     ./kitty
     ./lazygit
     ./nvim
+    ./opencode
     ./ripgrep
     ./ssh
     ./starship
