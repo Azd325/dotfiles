@@ -410,12 +410,6 @@
       }
     }
   },
-  "lsp": {
-    "clojure-lsp": {
-      "command": ["clojure-lsp", "listen"],
-      "extensions": [".clj", ".cljs", ".cljc", ".edn"]
-    }
-  },
   "mcp": {
     "chrome-devtools": {
       "type": "local",
