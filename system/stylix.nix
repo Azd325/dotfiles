@@ -3,8 +3,8 @@
   stylix = {
     enable = true;
 
-    # Color scheme - Catppuccin Mocha
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # Color scheme - Mellow Purple
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/mellow-purple.yaml";
 
     polarity = "dark";
 
