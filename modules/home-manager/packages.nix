@@ -40,6 +40,8 @@ let
     pkgs.nixfmt-rfc-style
     pkgs.nixpkgs-review
     pkgs.pandoc
+    pkgs.podman
+    pkgs.podman-tui
     pkgs.rsync
     pkgs.rustup
     pkgs.sops
