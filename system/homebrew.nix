@@ -62,7 +62,6 @@
       "tailscale-app"
       "telegram"
       "thunderbird"
-      "visual-studio-code"
       "vlc"
       "utm"
       "zed"
