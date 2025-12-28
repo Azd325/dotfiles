@@ -51,6 +51,7 @@
       "microsoft-auto-update"
       "microsoft-office"
       "microsoft-teams"
+      "mullvad-vpn"
       "obsidian"
       "pycharm"
       "raycast"
