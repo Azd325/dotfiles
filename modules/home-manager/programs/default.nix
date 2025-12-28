@@ -23,6 +23,7 @@
     ./starship
     ./tmux
     ./vscode
+    ./wezterm
     ./yazi
     ./zed
     ./zen-browser
