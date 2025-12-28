@@ -14,7 +14,6 @@
     ./helix
     ./jq
     ./jujutsu
-    ./kitty
     ./lazygit
     ./nvim
     ./opencode
