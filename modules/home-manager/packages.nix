@@ -76,6 +76,7 @@ let
     ai.codex
     ai.copilot-cli
     ai.crush
+    ai.handy
     ai.gemini-cli
     ai.goose-cli
     ai.mistral-vibe
