@@ -20,6 +20,32 @@ in
       git-committer = agentDir + "/git-committer.md";
       review = agentDir + "/review.md";
     };
+    skills = {
+      git-release = ''
+        ---
+        name: git-release
+        description: Create consistent releases and changelogs
+        ---
+
+        ## What I do
+
+        - Draft release notes from merged PRs
+        - Propose a version bump
+        - Provide a copy-pasteable `gh release create` command
+      '';
+
+      interview = ''
+        ---
+        name: interview
+        description: Interview me about the plan
+        ---
+        Read the plan file and interview me using the AskUserQuestion tool.
+        Ask about: technical implementation,
+        UI/UX, concerns, tradeoffs.
+        Make sure the questions are not obvious.
+        Be very in-depth and continue until it's complete, then write the spec.
+      '';
+    };
   };
 
   home.activation.cleanupOpencodeAgentLink = lib.hm.dag.entryBefore [ "writeBoundary" ] ''

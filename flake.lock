@@ -186,15 +186,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1767365803,
-        "narHash": "sha256-5k07cAPVcMWx2P0zSfBQ9KqpMA6La1rz4dy/pl9GzDw=",
-        "owner": "nix-community",
+        "lastModified": 1767378238,
+        "narHash": "sha256-NYrJInoeALWnmoq/49T69uFRiT7VtQlObyobzzXprKk=",
+        "owner": "Azd325",
         "repo": "home-manager",
-        "rev": "d4e4d5cfa30455f50d034f24aa9bc0ab05388fcd",
+        "rev": "dd2a4042de626ed458f5866b02b4b58e0acb4b12",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "Azd325",
+        "ref": "opencode-skills",
         "repo": "home-manager",
         "type": "github"
       }
