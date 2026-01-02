@@ -3,8 +3,7 @@
   stylix = {
     enable = true;
 
-    # Color scheme - Mellow Purple
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/mellow-purple.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
 
     polarity = "dark";
 
