@@ -36,7 +36,6 @@
       "figma"
       "firefox"
       "gas-mask"
-      "ghostty"
       "gpg-suite"
       "google-chrome"
       "grandperspective"

@@ -10,6 +10,7 @@
     ./fzf
     ./gh
     ./git
+    ./ghostty
     ./gpg
     ./helix
     ./jq
@@ -22,7 +23,6 @@
     ./starship
     ./tmux
     ./vscode
-    ./wezterm
     ./yazi
     ./zed
     ./zen-browser
