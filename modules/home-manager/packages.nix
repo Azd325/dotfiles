@@ -1,12 +1,12 @@
 { pkgs, inputs, ... }:
 let
   # Package sources
-  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
   ai = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
   tools = inputs.tools.packages.${pkgs.stdenv.hostPlatform.system};
 
   # Stable packages (from nixpkgs)
   stablePackages = [
+    pkgs.aichat
     pkgs.age
     pkgs.awscli2
     pkgs.cachix
@@ -16,8 +16,10 @@ let
     pkgs.curl
     pkgs.devenv
     pkgs.dive
+    pkgs.docker
     pkgs.duf
     pkgs.editorconfig-core-c
+    pkgs."fabric-ai"
     pkgs.ffmpeg
     pkgs.gallery-dl
     pkgs.gh
@@ -40,23 +42,18 @@ let
     pkgs.nixfmt-rfc-style
     pkgs.nixpkgs-review
     pkgs.pandoc
-    pkgs.docker
     pkgs.podman
-    pkgs.podman-tui
     pkgs.podman-compose
+    pkgs.podman-tui
     pkgs.rsync
     pkgs.rustup
     pkgs.sops
     pkgs.statix
     pkgs.tree
+    pkgs.uv
     pkgs.wget
     pkgs.yq
     pkgs.yt-dlp
-  ];
-
-  # Unstable packages (from nixpkgs-unstable)
-  unstablePackages = [
-    unstable.uv
   ];
 
   # Custom tool packages (from tools input)
@@ -76,24 +73,17 @@ let
     ai.codex
     ai.copilot-cli
     ai.crush
-    ai.handy
     ai.gemini-cli
     ai.goose-cli
+    ai.handy
     ai.mistral-vibe
     ai.openspec
     ai.spec-kit
   ];
 
-  # Mixed source AI packages (require both ai and unstable)
-  mixedSourceAIPackages = [
-    unstable.aichat
-    unstable."fabric-ai"
-  ];
-
 in
 {
-  home.packages =
-    stablePackages ++ unstablePackages ++ toolPackages ++ aiPackages ++ mixedSourceAIPackages;
+  home.packages = stablePackages ++ toolPackages ++ aiPackages;
 
   programs.home-manager.enable = true;
 }

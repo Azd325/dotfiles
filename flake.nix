@@ -2,15 +2,13 @@
   description = "macOS + Home Manager configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    nix-darwin.url = "github:lnl7/nix-darwin/nix-darwin-25.11";
+    nix-darwin.url = "github:lnl7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     llm-agents.url = "github:numtide/llm-agents.nix";
 
